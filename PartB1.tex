@@ -1,0 +1,192 @@
+%NOTE: This doc formatted according to http://ec.europa.eu/research/participants/data/ref/h2020/call_ptef/pt/2018-2020/h2020-call-pt-erc-stg-2019_en.pdf
+
+
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2.0cm,top=2.0cm,right=2.0cm,bottom=1.5cm]{geometry}               
+%\usepackage[subtle]{savetrees}
+\usepackage[bibbreaks=normal, paragraphs=normal, floats=tight, mathspacing=tight, lists=tight, title=tight, margins=normal, wordspacing=normal, tracking=normal, charwidths=normal, bibnotes=normal, mathdisplays=tight, leading=tight, indent=tight, bibliography=normal, sections=tight]{savetrees} 
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xspace}     
+\usepackage{wrapfig}
+
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{amsmath} % Adds a large collection of math symbols                  
+\usepackage{ifthen} % for conditional statements               
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{upgreek} % Adds in support for greek letters in roman typeset       
+\usepackage{titling}
+\usepackage{makecell}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{url,amsmath,booktabs,hepunits,abhepexpt,abhep,xcolor}
+\usepackage[colorlinks]{hyperref}    % Hyperlinks in references
+\usepackage[all]{hypcap} % Internal hyperlinks to floats.
+   
+
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set to true to get roman particle symbols
+
+%If we need more space we can investigate: https://tex.stackexchange.com/questions/273086/use-smaller-headheight-in-fancyhdr, https://tex.stackexchange.com/questions/271159/turn-off-fancyhdr-auto-spacing
+\usepackage{fancyhdr}
+
+\usepackage{rotating}
+
+%\usepackage{fancyheadings}
+\pagestyle{fancy}
+
+
+% Playing with the page size 
+
+\usepackage{array}
+\newcolumntype{y}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+%\renewcommand*{\arraystretch}{1.2}
+
+%TB
+%\addtolength{\oddsidemargin}{-10pt}
+%\addtolength{\evensidemargin}{-10pt}
+%\addtolength{\textwidth}{25pt}
+%\addtolength{\textheight}{76pt}
+%end TB
+
+%\addtolength{\textfloatsep}{-2pt}
+\setlength{\droptitle}{-44mm}
+
+\setlength{\headwidth}{\textwidth}
+
+
+\newboolean{articletitles}
+\setboolean{articletitles}{false}
+
+\usepackage{cite}
+\usepackage{mciteplus}
+
+\newboolean{inbibliography}
+
+\titlespacing{\section}{0pt}{4pt}{0pt}
+\titlespacing{\subsection}{0pt}{4pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{4pt}{0pt}
+
+%\titlespacing{\section}{0pt}{\parskip}{0pt}
+%\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+%\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+
+\title{{\Large Case for ERC Consolidator grant}}
+\author{{\normalsize Caterina Doglioni}}
+\date{}                                           % Activate to display a given date or no date
+
+\usepackage[parfill]{parskip}
+
+\begin{document}
+\lhead{{\small Doglioni}}
+\chead{{\small Part B1}}
+\rhead{{\small REALDARK}}
+\begin{center} 
+
+{\Large\bf ERC Consolidator Grant 2020} \\
+	{\Large\bf Research Proposal [Part B1]}  \\
+ 
+\vspace{2cm} 
+{\huge {\bf }}   \smallskip  
+
+\vspace{2cm} 
+{\Huge{REALDARK}} \\ 
+\vspace{1cm} 
+\vspace{1cm}
+\end{center} 
+\begin{tabular}{rcl}
+Principal Investigator & : & Dr.~Caterina~Doglioni \\
+Host Institution & : & Lund University \\ 
+Proposal duration in months & : & 60 \\
+\end{tabular}  
+\vspace{2cm}
+
+
+\begin{center} {\bf Summary}  \end{center}
+%Up to 2000 chars...
+Add summary here
+\clearpage
+
+\section*{Section A: Extended synopsis of the proposal} 
+
+\medskip
+
+\color{blue} The nature of 85\% of the matter in the universe is unknown. I will use data recorded with innovative techniques at the ATLAS experiment for a broad program of searches for this dark matter, providing valuable input to the community of dark matter searches worldwide, in terms of groundbreaking technological advancements in data taking and physics breakthroughs. \color{black}
+
+The first years of data taking at the Large Hadron Collider (LHC)~\cite{LHC2008} at CERN, yielded the discovery of a new fundamental particle, the Higgs boson~\cite{Khachatryan:2016vau}. LHC data confirmed the predictive power of the Standard Model (SM) of particle physics, the theory of fundamental particles and non-gravitational interactions. However, the amount of ordinary matter described by the SM is exceeded by a kind of unknown matter found by cosmological observations, called Dark Matter (DM)~\cite{Bertone:2016nfn}. 
+According to theoretical hypotheses accounting for the measured amount of DM in the universe with a new particle, DM could be created at the LHC in collisions of ordinary particles, with results complementing experiments directly looking for cosmological DM~\cite{Boveia:2018yeb}. 
+
+However, no hints of this kind of DM have been found so far.
+While it is worthwhile to continue these search DM since its interactions may be more rare and not yet accessible with the current LHC dataset, we need to significantly broaden our field of view ~\cite{Bertone:2018xtm} in order to elucidate the particle nature of DM and its interactions. In this Consolidator Grant, I propose to do so for LHC searches in the following ways:
+
+\begin{itemize}
+	\item by making the most of LHC data with innovative data-taking techniques, overcoming technological limitations that force experiments to discard most data milliseconds after being taken;
+	\item  by searching for more complex, less-explored yet theoretically motivated DM models that may have escaped being recorded and detected in this first phase of LHC data taking;
+	\item by connecting to the broader DM community that includes the wealth of astroparticle and non-collider experiments planned to start taking data in this decade, sharing physics results but also working together on tools for data processing, analysis and open science. 
+\end{itemize}
+
+%\begin{wrapfigure}{R}{0.5\textwidth} 
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=0.7\textwidth]{figs/flavorprobes.pdf}
+%\caption{\label{fig:scales} Energy scales of generic NP models probed by heavy flavor observables. The energies accessible to searches at the LHC and a potential $100~\TeV$ future collider (FCC) are indicated. Figure adapted from~\cite{neubert:scales}}
+%\end{center}
+%\end{wrapfigure}
+%\end{figure}
+
+
+
+\section{Project description}
+\subsection{WP1: ...}
+
+\section{Project planning}
+I will lead a research team consisting of two postdoctoral researchers and two PhD students. 
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=0.7\textwidth]{figs/timeline_new.pdf}
+%\caption{\label{fig:timeline} Timeline of the proposal.}
+%\end{center}
+%\end{figure}
+
+%The LHC will begin Run III with a commissioning period during %which the software trigger will be exercised. A detector %commissioning paper will be published in Q2 2021, and a %performance paper in Q4 2021 where the new exclusive trigger %selections will be used to highlight the increased efficiency %with respect to Run II. 
+
+
+
+\clearpage
+%\addcontentsline{toc}{section}{References}
+\setboolean{inbibliography}{true}
+\bibliographystyle{LHCb}
+\bibliography{researchrefs}
+
+~ 
+
+%{\bf Note:} The PI is acknowledged in Ref.~\cite{Jung:2014jfa} and is an author of Refs.~\cite{LHCb-PUB-2014-027,Williams:1670992} as well as of all publications by the LHCb collaboration -- Refs.~\cite{Alves:2008zz,CERN-LHCC-2014-016,LHCb:2011aa,Aaij:2013mga,Aaij:2014ywt}.
+%The PI is the contact author within LHCb for Ref.~\cite{Aaij:2014ywt}.
+
+\clearpage
+
+%\input{CF/CV_CF}
+
+\clearpage
+
+\section*{Appendix: All ongoing and submitted grants and funding of the PI}
+
+%\input{CF/FundingID_CF}
+
+\clearpage
+
+\section*{Section C: Early achievements track record}
+
+%\input{CF/TrackRecord_CF}
+
+\end{document}  
