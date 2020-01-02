@@ -125,22 +125,25 @@ The searches I will perform using this unique dataset will provide complementary
 
 \medskip
 
+\section{Aims of this research project} 
+\smallskip
+
 The first years of data taking at the Large Hadron Collider (LHC)~\cite{LHC2008} at CERN yielded the discovery of a new fundamental particle, the Higgs boson~\cite{Khachatryan:2016vau}. With this and other notable results, the LHC data confirmed the predictive power of the Standard Model (SM) of particle physics, the theory of fundamental particles and non-gravitational interactions. However, the amount of ordinary matter described by the SM is exceeded by a kind of unknown matter as determined by cosmological observations, called Dark Matter (DM)~\cite{Bertone:2016nfn}. 
 
 %My big idea is to expand on successful searches for DM that I pioneered to look elsewhere because now it's the time to expand that program. 
 
-Theoretical models that include a new particle accounting for the abundance of DM in the universe include DM particles that can be produced at the LHC in collisions of ordinary matter (see e.g.~\cite{Boveia:2018yeb} and references therein). 
+Theoretical models that explain the abundance of DM in the universe include massive DM particles that interact weakly with ordinary particles, called WIMPs, and can therefore be produced at the LHC in collisions of ordinary matter (see e.g.~\cite{Boveia:2018yeb} and references therein). 
 Creating DM in controlled conditions enables the study of its interactions with ordinary matter, complementing experiments capable of detecting cosmological DM  through direct and indirect methods. %~\cite{Boveia:2018yeb}. 
 
-Dark matter searches have been a flagship of the physics programmes of LHC experiments, so far setting world-leading constraints on a number of theory models, and I have ensured that the complementarity of these results to direct constraints is highlighted~\cite{DMWG}. While it is worthwhile to keep pursuing these searches since current LHC datasets may not have reached the sensitivities required to probe the rarest SM-DM interactions, we need to significantly broaden our field of view in order to determine the particle nature of DM and its interactions~\cite{Bertone:2018xtm}. In this Consolidator Grant, I propose to do so for LHC searches in the following ways:
+WIMP Dark matter searches have been a flagship of the physics programmes of LHC experiments, so far setting world-leading constraints on a number of theory models, and I have ensured that the complementarity of these results to direct constraints is highlighted~\cite{DMWG}. While it is worthwhile to keep pursuing these searches since current LHC datasets may not have reached the sensitivities required to probe the rarest SM-DM interactions, we need to significantly broaden our field of view in order to determine the particle nature of DM and its interactions~\cite{Bertone:2018xtm}. In this Consolidator Grant, I propose to do so for LHC searches in the following ways:
 
 \begin{itemize}
 	\item by making the most of the data recorded by the ATLAS experiment through innovative data-taking techniques, overcoming technological limitations that would otherwise force experiments to discard the majority of data of interest for many DM searches milliseconds after being taken;
 	\item by leading searches of theoretically motivated DM models that until now have escaped being recorded and detected in this first phase of LHC data taking;
-	\item by sharing derived analysis products, physics results and tools for their interpretation with the broader DM community in order to generate further impact by capitalising on the wealth of astroparticle and non-collider experiments planned to start taking data in this decade. 
+	\item by sharing derived analysis products, physics results and tools for their interpretation with the broader DM community in order to generate further impact, capitalising on the wealth of astroparticle and non-collider experiments planned to start taking data in this decade. 
 \end{itemize}
 
-\textbf{[add a sentence saying what objectives make the reviewer go WOW. Why this is important and forward-looking.]}
+\textbf{[add a sentence saying what objectives make the reviewer go WOW. Why this is important and forward-looking. Data storage requirements are a widespread concern for HL-LHC and future experiments]}
 
 As evidenced by my CV and track record, my profile combines both technical and scientific proficiency with leadership of large groups of scientists in both physics and data analysis tools. 
 With my international collaborators and within my StG, I have led a paradigm shift in data taking techniques in ATLAS from software concept to publication \textbf{[and I am now HSF convenor]}. I have authored a number of LHC searches for DM and new phenomena, and I have coordinated ATLAS- and LHC-wide working groups instrumental to the design of DM search strategies~\cite{DMWG}. 
@@ -160,6 +163,66 @@ As a recognized expert in DM searches and collider data taking techniques with a
 % Mention that DM people says that they want this stuff done
 
 %and thanks to the presence of a strong theory group with world-leading expertise in the DM models I intend to look for. 
+\subsection{Overall purposes and organization of the project} 
+
+Traditional data taking techniques are insufficient to probe the majority of the parameter space for a variety of theoretical possibilities that can explain the particle nature of dark matter. This proposal will solve this issue by enabling the ATLAS experiment to record data in a new manner. This will permit, for the first time, this wealth of recorded data to be used for early measurements and new dark matter searches, and propagates the results and the developed tools to the broader community. 
+The proposal consists of five logically interconnected work packages to maximise impact. Firstly, in \textbf{WP1} I will overcome the technological constraints that limit the sensitivity to a variety of physics phenomena including DM, with the use of non-standard data taking and recording techniques. In \textbf{WP2}, I will commission those techniques with early measurements using the first LHC Run 3 data. In \textbf{WP3} and \textbf{WP4}, I will use the dataset recorded with the fully commissioned techniques developed in \textbf{WP1} and \textbf{WP2} to perform new searches for standard and completely new dark matter models. In~\textbf{WP5}, I will interpret the results of those searches in coherent frameworks that transgress model boundaries with the inclusion of input from LHC measurements and non-collider DM searches, and work in synergy with the broader community for optimal dissemination of results and tools. 
+A graphical representation of the WPs and their expected outcomes is shown in Fig.~\ref{fig:WPs}. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figs/WPs}
+\caption{\label{fig:WPs} Schema of work packages and expected outcomes. \textbf{This needs to be spaced out more to be clearer.}}
+\end{center}
+\end{figure}
+
+\section{Project description}
+\smallskip
+
+\subsection*{WP1: Advancing data selection and computing}
+
+The discovery of new, rare processes, at a time when traditional data-taking confirms the SM, mandates technical innovation. LHC collides protons up to 30 million times per second. Recording and processing all this data is unfeasible: only a small fraction of interesting data can be selected by the experiment’s \textit{trigger systems} in the order of milliseconds after each collision has taken place; the rest is discarded forever.
+
+LHC experiments and their upgrades are subject to budgetary constraints, making it difficult to extend the physics programme while remaining within the budget dedicated to data processing and storage. 
+%A decision on whether a collision event is “interesting” is made by the experiment's \textit{trigger system} in the order of milliseconds after the collision has taken place, and the majority of the events that are not considered interesting are discarded
+Two notable examples of discoveries that would be impossible due to these constraints \textbf{[not anymore because my StG, and also we shouldn’t ignore LLP searches]} in ATLAS are:
+\begin{itemize} 
+\item rare processes where a new particle decays into ordinary matter, mimicked by more frequent SM-only processes that lead to the same signature in the detector. These new processes are discarded together with the vast amount of irreducible SM background mimicking them;
+\item processes where new particles have non-standard interactions with ordinary matter. In these cases, the exact content of the collision is difficult and time-consuming to reconstruct within the budget with which a decision must be made, therefore the features that distinguish signal from background to classify the event as interesting are missing and the event is discarded.
+\end{itemize}
+In this proposal I will map these discoveries to two classes of models which explain the particle nature of dark matter discussed in \textbf{WP3} and \textbf{WP4}. The data collected using these techniques represents an entirely new dataset that can extend the experimental reach of the ATLAS experiment with a similar amount of resources~\cite{Resonances}. 
+
+
+The main technological advancement delivered by this proposal is to break the traditional paradigm of first recording the entirety of raw detector data and then analyzing it, to one in which data is reduced and processed in real-time, using the two following techniques:
+
+
+\begin{itemize}
+
+%\begin{minipage}{.45\textwidth}
+%\includegraphics[0.45\textwidth]{figs/TLAPEB}
+%\caption{\label{fig:TLAPEB}. Plot from 2017 ATLAS data, showing that the TLA technique can record a higher rate of events for fewer resources with respect to standard data taking. Adapted from~\cite{Computing}}
+%\end{minipage}
+    
+%\begin{minipage}{width=.55\textwidth}
+\item \textbf{Real time analysis} (called Trigger-object Level Analysis in ATLAS\footnote{Turbo LHCb and data scouting in CMS}). Traditional data taking stores raw detector data in its entirety, so that it can be later reconstructed to extract higher level information. In the real-time analysis paradigm, reconstruction is performed at the first processing stages prior to making a decision, retaining only the higher-level information. As this information is considerably smaller than the raw data, this technique enables us to record a much larger number of events in the same data rate. 
+With my StG, I have proven that this technique is feasible in the single use case of dark matter mediators decaying into sprays of collimated particles (jets)~\cite{PRL_TLA}, and within this CoG I intend to extend it to a larger set of searches and measurements where it is suitable. 
+\item \textbf{Selective event reconstruction} (called Partial Event Building in ATLAS). In this technique, the information available to real-time analyses is augmented by a subset of the raw detector information in analyst-specified regions of the detector. This paradigm combines the data rate enhancements of real-time analysis with the added precision of full offline reconstruction in a user-configurable manner. Non-ordinary features signaling the presence of new phenomena can then be detected \textit{a posteriori}. This proposal will commission and use this technique for physics searches for the first time in ATLAS. 
+%\end{minipage}
+\end{itemize}
+
+As a pioneer of real-time analysis, I have delivered the proof-of-concept studies for these techniques, but they must be now developed and commissioned on a much larger scale in order for me to exploit them for DM searches in the Run-3 dataset. 
+
+
+Both of these techniques reduce data storage requirements, but further gains can be achieved using data compression. Therefore I will continue pursuing a method for data compression using machine learning algorithms where my students have made significant progress so far, in collaboration with other ATLAS ML and computing experts. This is a forward-looking activity targeting the high-luminosity LHC run starting in 2026 as well as experiments beyond the LHC (e.g. gravitational wave experiments).
+
+%which will be undertaken by supervising Master’s students from the engineering faculty. 
+\subsubsection*{WP2: Early searches and measurements}
+
+\subsubsection*{WP3: Dark Matter mediator searches}
+
+\subsubsection*{WP4: Mapping dark/hidden sectors}
+
+\subsubsection*{WP5: Conceptualization, contextualization, synergies}
 
 %\begin{wrapfigure}{R}{0.5\textwidth} 
 %\begin{figure}[h!]
@@ -172,10 +235,10 @@ As a recognized expert in DM searches and collider data taking techniques with a
 
 
 
-\section{Project description}
-\subsection{WP1: ...}
 
 \section{Project planning}
+\smallskip
+
 I will lead a research team consisting of two postdoctoral researchers and two PhD students. 
 
 %\begin{figure}[h!]
