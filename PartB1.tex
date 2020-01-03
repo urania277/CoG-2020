@@ -12,6 +12,7 @@
 \usepackage{epstopdf}
 \usepackage{xspace}     
 \usepackage{wrapfig}
+\setlength\intextsep{0pt}
 
 \usepackage{color}
 \usepackage{colortbl}
@@ -165,16 +166,18 @@ As a recognized expert in DM searches and collider data taking techniques with a
 %and thanks to the presence of a strong theory group with world-leading expertise in the DM models I intend to look for. 
 \subsection{Overall purposes and organization of the project} 
 
-Traditional data taking techniques are insufficient to probe the majority of the parameter space for a variety of theoretical possibilities that can explain the particle nature of dark matter. This proposal will solve this issue by enabling the ATLAS experiment to record data in a new manner. This will permit, for the first time, this wealth of recorded data to be used for early measurements and new dark matter searches, and propagates the results and the developed tools to the broader community. 
-The proposal consists of five logically interconnected work packages to maximise impact. Firstly, in \textbf{WP1} I will overcome the technological constraints that limit the sensitivity to a variety of physics phenomena including DM, with the use of non-standard data taking and recording techniques. In \textbf{WP2}, I will commission those techniques with early measurements using the first LHC Run 3 data. In \textbf{WP3} and \textbf{WP4}, I will use the dataset recorded with the fully commissioned techniques developed in \textbf{WP1} and \textbf{WP2} to perform new searches for standard and completely new dark matter models. In~\textbf{WP5}, I will interpret the results of those searches in coherent frameworks that transgress model boundaries with the inclusion of input from LHC measurements and non-collider DM searches, and work in synergy with the broader community for optimal dissemination of results and tools. 
-A graphical representation of the WPs and their expected outcomes is shown in Fig.~\ref{fig:WPs}. 
+Traditional data taking techniques are insufficient to probe the majority of the parameter space for a variety of theoretical possibilities that can explain the particle nature of dark matter. This proposal will solve this issue by enabling the ATLAS experiment to record data in a new manner. This will permit, for the first time, this wealth of recorded data to be used for early measurements and new dark matter searches, and propagates the results and the developed tools to the broader community. \textbf{Mention the tools somewhere}
 
-\begin{figure}[h!]
+\begin{wrapfigure}{L}{0.5\textwidth} 
+%\begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.7\textwidth]{figs/WPs}
-\caption{\label{fig:WPs} Schema of work packages and expected outcomes. \textbf{This needs to be spaced out more to be clearer.}}
+\includegraphics[width=0.5\textwidth]{figs/WPs}
+\caption{\label{fig:WPs} \small Schema of work packages and expected technical and physics results stemming from each WP.}
 \end{center}
-\end{figure}
+\end{wrapfigure}
+
+The proposal consists of five logically interconnected work packages to maximise impact, shown in Fig.~\ref{fig:WPs}. Firstly, in \textbf{WP1} I will overcome the technological constraints that limit the sensitivity to a variety of physics phenomena including DM, with the use of non-standard data taking and recording techniques, and employ machine learning techniques for forward-looking improvements. In \textbf{WP2}, I will commission the techniques in \textbf{WP1} with early measurements using the first LHC Run 3 data. In \textbf{WP3} and \textbf{WP4}, I will use the dataset recorded with the fully commissioned techniques developed in \textbf{WP1} and \textbf{WP2} to perform new searches for standard and new dark matter models. In~\textbf{WP5}, I will interpret the results of those searches in coherent frameworks that go beyond model boundaries with the inclusion of input from LHC measurements and non-collider DM searches using Open Science tools, and work in synergy with the broader community for optimal dissemination of results and tools. 
+\medskip
 
 \section{Project description}
 \smallskip
@@ -192,25 +195,22 @@ Two notable examples of discoveries that would be impossible due to these constr
 \end{itemize}
 In this proposal I will map these discoveries to two classes of models which explain the particle nature of dark matter discussed in \textbf{WP3} and \textbf{WP4}. The data collected using these techniques represents an entirely new dataset that can extend the experimental reach of the ATLAS experiment with a similar amount of resources~\cite{Resonances}. 
 
-
 The main technological advancement delivered by this proposal is to break the traditional paradigm of first recording the entirety of raw detector data and then analyzing it, to one in which data is reduced and processed in real-time, using the two following techniques:
 
+\begin{wrapfigure}{R}{0.5\textwidth} 
+\vskip-5pt
+\includegraphics[width=0.5\textwidth]{figs/TLAPEB}
+\caption{\label{fig:TLAPEB} \small Fraction of event rates recorded and trigger storage used for standard and Trigger Level Analysis technique. 
+The event rate recorded with the Trigger Level Analysis is much higher than the rate of events for standard data taking, for a much smaller amount of storage resources, From 2017 ATLAS data-taking, adapted from~\cite{Computing}. \scriptsize \color{red} If available, include estimates for this proposal. If not, change colors and only include Standard data taking and Trigger Level Analysis. \color{black}}
+\end{wrapfigure}
 
-\begin{itemize}
 
-%\begin{minipage}{.45\textwidth}
-%\includegraphics[0.45\textwidth]{figs/TLAPEB}
-%\caption{\label{fig:TLAPEB}. Plot from 2017 ATLAS data, showing that the TLA technique can record a higher rate of events for fewer resources with respect to standard data taking. Adapted from~\cite{Computing}}
-%\end{minipage}
-    
-%\begin{minipage}{width=.55\textwidth}
-\item \textbf{Real time analysis} (called Trigger-object Level Analysis in ATLAS\footnote{Turbo LHCb and data scouting in CMS}). Traditional data taking stores raw detector data in its entirety, so that it can be later reconstructed to extract higher level information. In the real-time analysis paradigm, reconstruction is performed at the first processing stages prior to making a decision, retaining only the higher-level information. As this information is considerably smaller than the raw data, this technique enables us to record a much larger number of events in the same data rate. 
-With my StG, I have proven that this technique is feasible in the single use case of dark matter mediators decaying into sprays of collimated particles (jets)~\cite{PRL_TLA}, and within this CoG I intend to extend it to a larger set of searches and measurements where it is suitable. 
-\item \textbf{Selective event reconstruction} (called Partial Event Building in ATLAS). In this technique, the information available to real-time analyses is augmented by a subset of the raw detector information in analyst-specified regions of the detector. This paradigm combines the data rate enhancements of real-time analysis with the added precision of full offline reconstruction in a user-configurable manner. Non-ordinary features signaling the presence of new phenomena can then be detected \textit{a posteriori}. This proposal will commission and use this technique for physics searches for the first time in ATLAS. 
-%\end{minipage}
-\end{itemize}
+\textbf{Real time analysis} (called Trigger-object Level Analysis in ATLAS\footnote{Turbo LHCb and data scouting in CMS}). Traditional data taking stores raw detector data in its entirety, so that it can be later reconstructed to extract higher level information. In the real-time analysis paradigm, reconstruction is performed at the first processing stages prior to making a decision, retaining only the higher-level information. As this information is considerably smaller than the raw data, this technique enables us to record a much larger number of events in the same data rate, as shown in Fig.~\ref{fig:TLAPEB}.  
+With my StG, I have proven that this technique is feasible in the single use case of dark matter mediators decaying into sprays of collimated particles (jets)~\cite{PRL_TLA}, and within this CoG I intend to extend it to photons, electrons and muons so that it can be used for a much larger set of searches and measurements. 
 
-As a pioneer of real-time analysis, I have delivered the proof-of-concept studies for these techniques, but they must be now developed and commissioned on a much larger scale in order for me to exploit them for DM searches in the Run-3 dataset. 
+\textbf{Selective event reconstruction} (called Partial Event Building in ATLAS). In this technique, the information available to real-time analyses is augmented by a subset of the raw detector information in analyst-specified regions of the detector. This paradigm combines the data rate enhancements of real-time analysis with the added precision of full offline reconstruction in a user-configurable manner. Non-ordinary features signaling the presence of new phenomena can then be detected \textit{a posteriori}. This proposal will commission and use this technique for physics searches for the first time in ATLAS. 
+
+As a pioneer of real-time analysis, I have delivered proof-of-concept studies for these techniques, but they must be now developed and commissioned on a much larger scale in order for me to exploit them for DM searches in the Run-3 dataset. 
 
 
 Both of these techniques reduce data storage requirements, but further gains can be achieved using data compression. Therefore I will continue pursuing a method for data compression using machine learning algorithms where my students have made significant progress so far, in collaboration with other ATLAS ML and computing experts. This is a forward-looking activity targeting the high-luminosity LHC run starting in 2026 as well as experiments beyond the LHC (e.g. gravitational wave experiments).
