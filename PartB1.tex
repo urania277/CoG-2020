@@ -141,9 +141,8 @@ Lack of evidence for WIMPs so far motivates a two-prong approach for DM searches
     \item I will deliver a new set of searches for models beyond the WIMP paradigm. These models postulate a new force akin to the strong interaction in the SM and could have so far escaped detection. 
 \end{itemize}
 
-The discovery of new, rare processes, at a time when traditional data-taking methods confirm the SM, mandates technical innovation. The LHC collides bunches of protons up to 30 million times per second. Recording and processing all this data is unfeasible: only a small fraction of interesting data can be selected by the experiment’s \textit{trigger systems} due to budgetary constraints on both processing and storage; the rest is discarded forever. This leads to a loss of sensitivity to large areas of parameter space for DM models. 
+The discovery of new, rare processes, at a time when traditional data-taking methods confirm the SM, mandates technical innovation. The LHC collides bunches of protons up to 30 million times per second. Recording and processing all this data is unfeasible: only a small fraction of interesting data can be selected by the experiment’s \textit{trigger systems} due to constraints on both processing and storage; the rest is discarded forever. This leads to a loss of sensitivity to large areas of parameter space for DM models. 
 
-%USED BELOW These budgetary constraints make it difficult to extend the physics programme using standard techniques, requiring a paradigm shift in the way in which data selected and processed.
 %Current data taking methods do not provide sensitivity to large areas of parameter space for DM models. 
 The searches in this proposal will be enabled by innovative data-taking techniques at the earliest stage of data selection and processing, that increase the utility of the data recorded by the ATLAS experiment as a whole. These techniques, called Trigger Level Analysis (proof-of-principle delivered by my StG~\cite{PRL}) and Partial Event Building in ATLAS, reduce the size of the data used for physics analysis by a factor of \color{red}X\color{black}, overcoming the storage limitations that would otherwise force ATLAS and other LHC experiments to discard the majority of data of interest for many DM searches. %milliseconds after being taken
 %taken, and deliver a dataset with unprecedented sensitivity. 
@@ -162,14 +161,6 @@ This proposal delivers as outputs discoveries or constraints that are usable for
 % Mention that HSF says RTA is crucial for 2020
 % Mention that DM people says that they want this stuff done
 
-%and thanks to the presence of a strong theory group with world-leading expertise in the DM models I intend to look for. 
-\section{Organization of the project} 
-
-\smallskip
-
-
-%CAN BE USED This proposal will solve this issue by enabling the ATLAS experiment to record data in a new manner. This will permit, for the first time, this wealth of recorded data to be used for early measurements and new dark matter searches, and propagates the results and the developed tools to the broader community. \textbf{Mention the tools somewhere}
-
 %\begin{wrapfigure}{L}{0.35\textwidth} 
 \begin{figure}[h!]
 \begin{center}
@@ -178,6 +169,71 @@ This proposal delivers as outputs discoveries or constraints that are usable for
 \end{center}
 %\end{wrapfigure}
 \end{figure}
+
+
+\section{Innovation to the state of the art from this project} 
+\smallskip
+
+The presence of DM does not have an explanation in the SM. 
+The absence of a particle explaining DM at the LHC and other experiments indicates that, if DM interacts with SM particles, these interactions must be very feeble and/or the experimental signals of DM must be subtle. 
+At the same time, the enormous data rates of modern particle experiments present a challenge: with traditional data taking methods, it is not possible to record, process and store the large datasets required to reveal DM signals, and the majority of the data has to be discarded forever milliseconds after being taken. 
+  
+Two notable examples of discoveries that are impossible with traditional data taking methods are:
+\begin{itemize} 
+\item Rare processes where a new particle decays into ordinary matter, mimicked by more frequent SM-only processes.
+These new processes are discarded together with the vast amount of irreducible SM background;
+\item Processes where new particles have non-standard interactions with ordinary matter. 
+In these cases, the exact content of the collision is difficult and time-consuming to reconstruct within the timing budget with which a decision to keep an event must be made. Therefore, the features that distinguish signal events from the more frequent background events are missing, and the event is discarded.
+\end{itemize}
+
+These discoveries map to two classes of models that explain the particle nature of dark matter, both able to reproduce the amount of DM measured in the universe (relic density). 
+
+The first class of models corresponds to the current state of the art for LHC searches, where DM is a massive particle that interacts only weakly with SM particles -- a WIMP~\cite{DMWG_Benchmarks,AR}. 
+Due to their feeble interactions with the detector material, WIMPs are traditionally sought at collider experiments by selecting events with an energy imbalance where an invisible particle has escaped detection. 
+These WIMPs can be produced from LHC proton-proton collisions through a new massive particle mediating the SM-DM interaction, analogously to the W and Z mediating the Weak Force. In addition to decaying into DM particles, this mediator will also decay into ordinary matter, through the same interactions responsible for its production. 
+In my StG, I delivered a new set of searches where the DM mediator decays to two jets, using LHC Run-2 data. 
+These searches have set the most stringent constraints to date for DM mediators with masses between 250 GeV and a TeV (see shaded \color{red} color \color{black} areas in Fig.~\ref{pastFutureConstraints}). 
+The search in the mediator mass range 450 GeV -- 1 TeV would not have been possible without the application of the TLA technique to jets, which overcomes the experiment's storage limitations by performing most of the initial data analysis and calibration already at the trigger level, retaining only a small amount of information for further analysis and discarding raw detector data. 
+In this CoG, I will significantly extend this technique by enabling its use for photons, electrons and muons, and exploit the dataset recorded with this technique for more sensitive WIMP mediator searches in the mass region where the mediator of the known forces lie (see shaded \color{red} color \color{black} areas in Fig.~\ref{pastFutureConstraints}).  
+%Change wording to WAF/VR
+
+Motivated by constraints set on WIMPs, the second class of models postulates interactions that are much feebler, with much lighter mediators. 
+These models~\cite{Zurek} predict a multitude of new particles in addition to the DM candidate, mirroring the complexity of the SM in theories similar to the strong force. An unambiguous signal of these models are "dark QCD" jets which are comprised of invisible particles and light dark matter mediators which decay into low-energy electrons and muons. 
+
+Standard searches in two-jet final states are not optimally sensitive to these scenarios. %, since they escape detection and are discarded at the trigger level. 
+This is because of the very large SM QCD backgrounds (a problem shared by WIMP mediator searches) and/or because the trigger system is unable to build and identify the characteristic features of the jets in time and considers them noise. 
+%shorten this sentence above
+In this CoG, I will combine the TLA and the Partial Event Building technique for the first time in ATLAS to solve this problem. 
+By augmenting the limited trigger level information with the full set of raw data in the region of interest behind the dark jets, I will bypass storage and processing limitations, and enable the reconstruction of features that distinguish signal from background at a later processing stage where more resources are available. 
+I will use the dataset recorded with this technique to map the parameter space of dark QCD theories and discover or set stringent constraints on models never tested at the LHC. 
+
+\setboolean{inbibliography}{true}
+\bibliographystyle{LHCb}
+\bibliography{researchrefs}
+
+\end{document}
+
+This WP furthers searches for WIMP models at the LHC using the Trigger Level Analysis technique, in a scenario that is not fully constrained by existing searches, by searching for the visible decays of the particles mediating the interaction between ordinary and dark matter. 
+
+\begin{wrapfigure}{L}{0.25\textwidth} \includegraphics[width=0.25\textwidth]{figs/WIMPMediator}
+\caption{\label{fig:WIMPMediator} \small Sketch of WIMP mediator model \scriptsize \color{red} Improve quality, consider adding DD/ID etc. \color{black}}
+\end{wrapfigure}
+
+This model is used by the majority of DM LHC searches and can reproduce the observed relic density. It can be used as a building block for more complex theories (e.g. those mentioned in WP4) since it can describe the behavior of these processes even with a small number of parameters. 
+
+
+Both classes of models can explain the amount of dark matter in the universe from cosmological observations (the DM \textit{relic density}). 
+
+%In this proposal I will map these discoveries to two classes of models which explain the particle nature of dark matter discussed in WP3 and WP4. %too kitchen sink
+The data collected using these techniques represents an entirely new dataset that can extend the experimental reach of the ATLAS experiment with a similar amount of resources~\cite{Resonances}. 
+
+
+
+
+%and thanks to the presence of a strong theory group with world-leading expertise in the DM models I intend to look for. 
+\section{Organization of the project} 
+\smallskip
+
 
 The proposal consists of five logically interconnected work packages.
 %to maximise impact. 
@@ -198,12 +254,12 @@ The work packages and their interconnections are indicated in Fig.~\ref{fig:WPs}
 
 %, and it must be selected in the order of milliseconds after each collision has taken place 
 
-Two notable examples of discoveries that would be impossible due to these constraints \textbf{[not anymore because my StG, and also we shouldn’t ignore LLP searches]} in ATLAS are:
-\begin{itemize} 
-\item Rare processes where a new particle decays into ordinary matter, mimicked by more frequent SM-only processes that lead to the same low-level trigger signatures in the detector. These new processes are discarded together with the vast amount of irreducible SM background mimicking them;
-\item Processes where new particles have non-standard interactions with ordinary matter. In these cases, the exact content of the collision is difficult and time-consuming to reconstruct within the timing budget with which a decision must be made, therefore the features that distinguish signal from background to classify the event as interesting are missing and the event is discarded.
-\end{itemize}
-In this proposal I will map these discoveries to two classes of models which explain the particle nature of dark matter discussed in WP3 and WP4. The data collected using these techniques represents an entirely new dataset that can extend the experimental reach of the ATLAS experiment with a similar amount of resources~\cite{Resonances}. 
+%Two notable examples of discoveries that would be impossible due to these constraints \textbf{[not anymore because my StG, and also we shouldn’t ignore LLP searches]} in ATLAS are:
+%\begin{itemize} 
+%\item Rare processes where a new particle decays into ordinary matter, mimicked by more frequent SM-only processes that lead to the same low-level trigger signatures in the detector. These new processes are discarded together with the vast amount of irreducible SM background mimicking them;
+%\item Processes where new particles have non-standard interactions with ordinary matter. In these cases, the exact content of the collision is difficult and time-consuming to reconstruct within the timing budget with which a decision must be made, therefore the features that distinguish signal from background to classify the event as interesting are missing and the event is discarded.
+%\end{itemize}
+%In this proposal I will map these discoveries to two classes of models which explain the particle nature of dark matter discussed in WP3 and WP4. The data collected using these techniques represents an entirely new dataset that can extend the experimental reach of the ATLAS experiment with a similar amount of resources~\cite{Resonances}. 
 
 The main technological advancement delivered by this proposal is to break the traditional paradigm of first recording the entirety of raw detector data and then analyzing it, to one in which data is reduced and processed in real-time, using the two following techniques:
 
@@ -212,14 +268,12 @@ The main technological advancement delivered by this proposal is to break the tr
 The event rate recorded with Trigger Level Analysis is much higher than the rate of events for standard data taking, for a much smaller amount of storage resources, as measured in 2017 ATLAS data-taking, adapted from~\cite{Computing}. \scriptsize \color{red} If available, include estimates for this proposal. If not, change colors and only include Standard data taking and Trigger Level Analysis. Also, show how much this could be compressed if compression worked (although that's an offline thing?). \color{black}}
 \end{wrapfigure}
 
-
 \textbf{Trigger Level Analysis}\footnote{Turbo LHCb and data scouting in CMS}. Traditional data taking methods store raw detector data in its entirety, so that it can be later reconstructed to extract higher level information. In the real-time analysis paradigm, reconstruction is performed at the first processing stages prior to making a decision, retaining only the higher-level information. As this information is considerably smaller than the raw data, this technique enables us to record a much larger number of events in the same data rate, as shown in Fig.~\ref{fig:TLAPEB}.  
-With my StG, I have shown that this is effective in a proof-of-concept use case of dark matter mediators decaying into sprays of collimated particles (jets)~\cite{PRL_TLA}. Within this CoG I intend to extend this paradigm to photons, electrons and muons so that it can be used to extend the ATLAS experiment reach to a much larger set of searches and measurements. 
+With my StG, I have shown that this is effective in a proof-of-concept use case of dark matter mediators~\cite{PRL_TLA}. Within this CoG I intend to extend this paradigm to photons, electrons and muons so that it can be used to extend the ATLAS experiment reach to a much larger set of searches and measurements. 
 
 \textbf{Selective event reconstruction} (called Partial Event Building in ATLAS). In this technique, the information available to real-time analyses is augmented by a subset of the raw detector information in analyst-specified regions of the detector. This paradigm combines the data rate enhancements of real-time analysis with the added precision of full offline reconstruction in a user-configurable manner. Non-ordinary features signaling the presence of new phenomena can then be detected \textit{a posteriori}. This proposal will commission and use this technique for physics searches for the first time in ATLAS. 
 
-As a pioneer of real-time analysis, I have delivered proof-of-concept studies for these techniques, but they must be now developed and commissioned on a much larger scale in order for me to exploit them for groundbreaking DM searches with the Run-3 dataset. 
-
+As a pioneer of real-time analysis, I have delivered proof-of-concept studies for these techniques, but they must be now developed and commissioned on a much larger scale in order for me to exploit them for groundbreaking DM searches with the Run-3 dataset, and I will do so in WP1. 
 
 Both of these techniques reduce data storage requirements, but these can be complemented by further gains in data compression. I will therefore pursue a method for data compression using machine learning algorithms where my students have made preliminary studies, in collaboration with other ATLAS ML and computing experts. This is a forward-looking activity targeting the high-luminosity LHC run starting in 2026 as well as experiments beyond the LHC (e.g. gravitational wave experiments).
 
@@ -227,7 +281,7 @@ Both of these techniques reduce data storage requirements, but these can be comp
 \subsubsection*{WP2: Early searches and measurements}
 
 During the shutdown between the Run-2 and Run-3 data taking periods, the ATLAS experiment trigger system is undergoing significant upgrades~\cite{FEXes}, and the software for the real-time event selection is being rewritten~\cite{MT}. 
-Thorough commissioning and testing, first with simulation and cosmic ray data, and subsequently with LHC commissioning data is mandatory. The initial LHC accelerator plan for Run-3  foresees that the first two years (2021-2022) will be used as a ramp-up for the production data taking period, with the majority of the dataset being collected in (2023-2024)~\cite{SomeRandomEuropeanStrategyPresentationOrTooMuch?}. 
+Thorough commissioning and testing, first with simulation and cosmic ray data, and subsequently with LHC commissioning data is mandatory. The initial LHC accelerator plan for Run-3  foresees that the first two years (2021-2022) will be used as a ramp-up for the production data taking period, with the majority of the dataset being collected in (2023-2024)~\cite{SomeRandomEuropeanStrategyPresentationOrTooMuch}. 
 The first two years are the ideal opportunity to use the already-established Trigger Level Analysis from Run-2~\cite{TLAPRL} to test a completely new software framework and the performance of the detector, and document this work with physics and technical results. 
 
 In WP2 I will select events where at least two jets are detected and reconstructed in real-time within the trigger system, and compare the performance of their reconstruction and calibration at the trigger level with traditional data taking. The reduced duty cycle of the accelerator will enable this study to record data at high rates, reducing the time-to-insight. \textbf{}.
@@ -237,11 +291,7 @@ Beyond the technical publications documenting the new software framework and its
 
 \subsubsection*{WP3: Dark Matter mediator searches}
 
-One of the most striking gaps in the knowledge of our universe is the nature of dark matter. All we know about dark matter so far comes from its gravitational and astrophysics observations and simulations; astrophysics also provides some tantalizing hints towards the existence of a new particle~\cite{HooperLeane} that are imperative to pursue~\footnote{Caveat about gravitation}. 
-
-In the past decade, the most popular theoretical explanation for the particle nature of dark matter is that DM is a WIMP. This is both because the relic density of DM can be comprised by WIMPs in its entirety, and because particles behaving like WIMPs are postulated by many theories (e.g. supersymmetry)\cite{AR}. 
-
-The first data taking period of the LHC and first generation of direct detection experiments have constrained the DM WIMP parameter space, but the search for these particles is far from over: their interactions with ordinary matter may not yet be accessible with current experiments. Therefore, collider, direct and indirect detection experiments will continue their flagship WIMP searches into the next decade and beyond, with significant upgrades and new experiments planned~\cite{Astro2020, EuropeanStrategy}. 
+%One of the most striking gaps in the knowledge of our universe is the nature of dark matter. All we know about dark matter so far comes from its gravitational and astrophysics observations and simulations; astrophysics also provides some tantalizing hints towards the existence of a new particle~\cite{HooperLeane} that are imperative to pursue~\footnote{Caveat about gravitation}. 
 
 This WP furthers searches for WIMP models at the LHC using the Trigger Level Analysis technique, in a scenario that is not fully constrained by existing searches, by searching for the visible decays of the particles mediating the interaction between ordinary and dark matter. 
 
@@ -249,15 +299,15 @@ This WP furthers searches for WIMP models at the LHC using the Trigger Level Ana
 \caption{\label{fig:WIMPMediator} \small Sketch of WIMP mediator model \scriptsize \color{red} Improve quality, consider adding DD/ID etc. \color{black}}
 \end{wrapfigure}
 
-WIMP DM can be produced via interactions of SM particles at the LHC through a new force mediator (analogous to the W and Z for the Weak Force), as in Fig.~\ref{fig:WIMPMediator}. Here, quarks within the colliding protons couple to a mediator particle which decays to a pair of WIMPs or, through the same interaction responsible for mediator production, to two jets. 
-This model is used by the majority of DM LHC searches and can reproduce the observed relic density. It can be used as a building block for more complex theories (e.g. those mentioned in WP4) since it can describe the behavior of these processes even with a small number of parameters. 
+%WIMP DM can be produced via interactions of SM particles at the LHC through a new force mediator (analogous to the W and Z for the Weak Force), as in Fig.~\ref{fig:WIMPMediator}. Here, quarks within the colliding protons couple to a mediator particle which decays to a pair of WIMPs or, through the same interaction responsible for mediator production, to two jets. 
+This model is used by the majority of DM LHC searches and can reproduce the observed relic density. 
 
 In WP3, I will search for the decays of mediators of DM in two-jet final states, accompanied by a photon or a jet. I have pioneered LHC searches for this signature in my StG using traditional data taking techniques as a way to look for new particles with lower masses with respect to what was possible in two-jet searches with the Trigger Level Analysis, and in this CoG I will implement the TLA technique in this kind of search, relying on the first ATLAS availability of TLA photons (\textbf{WP1}). This will lead to a major improvement to the sensitivity of particles in a region of phase space where the SM massive force mediators reside ($<$ 400 GeV), that is inaccessible with the same sensitivity by other kinds of searches, and that is motivated by a number of theoretical models beyond WIMP DM~\cite{ALP, HooperLeane}.  
 
 \subsubsection*{WP4: Mapping dark/hidden sectors}
 
-Partly motivated by the constraints set on such particles by first-generation direct searches, and by the analyses I have led in the first phase of the LHC data taking, the DM community has recently started to generalize the flagship searches for these weakly interacting massive particles (WIMPs) by expanding the search program for particles with much weaker interactions with SM particles than what predicted by WIMP theories~\cite{FIMPs}. 
-This is a strong motivation for this project to enable detection of different DM candidates with broad theoretical connections, such as new particles from dark/hidden sectors~\cite{HiddenSector}. 
+%Partly motivated by the constraints set on such particles by first-generation direct searches, and by the analyses I have led in the first phase of the LHC data taking, the DM community has recently started to generalize the flagship searches for these weakly interacting massive particles (WIMPs) by expanding the search program for particles with much weaker interactions with SM particles than what predicted by WIMP theories~\cite{FIMPs}. 
+%This is a strong motivation for this project to enable detection of different DM candidates with broad theoretical connections, such as new particles from dark/hidden sectors~\cite{HiddenSector}. 
 
 While the searches in WP2 are powerful probes of WIMPs, they are not optimally sensitive to DM mediators whose interaction with the SM is even feebler. This is the case for “dark sector” or “hidden valley” models\cite{Zurek}, where the only connection between the SM and the DM particle spectrum occurs via a feebly coupled mediator particle (e.g. a photon-like particle with non-zero mass). Hidden valley models also postulate a multitude of dark sector particles, mirroring the complexity of the SM in a theory similar to the strong force.  
 These "dark Quantum Chromodynamics” (dark QCD) theories, where the fundamental constituents (e.g. dark quarks) fragment into a mixture of visible and invisible particles (dark hadrons), would still give rise to jets of particles. However, the particles forming the jet may be invisible, or only emerge after having partially traversed the detector material. Dark sector jets may also contain very light dark matter mediators that decay into low-energy electrons and muons. 
@@ -315,6 +365,9 @@ I will lead a research team consisting of two postdoctoral researchers and two P
 %The LHC will begin Run III with a commissioning period during %which the software trigger will be exercised. A detector %commissioning paper will be published in Q2 2021, and a %performance paper in Q4 2021 where the new exclusive trigger %selections will be used to highlight the increased efficiency %with respect to Run II. 
 
 
+\section{Conclusions}
+
+%CAN BE USED This proposal will solve this issue by enabling the ATLAS experiment to record data in a new manner. This will permit, for the first time, this wealth of recorded data to be used for early measurements and new dark matter searches, and propagates the results and the developed tools to the broader community. \textbf{Mention the tools somewhere}
 
 \clearpage
 %\addcontentsline{toc}{section}{References}
