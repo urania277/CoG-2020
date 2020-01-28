@@ -1,0 +1,139 @@
+The implementation of TLA and TLA+PEB techniques in the trigger and reconstruction software represents a significant portion of the work in WP1. 
+
+%Project planning
+I am one of the 
+%two (?)
+main authors of the new Run-3 multithreaded HLT software algorithm that selects and writes out partially-built physics objects in the TLA stream. 
+This algorithm is more flexible than its Run-2 counterpart, and can handle any physics object rather than jets only. 
+By the start of this proposal, we will have preliminary results of this algorithm recording TLA jets in cosmic runs, and we will employ it to write out photons, muons and electrons.  
+Initially, the TLA stream will contain both jets and photons to enable analyses in WP3 in a simple manner. 
+Prior to the addition of TLA muons and electrons, we will contribute to the design and implementation of data streams that selectively record one or more objects simultaneously, optimizing the overlap among the streams. 
+This software work will be the starting point for generic algorithms that write out a user-defined combination of TLA and regional raw detector data (TLA+PEB events). 
+
+The TLA and TLA+PEB algorithms are executed if an event is selected by a given L1+HLT trigger chain, in order to reduce the storage and CPU cost of downstream HLT algorithms. 
+We will implement appropriate L1 and HLT triggers that match the requirements of the analyses in WP3 and WP4, still leaving sufficient flexibility for other analysis use cases for further use of the data streams. 
+As a test case, I am currently involved in preliminary work for the implementation and testing of the first jet+photon chains in the trigger menu. 
+
+%While TLA events are already reconstructed at the HLT and only need to be calibrated (see next section), in the case of the TLA+PEB stream we will need to adapt the offline software reconstruction algorithms to be able to cope with receiving partial detector data as input. 
+For TLA+PEB reconstruction, we will take advantage of reconstruction algorithms for tracks and jets at the trigger level, where regional reconstruction has already been used to optimize HLT resources. 
+We will extend existing reconstruction and identification techniques for non-isolated muons and electrons in hadronic environments, implementing techniques similar to those used for detecting muons inside $b-$quark-initiated jets and in Refs.~\ref{}. 
+
+%%%%%%%%%%%%
+
+
+\subsubsection{Optimization of trigger resources}
+
+Given that a large part of the searches in this proposal occurs at the HLT, a resource constrained environment, an important part of the planning prior to data taking is to optimize the CPU and storage resources needed for each of the searches. After this optimization, we can deploy the dedicated trigger chains to select events that will be analyzed using the TLA or the TLA+PEB techniques. 
+
+In the case of TLA, where reconstruction and a near-final calibration of objects need to be performed in the HLT farm, we will estimate the CPU costs of various options using the ATLAS Cost Monitoring framework~\cite{CostMonitoringTim}, prior to data taking in 2021.  
+Preliminary estimates are already available for the dijet+ISR photon analysis based on Run-2 software, indicating that this is expected, but further optimizations will be possible taking advantage of the rewrite of the trigger software and of the improved tracking and accounting for the early LHC running conditions (e.g. low luminosity runs) that will be known over the course of 2020. Using those new estimates, we will adjust the thresholds of the trigger chains and the level of precision of the algorithms used to maximize the sensitivity of the TLA dijet and dijet+ISR searches, based on the studies in Sec.\ref{sub:SensitivityStudies}. 
+ 
+In the case of TLA+PEB searches, the use of resources will have to be balanced between using computing-expensive algorithms at the HLT to be able to drop raw detector data, and delaying running those algorithms until later but allowing for a larger event size due to storing more detector information. The Cost Monitoring framework and test events storing different levels of detector information, informed by the calibration and reconstruction work as well as by the sensitivity studies, will be evaluated for this optimization. 
+
+%%%%%
+
+
+\subsubsection{Data preparation}
+
+
+In this proposal “data preparation” indicates the series of methods and procedures that are needed to transform the raw data into final distributions. For non-standard analyses such as TLA and TLA+PEB, these procedures differ with respect to traditional analysis, as more of this process needs to be customized and controlled by the analysis team. 
+
+In brief, the steps taken in this process are:
+
+\begin{itemize}
+
+\item Data are recorded by ATLAS using the trigger chains designed in Sec.~\ref{sec:OptimizationOfResources}. This is when real-time reconstruction of the data happens in the HLT computing farm, and its outputs are directly sent to the TLA stream;
+\item A small fraction of data are reconstructed and analyzed right away as data taking occurs for monitoring purposes (both centrally and by the analysis team, using the toolkit in Sec.~\ref{sec:Performance})
+\item Raw data, TLA and TLA+PEB data in \textit{bytestream} format are stored on tape at the CERN data center (Tier-0). 
+Raw detector data is reconstructed shortly after having been taken, requiring most of the Tier-0 computing resources. 
+TLA data requires fewer computing resources at this stage, as it already contains reconstructed objects. 
+TLA+PEB data is not reconstructed immediately, but rather transferred to local resources where specialized reconstruction algorithms can be ran, or processed when the LHC is not running~\footnote{This is a procedure I was instrumental in defining and using in Run-1 and Run-2, called “delayed stream” in ATLAS or “data parking” in CMS}. 
+\item Reconstructed data are processed from \textit{bytestream} format to a user-readable data format, called \textit{AOD}.  
+
+\end{itemize}
+
+From this point on, AOD data are sent to computing centers worldwide where user analysis occurs. User analysis includes:
+
+\begin{itemize}
+\item Derivation of the calibration constants and of their uncertainties. This step is generally done centrally by the experiment’s “Combined Performance groups”. We will participate actively to this work that is useful for the entirety of ATLAS, and customize central recommendations wherever needed for the analyses in WP3 and WP4. 
+\item Application of updated calibration constants to the data used for analysis and to the simulation of signal and backgrounds.  
+\item Production of final distributions of the observables needed for the monitoring of calibration performance and for further data analysis. This step may require various iterations, e.g. when updated calibration constants are available. 
+\item Use of final distributions for e.g. background estimation and statistical analysis.
+\end{itemize}
+
+The RECAST framework will be used to steer each of the user analysis steps and automatize them as much as possible. This will allow the analysis to be rerun quickly when more data is added, and it will facilitate further reinterpretation as the full analysis can be rerun just passing a different signal sample through the procedure. 
+
+%%%%
+
+\subsubsection{Calibration}
+
+
+\paragraph{Jet calibration} My team and I have long-standing expertise in the calibration of jets (see e.g. Refs.~\cite{JESPapersIAmAuthorOf} which I have edited or contributed to over the course of my career). 
+Jet calibration requires a multi-step procedure as described in Ref.~\ref{sec:JESPaper}, since they are composite objects whose individual constituents undergo a variety of detector effects that can either add or subtract from the “true” jet energy. 
+
+Not all the calibration steps could be performed at the HLT in Run-2 due to the lack of tracking information. As described in Sec.~\ref{sec:StateOfTheArt}, in Run-3 it is possible to associate information about tracks from the primary vertex to HLT jets.  This is a key point for TLAs sensitive to low-mass DM mediators. Currently, jets with a $p_{\rm{T}}$ below 60 GeV are not used in TLA as the contribution from pile-up cannot be removed efficiently using calorimeter information only. Tracking allows much more efficient subtraction of pile-up energy as well as the rejection of pile-up jets, effectively removing the restriction on the use of low-$p_{\rm{T}}$ trigger jets. Tracking information is also used to improve the resolution of trigger jets~\cite{GSC}, which in turn improves the mass resolution for new hadronically-decaying resonances. 
+With these improvements, the performance of HLT jets in Run-3 will be significantly improved with respect to Run-2. 
+
+%Don’t care about this really because we always recalibrate
+%Calibration constants for jets are derived more than once, with each iteration improving the precision of the jet energy scale. 
+%The “ab-initio” calibration constants applied to HLT jets for first data will be derived using MC only. 
+ 
+Calibration constants for jets are derived more than once, with each iteration improving the precision of the jet energy scale. Improved calibrations can be easily applied to both offline and HLT jets prior to their use in analysis. 
+Nevertheless, using a less precise jet calibration for HLT jets than for jets used in offline analysis leads to \textit{trigger inefficiencies}, as events that should pass the trigger are rejected due to HLT miscalibration. 
+The minimum $p_{\rm{T}}$ threshold applied to jets used in physics analysis is set to correspond to a point where the inefficiency is negligible, and this is generally higher than the HLT threshold. 
+This in turn leads to a substantial waste in terms of events that are recorded but not used for analysis, as shown in Fig.~\ref{fig:wastedRate}. 
+
+An improved calibration allows for improved agreement between the scale of trigger and offline jets, with a trigger efficiency that rises much more rapidly. 
+For this reason, an ambitious aim of this proposal prior to the LHC production data delivery period is to derive calibration constants simultaneously for trigger and offline jets, relying on the alignment of the reconstruction algorithms and on the availability of the same information for both kinds of jets. 
+
+New calibration constants can then be implemented in the HLT prior to data taking, allowing sufficient time for the reoptimization of the trigger menu taking the new event rates into account. In this way, work that benefit TLA will also have a significant impact on the overall ATLAS data taking strategies. 
+
+\paragraph{Calibration and identification of photons and electrons}
+One of the technical innovations of this project is the addition of photons to the TLA stream, so that they can be used for the dijet+ISR photon search in WP2 and WP3.
+
+Photons are not used to construct the main observables for this search, so their identification and calibration is not as critical as for jets. However, as described in the previous section, improving the performance of physics objects at the trigger level benefits the ATLAS physics program as a whole. This work will also enable further analyses to gain from using the TLA technique at a later stage (e.g. searches for low-mass pseudo scalars motivated by Axion-Like Particles~\ref{ALPMariotti}). 
+
+Preliminary studies that I supervised~\ref{Leo Thesis} show that the photon calibration at the trigger level in Run-2 was already well-understood without further optimizations in the energy range used for the searches in WP3. We expect the situation to improve in Run-3, especially since the preliminary studies did not subtract any of the QCD background that can be removed using a combination of calorimeter variables (e.g. as in~\ref{PhotonID,PhotonXSec}). 
+
+In Run-3, the same calorimeter inputs and software will be used to build both HLT and offline photons and electrons, with only minor differences in the calibration of the calorimeter cell energies. The photon calibration at the trigger level is performed in a series of steps that mirrors what is done offline, and the same software will be used to compute data-simulation correction factors~\ref{EgammaTriggerPaper}. The differences in the photon energies due to differences in the calorimeter cell energies will be corrected in this procedure. Control samples of Z bosons decaying to two electrons, one of which radiates a photon, provide a signal-rich testing ground for understanding the performance of HLT photons.  
+
+In this proposal, we plan to investigate whether using tracking for photon at the trigger level would improve their performance. Since jet reconstruction in events used for TLA already requires HLT tracking, the tracks will be available in the event without further CPU costs. Tracking could be used to improve the energy scale of photons that convert into electron-positron pairs in the detector material, and to further reduce hadronic and pile-up backgrounds. Prior to data taking, we will study the impact of improved isolation in the search in the preliminary sensitivity studies (Sec.~\ref{sec:Sensitivity}) and decide whether to make tracking in photons a priority. 
+
+Electrons and photons share most of the reconstruction chain in offline and trigger, with the difference that electrons require an associated tracks and use further information from the inner detector to improve their identification. The HLT electron performance will improve in Run-3, as most of the calibration steps and software are planned to be the same as for offline electrons, and residual differences will be removed using the ratio of HLT to offline electron variables in high-statistics control samples of J/psi and Z bosons decaying to two electrons. 
+In this proposal, we will study the performance of HLT electrons (see Sec.~\ref{sec:Performance}), and extend the photon tracking studies to electrons as well.
+% do we want to say what we will do?
+% with a particular focus in improving the CPU costs of the algorithms used.   
+
+Studies of the reconstruction, calibration and performance of HLT electrons in this proposal have two purposes. 
+Firstly, HLT electrons with offline-like quality can be used for searches and measurements. For example, a search for leptonic decays of dark photons using TLA electrons below the current HLT threshold of 26 GeV could be combined with an equivalent search in the muon channel, constraining this models the sensitivity beyond current results~\ref{LHCbDarkPhoton}. Furthermore, tests of lepton flavor universality at $p_{\mathrm{T}}$ below 10 GeV are an interesting yet challenging avenue for experimental study. 
+Secondly, we will gain experience in the regional reconstruction and calibration of non-isolated electron candidates as done at the HLT, needed for WP4 searches using partial event building. 
+
+\paragraph{Calibration and identification of muons} 
+
+Muon HLT chains are used for a wide variety of purposes and cover a large range of muon transverse momenta, as they are used to trigger low-mass resonances in the B-physics programs as well as high-pT muons for exotic searches. 
+The performance of muons at the trigger level is therefore rather well-understood, and CMS has already a trigger-level (scouting) stream in place used for highly sensitive dark photon searches~\ref{CMSScouting}. In this proposal, we will enable the use of HLT muons for physics analysis in ATLAS in a similar way as described for photons and electrons above. We will rely on existing work  by the muon and B-physics trigger groups in ATLAS for the muon reconstruction and calibration, contribute to the evaluation and monitoring of HLT muon performance, and use these results for WP4 searches. 
+
+\paragraph{Electrons and muons in hadronic environments}
+
+In Run-3, the default jet inputs technique will change, and include tracks for the particle flow technique. 
+We will extend the PFlow framework to include electron- and muon-finding from components that are already present within the jet. 
+We will employ the understanding of calibration of objects to write new algorithms for non-isolated stuff. 
+\textbf{Unfinished}
+
+
+%%%%
+
+
+Autoencoders are widely used as anomaly detection algorithms. They are first trained on large amounts of non-anomalous reference data, and then presented with new data. If the new data does not match the reference data, the reconstruction error will be large and can be used as figure of merit to spot anomalies. 
+
+The advantage of autoencoders over methods such as Principal Component Analysis is that they are able to learn non-linear correlations among the nodes, and that once the network is trained the compression is much faster. 
+The engineering Master’s student working with me in Fall 2019 compressed 2017 TLA jet data in text file format, and demonstrated that a compression of factor of 2 can be achieved with a negligible performance loss (measured to be within the experimental resolution) and the algorithm runs within microseconds. Further work is ongoing prior to the start of the work in this proposal to ensure that the network is still performant and fast when the input and outputs are files in the ATLAS data format, using state-of-the-art computing resources provided by IBM at CERN. 
+
+Tests of autoencoders as anomaly detection algorithms at the LHC are underway by members of the CMS experiment~\cite{CMSAE}, and proof-of-principle tests of autoencoders for compression on a limited number of variables  have been done by LHCb~\cite{ref:lhcb_ae}. 
+This proposal aims to test autoencoders for compression on a large scale for the first time, using the largest jet dataset ever recorded using the TLA technique.
+
+In this project, we will profit from the presence of an experienced software engineer during the first two years, to supervise the work of Master’s students augmenting the \textsc{Realdark} team and perform the optimization of the network prior to the large-scale test, and of the postdoctoral researchers who will further test the compression method in a realistic setup on the ATLAS test-bed machines. 
+
+As a byproduct of the data compression work, the existing network will be re-trained, optimized and used in an anomaly detection algorithm to monitor problems in data taking and calibration as in WP2. It will be tested with different levels of tolerance for anomalies using known problematic data, so that it can be calibrated to match what needed to evaluate the performance of analyses in WP3-4. 
+
+
