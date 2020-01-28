@@ -1,0 +1,21 @@
+The implementation of TLA and TLA+PEB techniques in the trigger and reconstruction software represents a significant portion of the work in WP1. 
+
+Within the context of the migration of the ATLAS software to multithreaded code, ATLAS collaborators have prepared the overall software infrastructure that receives raw trigger and detector data and assembles it into different data streams so that it can subsequently be reconstructed. 
+Traditional data analysis is performed on the \texttt{physics_Main} stream that contains the full event information, while physics objects reconstructed by the HLT as well as partial detector data are placed in other dedicated streams. 
+
+This software infrastructure needs to be customized for different physics objects, and needs to be executed when certain conditions within the event are met. 
+
+I am one of the two main authors of the new software algorithm used for these purposes for TLA. By the start of the work on this proposal, the algorithm will have been tested on jets, and its built-in flexibility will allow its use as the baseline for the implementation of photons, muons and electrons. Within this proposal, I will write an algorithm that allows PEB data to be recorded as well.  
+
+TLA and TLA+PEB data streams are “seeded” by a L1 trigger selection, which triggers the processing of the events selected by the HLT. All events can in principle saved in a TLA stream at this stage, as it was done in Run-2. In Run-3, we will design further selections to be applied to reduce the storage and CPU cost of downstream trigger algorithms. 
+We will implement appropriate L1 triggers and HLT selections that match the requirements of the analyses in WP3 and WP4, still leaving sufficient flexibility for other analysis use cases for further use of the data streams. 
+
+%This needs a study
+%An example of a planned step in this direction is the possibility to change in the baseline choice of the main L1 trigger seeding jet TLAs from Run-2. 
+%In Run-2, the TLA stream contained all events where there was at least one jet above a certain transverse momentum threshold at L1. 
+%The Run-3 TLA stream will contain events where the selection is made on the sum of the transverse momentum of the jets in the event.
+%This choice leads to a similar rate as the Run-2 one, thanks to the planned hardware improvements in the L1 trigger, but allows more flexible searches 
+
+In the case of the TLA+PEB stream, we will also need to adapt the offline software reconstruction algorithms to be able to cope with receiving partial detector data as input. 
+Here, we will take advantage of existing experience in the reconstruction of tracks and calorimeter objects at the trigger level, regional reconstruction is already widely used to optimize HLT resources.
+We will also implement dedicated reconstruction techniques for non-isolated muons and electrons in hadronic environments to be used in WP4 searches, adapting work already done for detecting muons inside $b-$quark initiated jets~\cite{MuonInJet} and  [heavy neutrino]. 
