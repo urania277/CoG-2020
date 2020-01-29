@@ -51,7 +51,7 @@ In WP1, we will:
 
 \end{description}
 
-The objectives of each WP are developed in more detail in the following sections, with intermediate objectives and milestones marked with \textbf{[N]} matching Sec.~\ref{sec:ProjectPlanning}.
+The objectives of each WP are developed in more detail in the following sections. 
 
 % and their interconnections are displayed in \textbf{Fig.~\ref{fig:WPs}}. 
 
@@ -61,41 +61,48 @@ The first objective of WP1 is to \textbf{deploy a comprensive TLA stream in ATLA
 In Run-3, this project will allow offline-quality photons, muons and electrons to be used for physics analysis, in addition to jets. 
 The success of the jet prototype has been demonstrated in Run-2 within my StG. 
 The use of a jet TLA allowed to lower the HLT jet threshold from 420 GeV in traditional analysis to 220 GeV in TLA, bringing orders-of-magnitude improvements in the number of recorded events. 
-A TLA implementation of HLT photons (\textbf{[1]}) will bring significant improvements to the sensitivity of the dijet+ISR DM mediator search. 
+A TLA implementation of HLT photons will bring significant improvements to the sensitivity of the dijet+ISR DM mediator search. 
 The HLT analyzes all photon and electron candidates that have a $p_{\rm{T}}$ above 30 GeV, 
 while only single-photon events with a $p_{\rm{T}}$ above 150 GeV are retained in traditional analysis. 
 The work done and lessons learned in the case of trigger-level jets will be the stepping stone for adding photons to the TLA stream, 
 and doubling the signal acceptance for the dijet+ISR search. 
-The implementation of electrons (\textbf{[2]}) and muons (\textbf{[3]}) in TLA will follow that of photons.
+The implementation of electrons and muons in TLA will follow that of photons.
 % but they will not be a priority for first data as the difference in thresholds between online and offline events is limited. 
 While electron and muon TLAs can still bring significant improvement to e.g. dark photon searches below the Z peak~\cite{ToBeCited}, %CMSDimuon
 the aim of this work is to gain confidence with the challenges of reconstruction and calibration of different physics objects with constrained computing resources. 
 
-As a second objective of WP1, we will \textbf{develop the calibration techniques that are necessary to enable physics analysis} with a reduced HLT-level data format, achieving near-parity with offline performance. 
-With my StG team, I have been responsible for reaching a 1-permille agreement in the jet energy scale of trigger-level jets~\cite{ToBeCited}.%TLAPRL 
-Within \textsc{Realdark} we will ensure that this is still the case for jets as our main observables, as well as for other physics objects. 
-In particular, the performance of trigger-level photons obtained in Run-2~\cite{ToBeCited} %EGamma paper
-and preliminary studies performed by a Lund Bachelor’s student~\cite{ToBeCited}%LeoBachelorThesis
-already give sufficient confidence on the feasibility of a dijet+ISR search, where the resonance is built from the jets and the photon is used as a tag. 
-The main challenge for this search lies in distinguishing low-$p_{\rm{T}}$ hard-scatter jets from pile-up jets, and efficiently subtracting pile-up contributions. 
-In WP1, we will test new pile-up suppression and subtraction techniques using calorimeter information and the newly available tracking information. 
-
-The third objective of WP1 is to \textbf{implement and reconstruct a data stream combining physics objects reconstructed at the trigger level and selected raw information in restricted regions of the detector}, through the combination of the TLA and Partial Event Building (PEB) techniques \textbf{[4]}. 
+The second objective of WP1 is to \textbf{implement and reconstruct a data stream combining physics objects reconstructed at the trigger level and selected raw information in restricted regions of the detector}, through the combination of the TLA and Partial Event Building (PEB) techniques. 
 Deployed for the first time in ATLAS in this proposal, this combination will maintain a sufficiently small data format with an amount of information equivalent to traditional techniques. 
-It will be a necessary ingredient to enable the non-standard reconstructions needed for the searches in WP4, and enable further characterization of potential excesses in a TLA search. 
-The overall outcome of this work will be a technical publication detailing the early Run-3 trigger \textbf{[5]}.  
-
+It will be a necessary ingredient to enable searches in WP4, and can be used for the characterization of any excesses observed in TLA searches. 
+%The overall outcome of this work will be a technical publication detailing the early Run-3 trigger.  
 Preliminary estimates based on the Run-2 $B-$physics PEB %cite muon paper if available
 place the size of TLA+PEB events to less than half of a standard event. 
 To remain advantageous, TLA and PEB must have the minimal possible footprint in terms of both storage and computing power. 
 Joint work betwen WP1 and WP2-4 will ensure that these constraints are met with dedicated trigger selections and selections.   
 The budget of this proposal also includes storage servers that will be used to store this data in 2023-2024. 
 
+As a third objective of WP1, we will \textbf{develop the calibration techniques that are necessary to enable physics analysis} with a reduced HLT-level data format, achieving near-parity with offline performance. 
+With my StG team, I have been responsible for reaching a 1-permille agreement between the jet energy scale of HLT jets with respect to offline jets~\cite{ToBeCited}.%TLAPRL 
+Within \textsc{Realdark} we will ensure that this is still the case for jets (as our main observables for WP3), as well as for other physics objects. 
+\begin{wrapfigure}{L}{0.3\textwidth} 
+\begin{center}
+\includegraphics[width=0.28\textwidth]{figs_B2/efficiencySketch}
+\caption{\color{black}\label{fig:wastedRate} \small Sketch of how trigger inefficiencies caused by a mismatch between the HLT and offline jet energy scales causes events to be recorded but never used for analysis.} %Trigger operation page
+\vskip2pt
+\end{center}
+\end{wrapfigure}
+%\color{red}\textbf{Not sure the following should be here, but it's a good motivation to calibrate HLT objects in case someone isn't convinced. }\color{black} 
+Differences in the energy scale of HLT and offline objects also lead to inefficiencies in the trigger selection, as events that should pass the trigger are rejected due to HLT miscalibrations. 
+As an example, the minimum $p_{\rm{T}}$ threshold applied to jets used in physics analysis is set to be higher than the HLT threshold due to these differences, leading to a substantial waste in terms of events that are recorded but not used for analysis, as shown in Fig.~\ref{fig:wastedRate}. 
+Preliminary studies performed within my StG and with collaborators show that, due to the steeply falling jet energy spectrum, the amount of events that are recorded but never used by offline analysis can be as high as 60\% for certain trigger chains. 
+The application of TLA-motivated improved calibration constants at the HLT during e.g. LHC technical stops (allowing sufficient time for the reoptimization of the trigger menu) will improve the fraction of useful data recorded and impact the overall ATLAS data taking strategies. 
+%In WP1, my team and I will contribute to the simultaneous derivation of calibration constants for trigger and offline jets. 
+
 The fourth objective of WP1 is to \textbf{further reduce the storage load of TLA events (and more generally ATLAS data and simulation) by compressing this data}. 
 TLA data is ideally suited for studies of more aggressive (lossy) compression, since it has already been shown that it can be made robust against loss of information using dedicated calibrations. If compression and decompression algorithms are sufficiently fast (order of milliseconds) they do not significantly increase the amount of resources needed for data processing. 
 The use of machine learning techniques for fast and performant compression (e.g. of images) is widespread: inspired by this, my ATLAS collaborators and I have been supervising Lund University Master’s students in preliminary tests to compress TLA data using deep autoencoders~\cite{ToBeCited}. %cite autoencoders paper 
 When compressing 2017 TLA jet data, these studies demonstrated that a compression of factor better than 2 can be achieved with a negligible performance loss.  
-In this proposal we plan to continue this work and deploy this compression algorithm in a proof-of-principle yet realistic emulation of the trigger system using raw detector data \textbf{[7]}. This is a future-looking study targeting HL-LHC, but if the results are ready to be deployed during the course of Run-3 we will use them for compression of the data recorded with techniques in WP1. Work will be documented in technical publications \textbf{[6,8]}.
+In this proposal we plan to continue this work and deploy this compression algorithm in a proof-of-principle yet realistic emulation of the trigger system using raw detector data. This is a future-looking study targeting HL-LHC, but if the results are ready to be deployed during the course of Run-3 we will use them for compression of the data recorded with techniques in WP1. 
 %Is this also ok with TLA+PEB? 
 
 As the trigger system is crucial for this research program and for the overall ATLAS physics output, the Lund group will maintain a leading role in its operations. 
@@ -105,17 +112,17 @@ The Lund group has already taken responsibility roles in the trigger, with the S
 
 \subsubsection{Objectives of WP2}
 
-The overall objective of WP2 is the commissioning of the new trigger techniques using data at the LHC start-up, and their validation using well-established physics observables. These observables will be used to evaluate the performance of the calibration techniques and take corrective measures if needed, still to be implemented in time for the production phase of the LHC. 
+The overall objective of WP2 is the commissioning of the new trigger techniques using early LHC data, and their validation using well-established physics observables. 
+These observables will be used to evaluate the performance of the calibration techniques and take corrective measures if needed, still to be implemented in time for the production phase of the LHC. 
 
-The first focus of WP2 is the \textbf{determination of the performance of HLT jets and photons [9], and of electrons and muons} at a later date \textbf{[10]}. 
+The first focus of WP2 is the \textbf{determination of the performance of HLT jets and photons, and of electrons and muons} at a later date. 
 Together with our collaborators in ATLAS, we will evaluate the energy scale and the uncertainty of HLT objects using early data and simulation. 
 I am an expert in those topics, having derived the very first iteration of the energy scale uncertainty~\cite{ToBeCited} %Jet cross-section and my thesis 
 and having supervised a number of students on this topic since. 
 Within my StG, we measured the performance of both offline and trigger jets in early Run-2 data using the same metrics and techniques, 
 and we intend to do the same in Run-3 for an impact on all ATLAS early measurements and searches.  
 
-After the trigger jet and photon performance is under control, we will use early data to \textbf{commission the new Run-3 trigger software}. 
-We will measure the dijet mass spectrum using a limited amount of data, inclusively and in association with a photon, first using offline jets and TLA jets, and then using TLA+PEB jets, and compare it to Run-2 data and simulation \textbf{[11]}. 
+We will use \textbf{early data to commission the new Run-3 trigger software} in the HLT dijet mass spectrum. 
 The experience at the beginning of Run-2, where my collaborators and I observed a L1 trigger misconfiguration in early jet data that limited measurements and searches~\cite{Collaboration:2035503}, showed that this is a mandatory validation step to take after upgrades. 
 Subsequently, we will repeat this process for PEB muons and electrons, using the dimuon and dielectron mass peaks from the decay of standard candles ($Z$ and $J/\psi$) \textbf{[10]}. 
 
@@ -128,7 +135,6 @@ Subsequently, we will repeat this process for PEB muons and electrons, using the
 \end{wrapfigure}
 %\vskip5pt
 
-The outcome of this work will be technical performance publications \textbf{[12]}, and contributions to early searches and measurements. 
 If the sensitivity of mediator searches in the dijet mass spectrum improves with respect to Run-2 results, we will publish dijet and dijet+ISR searches using early data.
 As an example, if the LHC delivers more than $\approx$ 18/fb of low-luminosity runs, dijet searches can profit from much lower jet trigger thresholds as shown in Fig.~\ref{fig:triggerLowThreshold} and surpass sensitivity with respect to current searches\footnote{The analysis of NN/fb of low-threshold Run-2 data is undergoing as part of my VR project grant, see Funding ID in Part B1}. 
 
@@ -145,29 +151,24 @@ so that theorists and members of the DM community can test their own signals, as
 The overall objective of WP3 is to use Run-3 LHC data recorded with the TLA technique to search for new resonances in the dijet mass spectrum, motivated by DM mediators.
 In this proposal we will focus on the decays of the mediators to light quarks, but the work in WP1 also enables dedicated searches for mediators decaying preferentially to heavy quarks. 
 
-The main innovation in this WP is the \textbf{dijet+ISR photon search using the TLA technique}, alongside the signature of a gluon ISR\textbf{[13]}. 
+The main innovation in this WP is the \textbf{dijet+ISR photon search using the TLA technique}, alongside the gluon ISR signature. 
 The two channels are complementary: the jet ISR channel is more sensitive due to higher signal rates, but selecting events using photon ISR can reach lower mediator masses. 
 Both channels will be much more sensitive than current Run-2 traditional searches, since the threshold on the associated object is lowered from $\approx$ 400 GeV to $\approx$ 220 GeV and from $\approx$ 150 GeV to $\approx$ 40 GeV for jet and photon cases respectively.  
 In turn, this increases the signal acceptance of more than one order of magnitude for a mediator mass of 250 GeV~\footnote{The background also increases, but since it is estimated using data-driven techniques as explained in~\ref{sec:methodologies} its increase can be managed without a significant loss in sensitivity.}, 
 and it lowers the minimum mediator mass to which these searches are sensitive, as shown e.g. in Ref.~\ref{ToBeCited}.%CMS ISR TLA 
-Throughout WP3, will rely on calibrations and data analysis code developed and tested in WP1 and WP2, in particular on the pile-up suppression techniques for the low-$p_{\mathrm{T}}$ jets that compose the resonance and on the RECAST implementation of the dijet+ISR signature. 
-We will also maintain our involvement in the \textbf{full Run-2 + Run-3 dataset dijet TLA}, providing the WP2 RECAST implementation and working with collaborators.  
-We will combine Run-2 and Run-3 results for a legacy TLA publication covering both LHC runs \textbf{[14]}. 
-Dijet searches are sensitive to a variety of new physics signals (see Sec.~\ref{sub:stateOfTheArtTheory}): code and results from WP3 searches will be input to WP5 for broad dissemination. 
+We will also maintain our involvement in the \textbf{full Run-2 + Run-3 dataset dijet TLA} towards a legacy TLA publication covering both LHC runs.
 
 \subsubsection{Objectives of WP4}
 
 %CD: I have the feeling this is a combination of objectives and methods
 The objective of WP4 is to use Run-3 LHC data recorded with the TLA+PEB technique for dark QCD searches. 
-The work in WP1 and WP2 on the reconstruction, calibration and performance of regional detector data will be the stepping stone for the searches for semi-visible jets and composite jets. 
-In WP4, we will \textbf{extend the study of isolated object performance to busier hadronic environments}, with a focus on the identification of variables and analysis techniques that can be used to minimize the impact of pile-up and reduce SM backgrounds already at the trigger level \textbf{[15]}. 
-Rejecting sufficient QCD background with a pre-selection will allow recording higher rate of TLA+PEB events with lower thresholds with respect to offline searches, with sufficient raw detector information in the region behind the jets. 
-These studies will also give sufficient handles to understand the variability of QCD jets to evaluate search sensitivity and systematic uncertainties.
-They will also provide input to a parallel effort funded by my VR Project Grant focused on anomaly detection techniques.  
-The \textbf{search for semi-visible jets} will be performed first~\textbf{[16]}, after we have reached sufficient understanding of the hadronic jet content. 
-Subsequently, we will augment the standard reconstruction techniques to correctly identify anomalous content (e.g. leptons in jets) needed for the \textbf{composite jet search}~\textbf{[17]}.
-
-An additional advantage of the PEB+TLA data stream selected for these searches is that it enables searches for a wide variety of non-standard jet topologies (e.g. photon-jets~\cite{PhotonJets}, jets containing long-lived particles~\cite{PhotonJets}) at a later date. 
+The most promising parameter space to target will be determined by discussing the theory and broader DM community (WP5), and by using jet measurements to constrain dark QCD phenomenology. 
+The rejection of QCD background at the HLT will be crucial for these searches, as it will allow recording higher signal rates in TLA+PEB events. 
+The \textbf{search for semi-visible jets} will be performed first, adapting calibration and performance studies in WP1 and WP2 and analysis techniques in WP3 to this signature. 
+Subsequently, we will augment the standard reconstruction techniques in WP2 to correctly identify anomalous content (e.g. leptons in jets) needed for the \textbf{composite jet search}.
+An additional advantage of the PEB+TLA data stream selected for these searches is that it enables searches for a wide variety of non-standard jet topologies (e.g. photon-jets~\cite{ToBeCited}, %PhotonJets
+jets containing long-lived particles~\cite{ToBeCited}) %Long lived jets
+at a later date. 
 This will have an impact especially after the end of this proposal when the long LHC shutdown is foreseen before HL-LHC and data already taken will be analyzed in further detail. 
 
 \subsubsection{Objectives of WP5}

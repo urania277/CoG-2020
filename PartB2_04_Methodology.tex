@@ -1,8 +1,6 @@
 The work within \textsc{Realdark} proposal builds novel data acquisition and selection tools and techniques in WP1 and applies them to obtain the physics results in WP2-4. This modus operandi follows my proven track record of bringing challenging improvements to the data taking system and to the combined performance of the entire experiment, and successfully exploiting them for world-best physics measurements and searches. 
-
 Sec.~\ref{sub:CommonMethodsTechnicalTools} and Sec.~\ref{sub:CommonMethodsAnalysisTools} describe the common methodologies required for reaching the objectives of the WPs described in Sec.~\ref{sub:objectives}. 
 Their description follows logically the procedures designed to record, treat and analyze large amounts of raw data towards the dissemination of results that can shed light on the particle nature of DM. Specific methodologies are described in Sec.~\ref{sub:SpecificMethodsCompression}. 
-
 How all these methods fit together in the project planning is described in Sec.~\ref{sub:ProjectPlanning}.  
 
 \subsection{Methodologies: technical tools}
@@ -17,11 +15,11 @@ and transform these data into physics quantities to be used for the searches in 
 
 \textbf{From LHC collisions to storage} The ATLAS core software infrastructure receives raw trigger and detector information from collisions and assembles it into different data streams. 
 Full events that passed the selections determined by the ATLAS trigger menu are placed in the \texttt{physics\_Main} stream for subsequent reconstruction, while partially-built detector data (including TLA and TLA+PEB objects) need to be selected by dedicated software algorithms and placed in specific data streams. 
-In WP1, I will rely on my expertise as one of the main authors of the TLA framework in Run-2, and deploy new multithreaded software algorithms that can write out jets, photons, muons and electrons, as well as user-defined partial detector information. 
-These algorithms are executed if an event is selected by a given L1+HLT trigger "\textit{seed}" chain, in order to reduce the storage and CPU cost of downstream HLT algorithms. 
-Given that a large part of the searches in this proposal occurs at the HLT, a resource constrained environment, an important part of the planning prior to data taking is to optimize the CPU and storage resources needed for each of the planned data streams, based on the sensitivity of the searches in WP2-4. 
-We will compare storage and CPU costs~\cite{ToBeCited} % CostMonitoring talk by Tim 
-of different seed chain options, to make an informed decision for the TLA and TLA+PEB streams. 
+In WP1, the team will rely on my expertise as one of the main authors of the TLA framework in Run-2, and deploy new multithreaded software algorithms that can write out jets, photons, muons and electrons, as well as user-defined partial detector information. 
+These algorithms are executed if an event is selected by a given L1+HLT trigger "\textit{seed}" chain. 
+%, in order to reduce the storage and CPU cost of downstream HLT algorithms. 
+Given that a large part of the searches in this proposal occurs at the HLT, a resource constrained environment, an important part of the planning prior to data taking is to optimize the CPU and storage resources needed for each of the planned data streams~\cite{ToBeCited}, % CostMonitoring talk by Tim 
+and determine the optimal stream content and seed chains for the searches in WP2-4. 
 
 \textbf{Reconstruction} Full events are passed through the ATLAS reconstruction software, so that raw detector data can be reconstructed into final physics objects (muons, electrons, jets...). 
 While TLA events are already reconstructed within the HLT software using inputs and algorithms that are as close as possible to offline, 
@@ -45,20 +43,6 @@ We expect a similar situation in Run-3 for photons and electrons alike, given th
 Identification and calibration of HLT muons will also rely on the offline procedures (reaching muon momenta as low as 3 GeV~\cite{ToBeCited}) %muon performance paper
 and additional corrections from $Z\rightarrow / J/\psi \rightarrow \mu\mu$ events. 
 
-\begin{wrapfigure}{L}{0.3\textwidth} 
-\begin{center}
-\includegraphics[width=0.28\textwidth]{figs_B2/efficiencySketch}
-\caption{\color{black}\label{fig:wastedRate} \small Sketch of how trigger inefficiencies caused by a mismatch between the HLT and offline jet energy scales causes events to be recorded but never used for analysis.} %Trigger operation page
-\vskip2pt
-\end{center}
-\end{wrapfigure}
-\color{red}\textbf{Not sure the following should be here, but it's a good motivation to calibrate HLT objects in case someone isn't convinced. }\color{black} 
-Differences in the energy scale of HLT and offline objects also lead to inefficiencies in the trigger selection, as events that should pass the trigger are rejected due to HLT miscalibrations. 
-As an example, the minimum $p_{\rm{T}}$ threshold applied to jets used in physics analysis is set to be higher than the HLT threshold due to these differences, leading to a substantial waste in terms of events that are recorded but not used for analysis, as shown in Fig.~\ref{fig:wastedRate}. 
-Preliminary studies performed within my StG and with collaborators show that, due to the steeply falling jet energy spectrum, the amount of events that are recorded but never used by offline analysis can be as high as 60\% for certain trigger chains. 
-The application of TLA-motivated improved calibration constants at the HLT during e.g. LHC technical stops (allowing sufficient time for the reoptimization of the trigger menu) will improve the fraction of useful data recorded and impact the overall ATLAS data taking strategies. 
-%In WP1, my team and I will contribute to the simultaneous derivation of calibration constants for trigger and offline jets. 
-
 \textbf{Performance evaluation} Once the reconstruction and calibration algorithms are in place, their performance needs to be evaluated in data using figures of merit for probe objects such as response and resolution, tested against well-measured references. 
 In WP2, we will prepare a comprehensive software toolkit for quantitative comparisons between physics objects reconstructed in TLA, TLA+PEB and offline, using automated problem detection techniques. 
 This toolkit will be deployed online, so that HLT problems can be corrected as early as possible, and used offline to determine the performance of HLT objects.  
@@ -72,7 +56,6 @@ For this reason, this proposal investigates using deep autoencoders for lossy da
 Preliminary studies by a Lund engineering (LTH) student that I co-supervised have shown that compressing data using deep autoencoders could lead to large space savings for TLA data and ATLAS data and simulation as a whole, leading to compression factors of 2 with negligible performance loss in TLA data~\cite{ToBeCited}. %Eric's thesis 
 The advantage of autoencoders over methods such as Principal Component Analysis is that they are able to learn non-linear correlations among the nodes, 
 and that, once the network is trained, the compression is fast (order 2-5 $\mu s$), making them a good candidate to be used in the HLT (latency $\approx$ 300 $\mu$ s). 
-Within this proposal, I will supervise Master's students that continue studying performance, implementation and characteristics of such networks, towards a test implementation in system that emulates a HLT computing node. 
 
 %Autoencoders are neural network that implement an approximation to the identity $f(x) \approx x$ using hidden layers with a smaller dimensionality with respect to input and output layers. 
 %The smallest-dimensionality hidden layer contains a compressed representation of of the original information. 
@@ -152,40 +135,8 @@ Identifying the source of the excess and the nature of the resonance (e.g. disti
 will become an outmost priority for the team~\footnote{This may lead to changes in the and work sharing of this project, as the entire team will be working first-hand with the tools and datasets employed up to that point for a result that has a world-wide impact on the field.} and for the Collaboration. 
 In this case, the results of astrophysics and non-LHC experiments will be crucial to ascertain whether these results can be attributed to processes involving DM.
 
-\subsection{Project planning}
-\label{sub:ProjectPlanning}
-
-
-%%%%%%BEGIN TO COMPILE UP TO HERE 
-\clearpage
-\begingroup
-    \setboolean{inbibliography}{true}
-\bibliographystyle{LHCb}
-    \linespread{0.9}\selectfont
-\bibliography{researchrefs}
-\endgroup
-%{\bf Note:} The PI is an author of Refs.~\cite{LHCb-PUB-2014-027,Bourgeois:2018nvk} and all the LHCb collaboration papers, with particular contributions to  Refs.~\cite{Aaij:2014jba,CERN-LHCC-2014-016,Aaij:2013mga,Aaij:2014ywt,LHCb-PUB-2014-040,Aaij:2016kjh,Aaij:2017lff}.
-%The PI is acknowledged in Ref.~\cite{Jung:2014jfa}.
-\end{document}  
-%%%%%%END TO COMPILE UP TO HERE 
-
 %This needs a study
 %An example of a planned step in this direction is the possibility to change in the baseline choice of the main L1 trigger seeding jet TLAs from Run-2. 
 %In Run-2, the TLA stream contained all events where there was at least one jet above a certain transverse momentum threshold at L1. 
 %The Run-3 TLA stream will contain events where the selection is made on the sum of the transverse momentum of the jets in the event.
 %This choice leads to a similar rate as the Run-2 one, thanks to the planned hardware improvements in the L1 trigger, but allows more flexible searches 
-
-
-
-\subsubsection{Performance evaluation}
-\ref{sec:Performance}
-
-
-
-\subsubsection{Data compression}
-
-
-
-
-%%%%
-%%%%

@@ -1,22 +1,158 @@
-The implementation of TLA and TLA+PEB techniques in the trigger and reconstruction software represents a significant portion of the work in WP1. 
+
+The research team of \textsc{Realdark} that I will lead as a PI is composed by two postdoctoral researchers, two PhD students and one software engineer.
+%Shift this to Resources
+The postdoctoral researchers (PD1 and PD2) will be employed for the entirety of the project. 
+The PhD students (PhD1 and PhD2) will work within \textsc{Realdark} for their 4-year thesis period. 
+Each of the postdocs will work with one of the PhD students on the two physics objectives of WP3 and WP4 respectively, and related technical and commissioning tasks in WP1 and WP2. 
+As PI, I will oversee all tasks in the project with day-to-day supervision and regular meetings, and have a hands-on involvement in more complex tasks as specified below. 
+%allowing an effective sharing of supervision tasks. 
+The software engineer will have a two-year contract at the beginning of the project to ensure the feasibility of the more software-intensive tasks in WP1. 
+%end of shift to resources
+Fig.~\ref{fig:gantt} provides a project planning schedule, including the breakdown of the work between the team members and intermediate milestones and deliverables marked with \textbf{[N]}. 
+It has been prepared using the OmniPlan software~\ref{ToBeCited},%Omniplan 
+taking into account the interdependencies between the WPs and 
+scheduling the work allocation in a way that ensures the feasibility of this ambitious project without overcommitting the team members. 
+
+\subsection{WP1: Real-time analysis and data compression in ATLAS}
+
+%The software implementation of TLA and TLA+PEB techniques and the calibration of physics objects recorded using these techniques represents a significant portion of the work in WP1. 
+\textbf{TLA software implementation and calibration of trigger objects} As a preliminary input to this proposal, I have started working on a new Run-3 multithreaded HLT software algorithm that selects and writes out partially-built physics objects in the TLA stream. 
+This algorithm will be more flexible than its Run-2 counterpart, and can handle any physics objects. 
+By the start of this proposal, we will have preliminary results of the use of this algorithm on TLA jets. 
+In 2021, PI, PD1, PhD1 and the software engineer
+will work on the readiness of the core software for photons and jets, on commissioning with cosmic data, and on their subsequent calibration \textbf{[1]}
+The experience gained with photons will be used by P1 and PhD1 to implement and commission TLA electrons as well \textbf{[2]}, while PD2 and PhD2 will focus on TLA muons \textbf{[3]}. 
+Initially, the TLA stream will contain both jets and photons to enable analyses in WP3 in a simple manner. 
+As part of this work, we will contribute to the design and implementation of seed trigger chains and data streams that selectively record one or more TLA objects simultaneously, optimizing according to the use cases in WP3 and WP4. 
+The finalized TLA software streams will be ready in Q3 2022, allowing sufficient time for validation with data prior to the LHC production period. \\
+\textbf{PEB software implementation and reconstruction} Prior to the implementation of TLA muons (Q1-Q2 2021), PD2 and PhD2 will deploy the core software to write out user-defined regions of the detector together with TLA objects, 
+%based on the Run-2 example for muons~\cite{ToBeCited}  and 
+taking into account the optimization between CPU and storage costs mentioned in Sec.~\ref{subsub:TriggerRecoSoftware}. 
+%strike a balance between the use of computing-expensive HLT algorithms to be able to drop raw detector data, and delaying running those algorithms until later at the cost of a larger event size. 
+%The Cost Monitoring framework and test events storing different levels of detector information, informed by the calibration and reconstruction work as well as by the sensitivity studies, will be evaluated for this optimization. 
+Subsequently, they will test the TLA+PEB implementation on early data and work together with the software engineer on the implementation of dedicated reconstruction algorithms for partial detector input, taking advantage of the experience gained with TLA electrons and muons~\textbf{[4]}. 
+At the end of this work, expected for Q3 2022, we will publish a technical paper describing the combined TLA and PEB implementation within the ATLAS trigger (Q4 2022) \textbf{[5]}. \\
+\textbf{Identification and calibration of TLA jets, photons, electrons and muons} Throughout 2021 and 2022, PhDs and postdocs will contribute to the algorithms for the identification and calibration of the HLT physics objects that they have implemented in TLA and PEB. 
+In this proposal, we will focus on new HLT pile-up suppression techniques using calorimeter information against techniques using tracking information. 
+The performance of this calibration will be studied in WP2 and documented in the technical papers in \textbf{[5]} and \textbf{[10]}.\\
+Together with the performance studies, this work will be part of the students' ATLAS authorship qualification task.
+\textbf{Data compression with autoencoders} Throughout the course of this proposal, the software engineer and I will supervise Master's students that study the performance, implementation and characteristics of autoencoder networks used to compress ATLAS data. 
+The outcome of this work will be a test implementation in system that emulates a HLT computing node, preparing the ground for an implementation in the HL-LHC trigger and computing system~\textbf{[7]}. 
+This work will be documented in technical publications, detailing preliminary and final work \textbf{[6,8]}.
+
+\subsection{WP2: Commissioning the upgraded ATLAS trigger with physics}
+
+\textbf{HLT object performance} Over the course of the early LHC data taking (2021-2022), 
+PD1 and PhD1 will determine the performance of HLT jets and photons with early data, while PD2 and PhD2 will focus on the performance of HLT and PEB electrons and muons. \\
+\textbf{Searches and measurements of the dijet mass spectrum} After the trigger jet and photon performance is well understood, PD1 and PhD1 and I will measure the dijet mass spectrum using a limited amount of data. 
+We will select inclusive dijet events, and events where dijets produced in association with a photon, first using offline jets and TLA jets, and then using TLA+PEB jets, for comparison with simulation and Run-2 data. 
+This will lead to a prototype of the dijet and dijet+ISR TLA searches within the RECAST framework~\textbf{[9]}.   
+PD2 and PhD2 will repeat this exercise with electrons and muons in a measurement of the $Z$ and $J/\psi$ peaks, 
+to be included with the jet and photon performance work in a dedicated technical publication~\textbf{[10]}. 
+If the LHC provides a dataset that surpasses the Run-2 sensitivity for either dijet and dijet+ISR searches, 
+PD1, PhD1 and I will work with ATLAS collaborators towards publication of the result of these searches in Q2 2023~\textbf{[11]}.
+
+\subsection{WP3: Dark matter mediator searches}
+
+WIMP mediator searches and the interpretation of their results will be the main physics focus of PD1 and PhD1.
+\textbf{Dijet+ISR TLA search} This search relies on calibrations and data analysis code developed and tested in WP1 and WP2.
+%PD1 and PhD1 will perform the sensitivity and literature studies to deploy trigger chains seeding these TLAs prior to 2022, 
+PD1 and PhD1 will refine the WP1 jet calibration for a high-statistics search (e.g. for pile-up suppression suppression techniques for the low-$p_{\mathrm{T}}$ resonance jets) and repeat the performance studies from WP2 with a larger dataset. 
+They will take advantage of WP2 RECAST implementation of the dijet+ISR mass spectrum to estimate backgrounds and produce inputs to run the statistical analysis,
+and collaborate with colleagues from OSU, Oregon and other ATLAS institutes for two publications, one using the first part of the dataset where the Run-2 sensitivity is surpassed~\textbf{[12]} in 2024, and one using the full Run-2 dataset~\textbf{[13]} in Q2 2025.\\ 
+\textbf{Dijet TLA search} PI and PD1 will remain involved in the full ATLAS Run-3 TLA with an advisory role. 
+We will provide the WP2 RECAST implementation, and combine Run-2 and Run-3 results for a legacy TLA publication covering both LHC runs in Q3 2025 \textbf{[14]}. 
+Dijet searches are sensitive to a variety of new physics signals (see Sec.~\ref{sub:stateOfTheArtTheory}): code and results from WP3 searches will be input to WP5 for broad dissemination. 
+
+\subsection{WP4: Dark sector searches}
+
+The searches in WP4 and the interpretation of their results will be the main physics focus of PD2 and PhD2. 
+Both searches in WP4 will require preliminary work to decide the optimal parameter space to target, described in WP5 below. 
+
+\textbf{Semi-visible jet search}  \\
+
+\textbf{Composite jet search} 
+
+%\textbf{Defining search targets} 
+%Through workshops and discussions with the theory community, PD2 
+%\textbf{Performance studies} During Q, the performance studies in WP2 will be extended to muons and electrons in busier hadronic environments, with a focus on the identification of variables and analysis techniques that can be used to minimize the impact of pile-up and reduce SM backgrounds already at the trigger level. 
+
+
+%%%%%%BEGIN TO COMPILE UP TO HERE 
+\clearpage
+\begingroup
+    \setboolean{inbibliography}{true}
+\bibliographystyle{LHCb}
+    \linespread{0.9}\selectfont
+\bibliography{researchrefs}
+\endgroup
+%{\bf Note:} The PI is an author of Refs.~\cite{LHCb-PUB-2014-027,Bourgeois:2018nvk} and all the LHCb collaboration papers, with particular contributions to  Refs.~\cite{Aaij:2014jba,CERN-LHCC-2014-016,Aaij:2013mga,Aaij:2014ywt,LHCb-PUB-2014-040,Aaij:2016kjh,Aaij:2017lff}.
+%The PI is acknowledged in Ref.~\cite{Jung:2014jfa}.
+\end{document}  
+%%%%%%END TO COMPILE UP TO HERE 
+
+These studies will also give sufficient handles to understand the variability of QCD jets to evaluate search sensitivity and systematic uncertainties.
+They will also provide input to a parallel effort funded by my VR Project Grant focused on anomaly detection techniques.  
+
+
+
+
+ with lower thresholds with respect to offline searches, with sufficient raw detector information in the region behind the jets. 
+ 
+
+
+Designing an HLT pre-selection that 
+Rejecting sufficient QCD background with an HLT pre-selection will 
+
+Preliminary work to understand the performance 
+
+
+
+
+
+PD2 and PhD2 will focus on dark sector searches, using data recorded with the TLA+PEB technique for dark QCD searches. 
+
+The work in WP1 and WP2 on the reconstruction, calibration and performance of regional detector data will be the stepping stone for the searches for semi-visible jets and composite jets. 
+In WP4, we will \textbf{extend the study of isolated object performance to busier hadronic environments}, with a focus on the identification of variables and analysis techniques that can be used to minimize the impact of pile-up and reduce SM backgrounds already at the trigger level \textbf{[15]}. 
+Rejecting sufficient QCD background with a pre-selection will allow recording higher rate of TLA+PEB events with lower thresholds with respect to offline searches, with sufficient raw detector information in the region behind the jets. 
+These studies will also give sufficient handles to understand the variability of QCD jets to evaluate search sensitivity and systematic uncertainties.
+They will also provide input to a parallel effort funded by my VR Project Grant focused on anomaly detection techniques.  
+The \textbf{search for semi-visible jets} will be performed first~\textbf{[16]}, after we have reached sufficient understanding of the hadronic jet content. 
+Subsequently, we will augment the standard reconstruction techniques to correctly identify anomalous content (e.g. leptons in jets) needed for the \textbf{composite jet search}~\textbf{[17]}.
+
+An additional advantage of the PEB+TLA data stream selected for these searches is that it enables searches for a wide variety of non-standard jet topologies (e.g. photon-jets~\cite{PhotonJets}, jets containing long-lived particles~\cite{PhotonJets}) at a later date. 
+This will have an impact especially after the end of this proposal when the long LHC shutdown is foreseen before HL-LHC and data already taken will be analyzed in further detail. 
+
+
+\subsection{WP5: Dissemination and synergies}
+\textbf{Organization of workshops} 
+\textbf{Dissemination of results and summary plots} 
+\textbf{Sharing of tools} 
+
+
+%%%%%%BEGIN TO COMPILE UP TO HERE 
+\clearpage
+\begingroup
+    \setboolean{inbibliography}{true}
+\bibliographystyle{LHCb}
+    \linespread{0.9}\selectfont
+\bibliography{researchrefs}
+\endgroup
+%{\bf Note:} The PI is an author of Refs.~\cite{LHCb-PUB-2014-027,Bourgeois:2018nvk} and all the LHCb collaboration papers, with particular contributions to  Refs.~\cite{Aaij:2014jba,CERN-LHCC-2014-016,Aaij:2013mga,Aaij:2014ywt,LHCb-PUB-2014-040,Aaij:2016kjh,Aaij:2017lff}.
+%The PI is acknowledged in Ref.~\cite{Jung:2014jfa}.
+\end{document}  
+%%%%%%END TO COMPILE UP TO HERE 
+
+
+%In particular, the performance of trigger-level photons obtained in Run-2~\cite{ToBeCited} %EGamma paper
+%and preliminary studies performed by a Lund Bachelor’s student~\cite{ToBeCited}%LeoBachelorThesis
+%already give sufficient confidence on the feasibility of a dijet+ISR search, where the resonance is built from the jets and the photon is used as a tag. 
+%The main challenge for this search lies in distinguishing low-$p_{\rm{T}}$ hard-scatter jets from pile-up jets, and efficiently subtracting pile-up contributions. 
 
 %Project planning
-I am one of the 
-%two (?)
-main authors of the new Run-3 multithreaded HLT software algorithm that selects and writes out partially-built physics objects in the TLA stream. 
-This algorithm is more flexible than its Run-2 counterpart, and can handle any physics object rather than jets only. 
-By the start of this proposal, we will have preliminary results of this algorithm recording TLA jets in cosmic runs, and we will employ it to write out photons, muons and electrons.  
-Initially, the TLA stream will contain both jets and photons to enable analyses in WP3 in a simple manner. 
-Prior to the addition of TLA muons and electrons, we will contribute to the design and implementation of data streams that selectively record one or more objects simultaneously, optimizing the overlap among the streams. 
-This software work will be the starting point for generic algorithms that write out a user-defined combination of TLA and regional raw detector data (TLA+PEB events). 
 
-The TLA and TLA+PEB algorithms are executed if an event is selected by a given L1+HLT trigger chain, in order to reduce the storage and CPU cost of downstream HLT algorithms. 
-We will implement appropriate L1 and HLT triggers that match the requirements of the analyses in WP3 and WP4, still leaving sufficient flexibility for other analysis use cases for further use of the data streams. 
-As a test case, I am currently involved in preliminary work for the implementation and testing of the first jet+photon chains in the trigger menu. 
 
 %While TLA events are already reconstructed at the HLT and only need to be calibrated (see next section), in the case of the TLA+PEB stream we will need to adapt the offline software reconstruction algorithms to be able to cope with receiving partial detector data as input. 
-For TLA+PEB reconstruction, we will take advantage of reconstruction algorithms for tracks and jets at the trigger level, where regional reconstruction has already been used to optimize HLT resources. 
-We will extend existing reconstruction and identification techniques for non-isolated muons and electrons in hadronic environments, implementing techniques similar to those used for detecting muons inside $b-$quark-initiated jets and in Refs.~\ref{}. 
 
 %%%%%%%%%%%%
 
@@ -28,7 +164,6 @@ Given that a large part of the searches in this proposal occurs at the HLT, a re
 In the case of TLA, where reconstruction and a near-final calibration of objects need to be performed in the HLT farm, we will estimate the CPU costs of various options using the ATLAS Cost Monitoring framework~\cite{CostMonitoringTim}, prior to data taking in 2021.  
 Preliminary estimates are already available for the dijet+ISR photon analysis based on Run-2 software, indicating that this is expected, but further optimizations will be possible taking advantage of the rewrite of the trigger software and of the improved tracking and accounting for the early LHC running conditions (e.g. low luminosity runs) that will be known over the course of 2020. Using those new estimates, we will adjust the thresholds of the trigger chains and the level of precision of the algorithms used to maximize the sensitivity of the TLA dijet and dijet+ISR searches, based on the studies in Sec.\ref{sub:SensitivityStudies}. 
  
-In the case of TLA+PEB searches, the use of resources will have to be balanced between using computing-expensive algorithms at the HLT to be able to drop raw detector data, and delaying running those algorithms until later but allowing for a larger event size due to storing more detector information. The Cost Monitoring framework and test events storing different levels of detector information, informed by the calibration and reconstruction work as well as by the sensitivity studies, will be evaluated for this optimization. 
 
 %%%%%
 
