@@ -55,7 +55,7 @@ An example is a class of models including mediator-like particles that do not di
 \\
 \indent
 The symmetries of the SM can be used as guiding principle to construct the particle spectrum and the interactions of the new dark sector. 
-A \textbf{new $U(1)$ symmetry} introduces a portal particle called \textit{dark photon}~\cite{Holdom:1985ag,Curtin:2014cca}.   
+A \textbf{new U(1) symmetry} introduces a portal particle called \textit{dark photon}~\cite{Holdom:1985ag,Curtin:2014cca}.   
 The dark photon mixes with the ordinary photon, leading to rare but observable signatures from its decays to SM particles. 
 This model is currently used as a benchmark for many non-LHC experiments and for future facilities~\cite{Strategy:2019vxc}. 
 %Why according to Shaposhnikov (who motivated benchmarks): doesn't quite convince me. 
@@ -120,10 +120,13 @@ The ATLAS trigger is undergoing significant upgrades for Run-3~\cite{Aad:1602235
 The ATLAS L1 trigger will be equipped with new electronic boards that allow for a more granular and efficient first-pass selection. 
 As part of my StG, my team has developed control software for the board which will permit using information from the entire hadronic calorimeter at once (gFEX)~\cite{Tang:2016ded}, 
 and contributed to the software for the new jet board (jFEX)~\cite{Bauss:2018nde}. 
-The computing power of the ATLAS HLT farm will increase significantly, and optimized trigger tracking algorithms will be available~\footnote{See 
-Ref.~\cite{ATL-PHYS-PUB-2019-041} %Elsing 
+Furthermore, the HLT software is being rewritten as a multithreaded framework~\cite{Bielski:2674286} and the computing power of the ATLAS HLT farm will increase significantly. 
+The combination of optimized algorithms\footnote{See Ref.~\cite{ATL-PHYS-PUB-2019-041} %Elsing 
 for an example of the improvements from optimizing tracking algorithms on simulated data containing 200 simultaneous collisions for the ATLAS high luminosity upgrade}. 
-This will enable a more widespread availability of tracking at the trigger level, allowing to reject backgrounds from simultaneous proton-proton interactions (pile-up). Testing and exploiting these upgrades is an integral part of this proposal. 
+and increased HLT capacity will allow a more widespread availability of tracking information at the trigger level with respect to Run-2. 
+This information is crucial to reject backgrounds from simultaneous proton-proton interactions (pile-up), which in turn is a limiting factor for the sensitivity of LHC DM searches. 
+Moreover, for the first time in ATLAS, it will be possible to write out object reconstructed directly at the HLT in combination with selected raw detector information in regions of interest with a technique called Partial Event Building, or PEB, currently only used for muons calibration and $B-$physics. 
+Testing and exploiting these upgrades is an integral part of this proposal. 
 
 %Among those, a full overhaul of the electronic boards that read in calorimeter information is foreseen. 
 %The board that reads information from the electromagnetic calorimeters (eFEX) will allow for more refined distinction between electrons and photons already at L1. 
@@ -166,29 +169,28 @@ Here, the resonance recoils against a high-p$_{\rm{T}}$ photon or gluon radiated
 The requirement of an energetic object at the HLT reduces the background and allows to reach lower mediator masses, 
 but limits the signal acceptance. 
 Lowering the threshold on the ISR objects would increase the mass coverage and signal acceptance.
-This motivates combining the TLA technique for the dijet+ISR signature for the first time in ATLAS, as planned for WP3. 
+This motivates combining the TLA technique for the dijet+ISR signature for the first time in ATLAS\footnote{The CMS search in Ref.~\cite{ToBeCited} %CMS dijet+ISR
+combines the dijet+ISR signature with the Scouting technique, but it does not surpass the sensitivity of the offline ATLAS search as it is limited to a limited Run-2 dataset with special triggers.}, as planned for WP3. 
 \\
 \indent
-The combination of ATLAS and CMS dijet+ISR searches~\cite{ToBeCited}\footnote{The CMS search in Ref.~\cite{ToBeCited} %CMS dijet+ISR
-combines the dijet+ISR signature with the Scouting technique, but it does not surpass the sensitivity of the offline ATLAS search as it is limited to a limited Run-2 dataset with special triggers.}
-with searches exclusively looking for resonances decaying in heavy flavor quarks~\cite{ToBeCited} %di-b
-and searches where the resonance is boosted~\cite{ToBeCited} %CMS and ATLAS dijet ISR boosted
+The combination of ATLAS and CMS low-mass dijet resonance searches (TLA/Scouting and dijet+ISR searches)~\cite{ToBeCited}
+including searches targeting resonances decaying in heavy flavor quarks~\cite{ToBeCited} %di-b
+and where the resonance is boosted~\cite{ToBeCited} %CMS and ATLAS dijet ISR boosted
 improves the sensitivity of LHC experiments but still leaves significant room for discovery around the EW scale. 
 This is a region where the weak force mediators reside, and that is favored in WIMP and non-WIMP $Z’$ models fitting ID excesses~\cite{ToBeCited}. %Hooper&Leane  
 To date, searches in this region are only sensitive to coupling strengths well above those of the weak force. 
-Pushing the collider sensitivity to be comparable to DD in this region will help validate and characterize a possible DM interpretation of these ID results~\cite{Ellis:2018xal,Kang:2020huh}.
+Pushing the collider sensitivity to be comparable to DD in this region will help validate and characterize a possible DM interpretation of these results~\cite{Ellis:2018xal,Kang:2020huh}.
 
-\color{red}\textbf{Rearranged and shortened up to here}\color{black}
-%%UP TO HERE BUT NOT YET ALL REFS
+\color{red}\textbf{TODO: References done up to here}\color{black}
 
 \begin{wrapfigure}{R}{0.5\textwidth} 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{figs_B2/darksectorsketch.png}
-\caption{Sketches of search signatures in this proposal. \color{red}\textbf{This will be a sketch in powerpoint indicating what is covered and what is uncovered}\color{black}\label{fig:darksectorssketch} }
-\vskip2pt
+\includegraphics[width=0.5\textwidth]{figs_B2/DarkSectorSketch}
+\caption{Sketches of covered and uncovered search signatures for dark jets. \color{red}\textbf{TODO: Add references to picture}\color{black}
+\label{fig:darksectorssketch} }
 \end{center}
 \end{wrapfigure}
-\vskip5pt
+\vskip-10pt
 
 %Alternative text because Dark QCD is sometimes strongly interacting?
 %Partly motivated by the constraints set on such particles by first-generation direct searches and by results obtained in the first phase of the LHC data taking, the DM community has recently started to generalize the flagship searches for these weakly interacting massive particles (WIMPs) by expanding the search program for particles with either stronger or much weaker interactions with SM particles than what predicted by WIMP theories~\cite{FIMPs, StronglyInteracting}, or much lighter particles~\cite{DarkPhotons, ALPs}, or much more massive objects (e.g. Primordial Black Holes)~\cite{GW paper}~\footnote{Such scenarios can also fit the measurements of the relic density of dark matter through different mechanisms~\cite{FreezeIn}}. 
@@ -200,39 +202,31 @@ Hidden sector models generally imply more difficult detector signatures than mor
 An example are particles with a long lifetime, whose decays away from the interaction point are not suited to standard reconstruction techniques~\cite{ToBeCited}.
 Unusual features, such as displaced decays or unexpected particles within the busy environment of a hadronic jet, are too expensive to reconstruct at the HLT and require specific data formats. %DRAW
 This forces searches to rely on triggers that let large amounts of background through (e.g. missing transverse energy or purely hadronic triggers) and subsequently induce limitations on the signal rates, or to trigger on specific signatures and partially lose model-independence. 
-%Does it belong here?
-It is more advantageous to only rely on the broad features of this class of models to apply a coarse initial L1 selection, store high-level objects reconstructed at the HLT, and record only the raw detector information needed to defer reconstruction of distinctive features at a later date. This can be done with a combination of TLA and a technique called \textbf{Partial Event Building (PEB)}. PEB allows recording selected raw detector information in a limited region of the detector, and in Run-2 it was implemented in ATLAS for for $B$-physics and calibrations~\cite{ToBeCited}.%Muon trigger paper if it's out, if not "in preparation"  
-This allows to systematically target a variety of signatures, especially in view of a multi-year shutdown at the end of Run-3. 
-This is part of the work in WP1 described in the next section. 
-%Within the timescale of this proposal we will choose 
+This motivates the use of the TLA+PEB technique in this proposal, so that more complex features can be reconstructed after only a coarse preselection, limiting the loss of search generality. In TLA+PEB, the event size is reduced with respect to traditional data analysis, so that the signal rates recorded can be increased. 
+ % with a small enough event size and increased signal rates with respect to traditional searches.%, limiting the loss of generality of the search. 
 
-The approach for choosing and designing Run-3 searches to be performed within the timeframe of this proposal is signature-driven rather than model-driven. 
+The approach for choosing and designing Run-3 searches to be performed using this technique within the timeframe of this proposal is signature-driven rather than model-driven. 
 As specified in Sec.~\ref{sub:stateOfTheArtTheory}, we adopt the grounding assumption that the confinement scale is sufficient to produce dark jets. 
-%Ohm Soffer review 
-As an initial guide to the experimental state-of-the-art for the searches in WP4, dark jets can be classified according to their main characteristics. 
-Extending Ref.~\cite{Cohen:2017pzm, Park:2017rfb}, Fig.~\ref{fig:darksectorssketch} characterizes dark jets according to: 
-\begin{itemize}
-\item how promptly the full content of the dark jets appears in the detector, indicating that they contain long-lived constituents (emerging/trackless jets);
-\item what is the fraction of invisible particles in the dark jet ($R_{inv}$), indicating the presence of stable dark sector particles and DM candidates (semi-visible jets);
-\item whether jets contain an unusual number of leptons, from leptonically-decaying dark photons (composite jets).
-\end{itemize}
+ %Ohm Soffer review 
+As an initial guide to the experimental state-of-the-art for the searches in WP4, dark jets can be classified according to their main features. 
+Extending Ref.~\cite{Cohen:2017pzm, Park:2017rfb}, Fig.~\ref{fig:darksectorssketch} characterizes dark jets according to the following.  
 
-Searches for dark shower models in ATLAS and CMS currently cover the cases of:
-\begin{itemize}
-\item jets where the constituents are prompt and fully visible, but the fragmentation is different~\cite{Park:2017rfb}. I am pursuing the first-ever LHC search for this signature and expect a publication by Fall 2020. 
-\item jets containing a large number of displaced tracks (emerging jets, \cite{ToBeCited}, trackless jets \cite{ToBeCited}),%Emerging+trackless jets theory and experiment
-\item jets composed exclusively of leptons (lepton-jets, ~\cite{ToBeCited}).%Lepton jets theory and experiment
-\end{itemize} 
-
-%Searches that exploit the long lifetime of single dark sector particles are covered, but suffer 
-%, while models with promptly-decaying dark sector particles are less covered
-
+\noindent
+\textbf{1.} Depending on how many of the constituents of the the dark jet are long-lived, the dark jet will appear in the detector at different distances with respect to the interaction point. ATLAS and CMS searches pursue these signatures, looking for \textit{emerging}~\cite{Sirunyan:2018njd} or \textit{trackless jets}~\cite{ToBeCited} jets and for the long-lived particles themselves~\cite{ToBeCited}. Together with colleagues from LPSC Grenoble and Witswatersrand, I am pursuing the first-ever LHC search for signatures of jets whose constituents are prompt and fully visible but fragment differently (\textit{prompt dark jets})~\cite{Park:2017rfb}, with a publication expected by Fall 2020. \\
+\textbf{2.} The dark jet may be constituted by a sizable fraction of invisible particles, e.g. stable dark sector particles and DM candidates, and appear as a \textit{semi-visible dark jet}. In this case, we assume that the lightest particles in the dark sector are the DM candidates following Refs.~\cite{Cohen:2017pzm,Park:2017rfb,ToBeCited}%Felix
+\footnote{Dark sector / dark pion decays into SM particles motivate other searches that will be connected to the ones in this proposal, for example emerging/trackless jets and searches in the review of Ref.~\cite{ToBeCited}}.%Kribs, https://lhcbproject.web.cern.ch/lhcbproject/Publications/LHCbProjectPublic/LHCb-PAPER-2016-065.html
+\\
+\textbf{3.}  The dark jet may contain an unusual number of leptons, from leptonically-decaying dark photons. In this case, jets composed exclusively of leptons (lepton-jets) are covered by ATLAS and CMS searches~\cite{ToBeCited}.%LeptonJets
 %\textbf{This part needs to be sharpened...} 
-From this classification, \textbf{Semi-visible jets}  (Fig.~\ref{fig:feynman} [c]) are experimentally uncovered at the time of writing, 
+
+From this classification, \textbf{Semi-visible jets}  (Fig.~\ref{fig:feynman} [c]) are experimentally uncovered at the time of writing. 
 %Should I say this? 
 %~\footnote{I am involved in an ongoing search for semi-visible jets in ATLAS and CMS with Run-2 data, but the benchmarks used and mass range are different to those used in this proposal. There is also an ongoing CMS search using Run-2 data.}.
-and so are \textbf{composite jets} where dark QCD and dark photon showers are interleaved (Fig.~\ref{fig:feynman} [d]). This motivates the choice of the two WP4 searches. 
+Similarly,  \textbf{composite jets} where dark QCD and dark photon showers are interleaved producing a cascade of leptons and hadrons within the same jet (Fig.~\ref{fig:feynman} [d]) have not been sought at the LHC before. 
+This motivates the choice of the two WP4 searches. 
 
 Experimental attention generally stimulates theoretical development and extensions of unprobed models, as well as efforts towards their systematic classification. 
-As part of this proposal, we will also open a number of discussion channels with the theory, astroparticle, non-collider and nuclear physics communities, within WP5. 
+As part of WP5 in this proposal, we will organize workshops and open a number of discussion channels with the theory, astroparticle, non-collider and nuclear physics communities. 
 This cross-talk will be useful for input on search targets, on the simulation of benchmark models and for the contextualization of search results.
+
+\color{red}\textbf{TODO: Reorganization done up to here}\color{black}
