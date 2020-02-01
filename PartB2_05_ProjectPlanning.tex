@@ -29,24 +29,24 @@ This algorithm will be more flexible than its Run-2 counterpart, and can handle 
 By the start of this proposal, we expect to obtain preliminary results of the use of this algorithm on TLA jets. 
 In 2021, PI, PD1, PhD1 and the software engineer
 will work on the readiness of the core software for photons and jets, on commissioning with cosmic data, and on their subsequent calibration \textbf{[1]}
-The experience gained with photons will be used by P1 and PhD1 to implement and commission TLA electrons as well \textbf{[2]}, while PD2 and PhD2 will focus on TLA muons \textbf{[3]}. 
+The experience gained with photons will be used by P1 and PhD1 to implement and commission TLA electrons as well, while PD2 and PhD2 will focus on TLA muons \textbf{[3]}. 
 %Initially, the TLA stream will contain both jets and photons to enable analyses in WP3 in a simple manner. 
 As part of this work, we will contribute to the design and implementation of seed trigger chains and data streams that selectively record one or more TLA objects simultaneously, optimizing according to the use cases in WP3 and WP4. 
 The finalized TLA software streams will be ready in Q3 2022, allowing sufficient time for validation with data prior to the LHC production period. \\
 \textbf{PEB software implementation and reconstruction} In Q1-Q2 2021, Prior to the implementation of TLA muons, PD2 and PhD2 will deploy the core software to write out user-defined regions of the detector together with TLA objects, 
 %based on the Run-2 example for muons~\cite{ToBeCited}  and 
-taking into account the optimization between CPU and storage costs mentioned in Sec.~\ref{subsub:TriggerRecoSoftware}. 
+taking into account the optimization between CPU and storage costs mentioned in Sec.~\ref{subsub:TriggerRecoSoftware}~\textbf{[2]}. 
 %strike a balance between the use of computing-expensive HLT algorithms to be able to drop raw detector data, and delaying running those algorithms until later at the cost of a larger event size. 
 %The Cost Monitoring framework and test events storing different levels of detector information, informed by the calibration and reconstruction work as well as by the sensitivity studies, will be evaluated for this optimization. 
-Subsequently, they will test the TLA+PEB implementation on early data and work together with the software engineer on the implementation of dedicated reconstruction algorithms for partial detector input, taking advantage of the experience gained with TLA electrons and muons~\textbf{[4]}. 
+Subsequently, they will test the TLA+PEB implementation on early data and work together with the software engineer on the implementation of dedicated reconstruction algorithms for partial detector input, taking advantage of the experience gained with TLA electrons and muons~\textbf{[3]}. 
 At the end of this work, expected for Q3 2022, we will publish a technical paper describing the combined TLA and PEB implementation within the ATLAS trigger (Q4 2022) \textbf{[5]}. \\
 \textbf{Identification and calibration of TLA jets, photons, electrons and muons} Throughout 2021 and 2022, PhDs and postdocs will contribute to the algorithms for the identification and calibration of the HLT physics objects that they have implemented in TLA and PEB. 
 In this proposal, we will focus on new HLT pile-up suppression techniques using calorimeter information against techniques using tracking information. 
-The performance of this calibration will be studied in WP2 and documented in the technical papers in \textbf{[5]} and \textbf{[10]}.\\
+The performance of this calibration will be studied in WP2 and documented in the technical papers in \textbf{[3]} and \textbf{[7]}.\\
 Together with the performance studies, this work will be part of the students' ATLAS authorship qualification task.
 \textbf{Data compression with autoencoders} Throughout the course of this proposal, the software engineer and I will supervise Master's students that study the performance, implementation and characteristics of autoencoder networks used to compress ATLAS data. 
 The outcome of this work will be a test implementation in system that emulates a HLT computing node, preparing the ground for an implementation in the HL-LHC trigger and computing system~\textbf{[7]}. 
-This work will be documented in technical publications, detailing preliminary and final work \textbf{[6,8]}.
+This work will be documented in technical publications, detailing preliminary and final work \textbf{[8,11]}.
 
 \subsection{WP2: Commissioning the upgraded ATLAS trigger with physics}
 
