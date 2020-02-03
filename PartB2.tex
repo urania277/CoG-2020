@@ -102,14 +102,14 @@
 %\usepackage{helvet}
 
 %\setlength{\parindent}{2em}
-\setlength{\parskip}{0.2em}
+%\setlength{\parskip}{0.2em}
 
 
 \title{{\Large Part B1 - ERC Consolidator grant}}
 \author{{\normalsize Caterina Doglioni}}
 \date{}                                           % Activate to display a given date or no date
 
-%\usepackage[parfill]{parskip}
+\usepackage[parfill]{parskip}
 
 \begin{document}
 
@@ -156,7 +156,7 @@
 
 \input{PartB2_04_Methodology}
 
-\subsection{Project planning}
+\subsection{Team composition and project planning}
 %\smallskip
 
 \input{PartB2_05_ProjectPlanning}
@@ -171,6 +171,25 @@
 %The research team will be comprised of the PI, a PDRA, and three PhD students. In the following, a detailed description of the work to be undertaken by the team is given. 
 
 %A timeline describing the overall planning and allocation of team members is provided in Figure~\ref{fig:timeline}. This has been prepared using project planning and management software~\cite{omni:plan}, taking particular care to schedule tasks common to all analyses and balancing the work between the research team in a way that ensures the ambitious project is achievable within the timescale and resources of this research proposal. Resources are discussed in the next section.
+
+
+
+%%%%%%BEGIN TO COMPILE UP TO HERE 
+\clearpage
+\mciteErrorOnUnknownfalse
+\begingroup
+    \setboolean{inbibliography}{true}
+\bibliographystyle{JHEP}
+    \linespread{0.9}\selectfont
+%\bibliography{researchrefs}
+\bibliography{bib/ATLAS,bib/CMS,bib/ConfNotes,researchrefs}%,.bib/CMS.bib/ConfNotes,bib/PubNotes
+\endgroup
+%{\bf Note:} The PI is an author of Refs.~\cite{LHCb-PUB-2014-027,Bourgeois:2018nvk} and all the LHCb collaboration papers, with particular contributions to  Refs.~\cite{Aaij:2014jba,CERN-LHCC-2014-016,Aaij:2013mga,Aaij:2014ywt,LHCb-PUB-2014-040,Aaij:2016kjh,Aaij:2017lff}.
+%The PI is acknowledged in Ref.~\cite{Jung:2014jfa}.
+\end{document}  
+%%%%%%END TO COMPILE UP TO HERE 
+
+
 
 \subsection{Impact and risk management}
 %\smallskip
@@ -240,7 +259,7 @@
     \setboolean{inbibliography}{true}
 \bibliographystyle{LHCb}
     \linespread{0.9}\selectfont
-\bibliography{researchrefs}
+\bibliography{bib/ATLAS,bib/CMS,bib/ConfNotes,bib/PubNotes,researchrefs}
 
 \endgroup
 

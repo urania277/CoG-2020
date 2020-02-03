@@ -1,0 +1,115 @@
+The research team of \textsc{Realdark} that I will lead as a PI is composed by two postdoctoral researchers, two PhD students and one software engineer.
+As PI, I will oversee all tasks in the project with day-to-day supervision and regular meetings, and have a hands-on involvement in more complex tasks as specified below. 
+Each of the postdocs will work with one of the PhD students on the two physics objectives of WP3 and WP4 respectively, and related technical and commissioning tasks in WP1 and WP2. 
+The software engineer will have the necessary technical background to undertake complex core software tasks necessary to the objectives in WP1. 
+My involvement in interdisciplinary and beyond-academia activities as mentioned in the Track Record will aid recruitment of a candidate with the right profile. 
+The \textsc{Realdark} team will be embedded in the active research environment of the Lund University experimental and theoretical particle physics group. 
+This will allow them to have daily cross-talk with the group of theoretical physicists with word-leading expertise in QCD modelling, dark sector models and event generation as authors of the Pythia software~\cite{Sjostrand:2014zea}.  
+My role as the Chair of the Board of the Particle and Astroparticle Swedish Physical Society will facilitate the team's national networking.   
+Given the international nature of high energy physics research, many of the meetings will be held remotely using professional videoconference hardware and software, in a dedicated meeting room at Lund University, and a limited number of meetings will be attended by the team member person  
+We will communicate via the Mattermost/Slack software, to create a "virtual corridor" that guarantees presence, peer learning and rapid feedback even when team members are not in the same physical location.  
+
+\vskip5pt
+\begin{figure}[!htpb] 
+\begin{center}
+\includegraphics[width=\textwidth]{figs_B2/gantt}
+\caption{\color{black}\label{fig:gantt} \small Sketch of project planning and division of work across team members.} 
+\vskip2pt
+\end{center}
+\end{figure}
+%\vskip5pt
+
+%allowing an effective sharing of supervision tasks. 
+%Shift this to Resources
+%end of shift to resources
+Fig.~\ref{fig:gantt} provides a project planning schedule, including the breakdown of the work between the team members and a preliminary schedule of intermediate milestones and deliverables marked with \textbf{[N]}. 
+It has been prepared using the OmniPlan software~\cite{omni:plan}, %Omniplan 
+taking into account the inter-dependencies between the WPs and 
+scheduling the work allocation in a way that ensures the feasibility of this ambitious project without over-committing the team members. 
+
+\subsection{WP1: Real-time analysis and data compression in ATLAS}
+
+%The software implementation of TLA and TLA+PEB techniques and the calibration of physics objects recorded using these techniques represents a significant portion of the work in WP1. 
+\textbf{TLA software implementation and calibration of trigger objects} As a preliminary input to this project, I have started working on a new Run-3 multithreaded HLT software algorithm that selects and writes out partially-built physics objects in the TLA stream. 
+This algorithm will be more flexible than its Run-2 counterpart, and can handle any physics objects. 
+By the start of this project, we expect to obtain preliminary results of the use of this algorithm on TLA jets. 
+In 2021, PI, PD1, PhD1 and the software engineer
+will work on the readiness of the core software for photons and jets, on commissioning with cosmic data, and on their subsequent calibration \textbf{[1]}.
+The experience gained with photons will be used by P1 and PhD1 to implement and commission TLA electrons as well, while PD2 and PhD2 will focus on TLA muons \textbf{[3]}. 
+%Initially, the TLA stream will contain both jets and photons to enable analyses in WP3 in a simple manner. 
+As part of this work, we will contribute to the design and implementation of seed trigger chains and data streams that selectively record one or more TLA objects simultaneously, optimizing according to the use cases in WP3 and WP4. 
+The finalized TLA software streams will be ready in Q3 2022, allowing sufficient time for validation with data prior to the LHC production period. \\
+\textbf{PEB software implementation and reconstruction} In Q1-Q2 2021, Prior to the implementation of TLA muons, PD2 and PhD2 will deploy the core software to write out user-defined regions of the detector together with TLA objects, 
+%based on the Run-2 example for muons~\cite{ToBeCited}  and 
+taking into account the optimization between CPU and storage costs mentioned in Sec.~\ref{subsub:TriggerRecoSoftware}~\textbf{[2]}. 
+%strike a balance between the use of computing-expensive HLT algorithms to be able to drop raw detector data, and delaying running those algorithms until later at the cost of a larger event size. 
+%The Cost Monitoring framework and test events storing different levels of detector information, informed by the calibration and reconstruction work as well as by the sensitivity studies, will be evaluated for this optimization. 
+Subsequently, they will test the TLA+PEB implementation on early data and work together with the software engineer on the implementation of dedicated reconstruction algorithms for partial detector input, taking advantage of the experience gained with TLA electrons and muons~\textbf{[3]}. 
+At the end of this work, expected for Q3 2022, we will publish a technical paper describing the combined TLA and PEB implementation within the ATLAS trigger (Q4 2022) \textbf{[4]}. \\
+\textbf{Identification and calibration of TLA jets, photons, electrons and muons} Throughout 2021 and 2022, PhDs and postdocs will contribute to the algorithms for the identification and calibration of the HLT physics objects that they have implemented in TLA and PEB. 
+%We will focus on testing new HLT jet pile-up suppression techniques using calorimeter information against techniques using tracking information. 
+The performance of this calibration will be studied in WP2 and documented in the technical papers in \textbf{[4]} for jets and photons and \textbf{[10]} for muons and electrons.\\
+Together with the performance studies, this work will be part of the students' ATLAS authorship qualification task.
+\textbf{Data compression with autoencoders} Throughout the course of this project, the software engineer and I will supervise Master's students that study the performance, implementation and characteristics of autoencoder networks used to compress ATLAS data. 
+The outcome of this work will be a test implementation in system that emulates a HLT computing node, preparing the ground for an implementation in the HL-LHC trigger and computing system~\textbf{[6]}. 
+This work will be documented in technical publications, detailing preliminary and final work \textbf{[5,7]}.
+
+\subsection{WP2: Commissioning the upgraded ATLAS trigger with physics}
+
+\textbf{HLT object performance} Over the course of the early LHC data-taking (2021-2022), 
+PD1 and PhD1 will determine the performance of HLT jets and photons with early data, while PD2 and PhD2 will focus on the performance of HLT and PEB electrons and muons. \\
+\textbf{Searches and measurements of the dijet mass spectrum} After the trigger jet and photon performance is well understood, PD1 and PhD1 and I will measure the dijet mass spectrum using a limited amount of data. 
+We will select inclusive dijet events, and events where dijets are produced in association with a photon
+%, first using offline jets and TLA jets, and then using TLA+PEB jets, for comparison with simulation and Run-2 data. 
+This will lead to a prototype of the dijet and dijet+ISR TLA searches within the RECAST framework~\textbf{[8]}.   
+PD2 and PhD2 will repeat this exercise with electrons and muons in a measurement of the $Z$ and $J/\psi$ peaks, 
+to be included in a dedicated technical publication~\textbf{[10]}. 
+If the LHC provides a dataset that surpasses the Run-2 sensitivity for either dijet and dijet+ISR searches, 
+PD1, PhD1 and I will work with ATLAS collaborators towards publication of the result of these searches in Q2 2023~\textbf{[9]}.
+
+\subsection{WP3: Dark matter mediator searches}
+
+WIMP mediator searches and the interpretation of their results will be the main physics focus of PD1 and PhD1.\\ \indent
+\textbf{Dijet+ISR TLA search} This search relies on calibrations and data analysis code developed and tested in WP1 and WP2.
+%PD1 and PhD1 will perform the sensitivity and literature studies to deploy trigger chains seeding these TLAs prior to 2022, 
+PD1 and PhD1 will refine the WP1 jet calibration for a high-statistics search (e.g. for pile-up suppression suppression techniques for the low-$p_{\mathrm{T}}$ resonance jets) and repeat the performance studies from WP2 with a larger dataset. 
+PD1 and PhD1 will take advantage of WP2 RECAST implementation of the dijet+ISR mass spectrum to estimate backgrounds and produce inputs to run the statistical analysis.
+PD1 and PhD1 will collaborate with colleagues from OSU, Oregon and Heidelberg on two publications, one using the first part of the dataset where the Run-2 sensitivity is surpassed~\textbf{[11]} in 2024, and one using the full Run-2 dataset~\textbf{[12]} in Q2 2025.\\ 
+\textbf{Dijet TLA search} PD1 and I will remain involved in the full ATLAS Run-3 TLA with an advisory role. 
+We will provide the WP2 RECAST implementation, and combine Run-2 and Run-3 results for a legacy TLA publication covering both LHC runs in Q3 2025 \textbf{[13]}. 
+Dijet searches are sensitive to a variety of new physics signals (see Sec.~\ref{sub:stateOfTheArtTheory}): code and results from WP3 searches will be input to WP5 for broad dissemination. 
+
+\subsection{WP4: Dark QCD searches}
+
+Dark QCD searches and the interpretation of their results will be the main physics focus of PD2 and PhD2. 
+Both searches in WP4 will require preliminary work within the first and second year of this project to decide on the optimal parameter space to target, 
+together with the preliminary studies on the suppression of QCD background to implement at the HLT.
+This work will inform the configuration for the TLA+PEB stream to be implemented upon the LHC restart in Q1-Q2 2023\textbf{[14]}. 
+A \textbf{two-weeks workshop} with other non-LHC communities, involving experts and \href{https://p3h.particle.kit.edu/research/projects/b3a}{authors of the theory benchmarks} for searches in this project who agreed to participate if this project is funded, will be organized in Q3 2021 within the iDMEu initiative. 
+The workshop will be hosted at Lund for the first week and at CERN for the second week (with videoconference available in both), to discuss the state-of-the-art of dark QCD theory and experiment and understand current constraints including dark meson searches, non-collider and astrophysical constraints. \\
+This work will culminate in a public document (ATLAS PUB note) on the reinterpretation of measurements and existing searches for a variety of dark QCD benchmark models in Q3 2022 \textbf{[15]}. \\
+The \textbf{semi-visible jet search} be the first to be tackled.
+% as it relies on studies and analysis code in WP1-3 given the relative similarity of the two signatures. 
+PD2 and PhD2 will bring their expertise to search for low-mass particles decaying into semi-visible jets in TLA+PEB, and work with colleagues from the University of Witswatersrand who will focus on the high-mass region with traditional techniques. 
+This continues an existing collaboration started within my StG, which we expect to be supported by the ERC "Implementing Agreements" program during 2020.
+We will publish this search with an intermediate dataset in Q2 2024~\textbf{[16]}, and continue our involvement in the full-dataset search with an advisory role. \\
+The \textbf{composite jet search} shares many of the common PEB+TLA performance tools with the semi-visible jet search and proceeds in parallel during 2023. 
+The bulk of the work will be done during 2024, first adapting WP1 and WP2 code and techniques for leptons within jets and then running the analysis chain, leading to a publication in Q4 2025~\textbf{[17]}. 
+Throughout this period we will also work to make the TLA+PEB stream and the analysis tools available within ATLAS for other dark sector searches. 
+
+\subsection{WP5: Interpretation, dissemination and synergies}
+
+The work in WP5 is spread over all the timeline of this project and its hands-on components will involve the PI, the postdocs and the PhDs.
+Together with each technical and physics publication we will share our results on HEPData and on \textbf{plots that summarize searches from different techniques and experiments} constraining DM models~\cite{ATLASSummary}. 
+Within iDMEu, we will also extend the benchmarks used for these plots to dark QCD models, with a first iteration expected after the Lund/CERN workshop. \\
+We will contribute as a team to the outreach efforts planned within iDMEu, organizing a yearly event for \textit{Dark Matter Day} event (October 31st) in Lund, with a screening of the movie \href{http://phantomoftheuniverse.com}{"Phantom of the Universe"} in the Lund planetarium and demonstrations for high-school students and general public. 
+We will also make \textbf{common-interest software} in WP1 (e.g. compression, non-standard object reconstruction) and WP2-4 (RECAST analyses in REANA) available in the \textbf{ESCAPE Software Catalogue as part of the DM Virtual Environment}, and on the HSF webpages. 
+This will include documentation and working examples for enhancing the usability and impact of the shared software. \\
+Finally, I will write a \textbf{review of the state of the art} of DM searches at colliders at the end of this project~\textbf{[18]}. 
+
+%\textbf{Defining search targets} 
+%Through workshops and discussions with the theory community, PD2 
+%\textbf{Performance studies} During Q, the performance studies in WP2 will be extended to muons and electrons in busier hadronic environments, with a focus on the identification of variables and analysis techniques that can be used to minimize the impact of pile-up and reduce SM backgrounds already at the trigger level. 
+
+
+

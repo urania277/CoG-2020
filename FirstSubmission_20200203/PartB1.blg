@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: PartB1.aux
+The style file: JHEP.bst
+Database file #1: researchrefs.bib
+Warning--I didn't find a database entry for "Daci:2015hca"
+Warning--empty editors in LHC2008
+Warning--empty editors in Khachatryan:2016vau
+Warning--empty editors in Bertone:2016nfn
+Warning--empty editors in Boveia:2018yeb
+Warning--empty editors in Aaboud:2019yqu
+Warning--empty editors in Canepa:2019hph
+Warning--empty editors in Aaboud:2018fzt
+Warning--empty editors in Aaboud:2019zxd
+Warning--empty editors in Abercrombie:2015wmb
+Warning--empty editors in Strategy:2019vxc
+Warning--empty editors in Alves:2017she
+Warning--empty booktitle in Allen:2018yvz
+Warning--empty editors in Beacham:2019nyx
+Warning--empty editors in ATLAS:2015nsi
+Warning--empty editors in Khachatryan:2016ecr
+Warning--empty editors in Aaij:2016rxn
+Warning--empty editors in Strassler:2006im
+Warning--empty editors in Cohen:2017pzm
+Warning--empty editors in Curtin:2014cca
+Warning--empty editors in Hoenig:2014dsa
+Warning--empty editors in Mariotti:2017vtv
+Warning--empty editors in hinton
+Warning--there's a number but no series in Bielski:2674286
+Warning--empty editors in Kim:2019rhy
+Warning--empty editors in Bernreuther:2019pfb
+Warning--empty editors in Falkowski:2010gv
+Warning--empty editors in Sjostrand:2014zea
+Warning--empty editors in Butterworth:2016sqg
+Warning--empty editors in FAIR
+Warning--empty editors in Aaboud:2016leb
+You've used 38 entries,
+            2196 wiz_defined-function locations,
+            771 strings with 10633 characters,
+and the built_in function-call counts, 10992 in all, are:
+= -- 1093
+> -- 319
+< -- 0
++ -- 124
+- -- 86
+* -- 887
+:= -- 1444
+add.period$ -- 46
+call.type$ -- 38
+change.case$ -- 38
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 631
+empty$ -- 1107
+format.name$ -- 86
+if$ -- 2814
+int.to.chr$ -- 0
+int.to.str$ -- 38
+missing$ -- 114
+newline$ -- 125
+num.names$ -- 34
+pop$ -- 225
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 397
+stack$ -- 0
+substring$ -- 494
+swap$ -- 245
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 30
+while$ -- 68
+width$ -- 40
+write$ -- 400
+(There were 31 warnings)

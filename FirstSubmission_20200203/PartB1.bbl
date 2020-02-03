@@ -1,0 +1,216 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{LHC2008}
+L.~Evans and P.~Bryant, {\it {{LHC Machine}}},  {\em {JINST}} {\bf 3} (2008)
+  {S08001}.
+
+\bibitem{Khachatryan:2016vau}
+{ATLAS and CMS Collaborations}, {\it {Measurements of the Higgs boson
+  production and decay rates and constraints on its couplings from a combined
+  ATLAS and CMS analysis of the LHC pp collision data at $ \sqrt{s}=7 $ and 8
+  TeV}},  {\em JHEP} {\bf 08} (2016) 045,
+  [\href{http://xxx.lanl.gov/abs/1606.0226}{{\tt arXiv:1606.0226}}].
+
+\bibitem{Bertone:2016nfn}
+G.~Bertone and D.~Hooper, {\it {History of dark matter}},  {\em Rev. Mod.
+  Phys.} {\bf 90} (2018), no.~4 045002,
+  [\href{http://xxx.lanl.gov/abs/1605.0490}{{\tt arXiv:1605.0490}}].
+
+\bibitem{Boveia:2018yeb}
+A.~Boveia and C.~Doglioni, {\it {Dark Matter Searches at Colliders}},  {\em
+  Ann. Rev. Nucl. Part. Sci.} {\bf 68} (2018) 429--459,
+  [\href{http://xxx.lanl.gov/abs/1810.1223}{{\tt arXiv:1810.1223}}].
+
+\bibitem{Aaboud:2019yqu}
+{ATLAS Collaboration}, {\it {Constraints on mediator-based dark matter and
+  scalar dark energy models using $\sqrt s = 13$ TeV $pp$ collision data
+  collected by the ATLAS detector}},  {\em JHEP} {\bf 05} (2019) 142,
+  [\href{http://xxx.lanl.gov/abs/1903.0140}{{\tt arXiv:1903.0140}}].
+
+\bibitem{Canepa:2019hph}
+A.~Canepa, {\it {Searches for Supersymmetry at the Large Hadron Collider}},
+  {\em Rev. Phys.} {\bf 4} (2019) 100033.
+
+\bibitem{Aaboud:2018fzt}
+{ATLAS Collaboration}, {\it {Search for low-mass dijet resonances using
+  trigger-level jets with the ATLAS detector in $pp$ collisions at
+  $\sqrt{s}=13$ TeV}},  {\em Phys. Rev. Lett.} {\bf 121} (2018), no.~8 081801,
+  [\href{http://xxx.lanl.gov/abs/1804.0349}{{\tt arXiv:1804.0349}}].
+
+\bibitem{Aaboud:2019zxd}
+{ATLAS Collaboration}, {\it {Search for low-mass resonances decaying into two
+  jets and produced in association with a photon using $pp$ collisions at
+  $\sqrt{s} = 13$ TeV with the ATLAS detector}},  {\em Phys. Lett.} {\bf B795}
+  (2019) 56--75, [\href{http://xxx.lanl.gov/abs/1901.1091}{{\tt
+  arXiv:1901.1091}}].
+
+\bibitem{Abercrombie:2015wmb}
+{LHC Dark Matter Forum} , D.~Abercrombie et~al., {\it {Dark Matter Benchmark
+  Models for Early LHC Run-2 Searches: Report of the ATLAS/CMS Dark Matter
+  Forum}},  \href{http://xxx.lanl.gov/abs/1507.0096}{{\tt arXiv:1507.0096}}.
+
+\bibitem{Strategy:2019vxc}
+R.~K. Ellis et~al., {\it {Physics Briefing Book}},
+  \href{http://xxx.lanl.gov/abs/1910.1177}{{\tt arXiv:1910.1177}}.
+
+\bibitem{Alves:2017she}
+{HEP Software Foundation} , J.~Albrecht et~al., {\it {A Roadmap for HEP
+  Software and Computing R\&D for the 2020s}},  {\em Comput. Softw. Big Sci.}
+  {\bf 3} (2019), no.~1 7, [\href{http://xxx.lanl.gov/abs/1712.0698}{{\tt
+  arXiv:1712.0698}}].
+
+\bibitem{DMWGWebsite}
+{LHC Dark Matter Working Group} , ``{LHC Dark Matter Working Group on the LHC
+  Physics Center webpages}.''
+  \url{https://lpcc.web.cern.ch/content/lhc-dm-wg-wg-dark-matter-searches-lhc},
+  2016.
+\newblock [Online; accessed 7-January-2019].
+
+\bibitem{Allen:2018yvz}
+G.~Allen et~al., {\it {Multi-Messenger Astrophysics: Harnessing the Data
+  Revolution}},  2018.
+\newblock \href{http://xxx.lanl.gov/abs/1807.0478}{{\tt arXiv:1807.0478}}.
+
+\bibitem{APPECStrategy}
+``European astroparticle physics strategy 2017-2026.''
+  \url{https://www.appec.org/wp-content/uploads/Documents/Current-docs/APPEC-Strategy-Book-Proof-19-Feb-2018.pdf},
+  2018.
+\newblock [Online; accessed 7-January-2019].
+
+\bibitem{Beacham:2019nyx}
+{Physics Beyond Colliders Working Group} , J.~Beacham et~al., {\it {Physics
+  Beyond Colliders at CERN: Beyond the Standard Model Working Group Report}},
+  {\em J. Phys.} {\bf G47} (2020), no.~1 010501,
+  [\href{http://xxx.lanl.gov/abs/1901.0996}{{\tt arXiv:1901.0996}}].
+
+\bibitem{ATLAS:2015nsi}
+{ATLAS Collaboration}, {\it {Search for new phenomena in dijet mass and angular
+  distributions from $pp$ collisions at $\sqrt{s}=$ 13 TeV with the ATLAS
+  detector}},  {\em Phys. Lett.} {\bf B754} (2016) 302--322,
+  [\href{http://xxx.lanl.gov/abs/1512.0153}{{\tt arXiv:1512.0153}}].
+
+\bibitem{Khachatryan:2016ecr}
+{CMS Collaboration}, {\it {Search for narrow resonances in dijet final states
+  at $\sqrt(s)=$ 8 TeV with the novel CMS technique of data scouting}},  {\em
+  Phys. Rev. Lett.} {\bf 117} (2016), no.~3 031802,
+  [\href{http://xxx.lanl.gov/abs/1604.0890}{{\tt arXiv:1604.0890}}].
+
+\bibitem{Aaij:2016rxn}
+{LHCb Collaboration}, {\it {Tesla : an application for real-time data analysis
+  in High Energy Physics}},  {\em Comput. Phys. Commun.} {\bf 208} (2016)
+  35--42, [\href{http://xxx.lanl.gov/abs/1604.0559}{{\tt arXiv:1604.0559}}].
+
+\bibitem{Strassler:2006im}
+M.~J. Strassler and K.~M. Zurek, {\it {Echoes of a hidden valley at hadron
+  colliders}},  {\em Phys. Lett.} {\bf B651} (2007) 374--379,
+  [\href{http://xxx.lanl.gov/abs/hep-ph/0604261}{{\tt hep-ph/0604261}}].
+
+\bibitem{Cohen:2017pzm}
+T.~Cohen, M.~Lisanti, H.~K. Lou, and S.~Mishra-Sharma, {\it {LHC Searches for
+  Dark Sector Showers}},  {\em JHEP} {\bf 11} (2017) 196,
+  [\href{http://xxx.lanl.gov/abs/1707.0532}{{\tt arXiv:1707.0532}}].
+
+\bibitem{Curtin:2014cca}
+D.~Curtin, R.~Essig, S.~Gori, and J.~Shelton, {\it {Illuminating Dark Photons
+  with High-Energy Colliders}},  {\em JHEP} {\bf 02} (2015) 157,
+  [\href{http://xxx.lanl.gov/abs/1412.0018}{{\tt arXiv:1412.0018}}].
+
+\bibitem{Hoenig:2014dsa}
+I.~Hoenig, G.~Samach, and D.~Tucker-Smith, {\it {Searching for dilepton
+  resonances below the Z mass at the LHC}},  {\em Phys. Rev.} {\bf D90} (2014),
+  no.~7 075016, [\href{http://xxx.lanl.gov/abs/1408.1075}{{\tt
+  arXiv:1408.1075}}].
+
+\bibitem{Mariotti:2017vtv}
+A.~Mariotti, D.~Redigolo, F.~Sala, and K.~Tobioka, {\it {New LHC bound on
+  low-mass diphoton resonances}},  {\em Phys. Lett.} {\bf B783} (2018) 13--18,
+  [\href{http://xxx.lanl.gov/abs/1710.0174}{{\tt arXiv:1710.0174}}].
+
+\bibitem{iDMEu}
+``{Initiative for Dark Matter in Europe and beyond: Towards facilitating
+  communication and result sharing in the Dark Matter community (iDMEu)}.''
+  \url{https://indico.cern.ch/e/iDMEu}, 2019.
+\newblock [Online; accessed 7-January-2019].
+
+\bibitem{ATLASTrigger}
+``{ATLAS Trigger Operations - Public Results}.''
+  \url{https://twiki.cern.ch/twiki/bin/view/AtlasPublic/TriggerOperationPublicResults#Trigger_Rates_and_bandwidth},
+  2019.
+\newblock [Online; accessed 27-January-2019].
+
+\bibitem{Vincent:2008:ECR:1390156.1390294}
+P.~Vincent, H.~Larochelle, Y.~Bengio, and P.-A. Manzagol, {\it Extracting and
+  composing robust features with denoising autoencoders},  in {\em Proceedings
+  of the 25th International Conference on Machine Learning}, ICML '08, (New
+  York, NY, USA), pp.~1096--1103, ACM, 2008.
+
+\bibitem{hinton}
+G.~Hinton and R.~Salakhutdinov, {\it Reducing the dimensionality of data with
+  neural networks},  {\em Science (New York, N.Y.)} {\bf 313} (08, 2006)
+  504--7.
+
+\bibitem{Aad:1602235}
+{ATLAS Collaboration}, {\it {Technical Design Report for the Phase-I Upgrade of
+  the ATLAS TDAQ System}},  Sep, 2013.
+\newblock \href{https://cds.cern.ch/record/1602235}{CERN-LHCC-2013-018}.
+
+\bibitem{Bielski:2674286}
+{{ATLAS Collaboration}} , R.~Bielski and A.~Collaboration, {\it {ATLAS High
+  Level Trigger within the multi-threaded software framework AthenaMT}},  in
+  {\em {19th International Workshop on Advanced Computing and Analysis
+  Techniques in Physics Research}}, no.~ATL-DAQ-PROC-2019-004, (Geneva), May,
+  2019.
+
+\bibitem{Schuy:2019awp}
+A.~Schuy, L.~Heinrich, K.~Cranmer, and S.-C. Hsu, {\it {Extending RECAST for
+  Truth-Level Reinterpretations}},  in {\em {Proceedings of the Meeting of the
+  Division of Particles and Fields of the American Physical Society
+  (DPF2019)}}, 2019.
+\newblock \href{http://xxx.lanl.gov/abs/1910.1028}{{\tt arXiv:1910.1028}}.
+
+\bibitem{Kim:2019rhy}
+J.~H. Kim, K.~Kong, B.~Nachman, and D.~Whiteson, {\it {The motivation and
+  status of two-body resonance decays after the LHC Run 2 and beyond}},
+  \href{http://xxx.lanl.gov/abs/1907.0665}{{\tt arXiv:1907.0665}}.
+
+\bibitem{Bernreuther:2019pfb}
+E.~Bernreuther, F.~Kahlhoefer, M.~Krämer, and P.~Tunney, {\it {Strongly
+  interacting dark sectors in the early Universe and at the LHC through a
+  simplified portal}},  {\em Submitted to: J. High Energy Phys.} (2019)
+  [\href{http://xxx.lanl.gov/abs/1907.0434}{{\tt arXiv:1907.0434}}].
+
+\bibitem{Falkowski:2010gv}
+A.~Falkowski, J.~T. Ruderman, T.~Volansky, and J.~Zupan, {\it {Discovering
+  Higgs Decays to Lepton Jets at Hadron Colliders}},  {\em Phys. Rev. Lett.}
+  {\bf 105} (2010) 241801, [\href{http://xxx.lanl.gov/abs/1007.3496}{{\tt
+  arXiv:1007.3496}}].
+
+\bibitem{Sjostrand:2014zea}
+T.~Sj{\"o}strand, S.~Ask, J.~R. Christiansen, R.~Corke, N.~Desai, P.~Ilten,
+  S.~Mrenna, S.~Prestel, C.~O. Rasmussen, and P.~Z. Skands, {\it {An
+  introduction to PYTHIA 8.2}},  {\em Comput. Phys. Commun.} {\bf 191} (2015)
+  159, [\href{http://xxx.lanl.gov/abs/1410.3012}{{\tt arXiv:1410.3012}}].
+
+\bibitem{Butterworth:2016sqg}
+J.~M. Butterworth, D.~Grellscheid, M.~Kraemer, B.~Sarrazin, and D.~Yallup, {\it
+  {Constraining new physics with collider measurements of Standard Model
+  signatures}},  {\em JHEP} {\bf 03} (2017) 078,
+  [\href{http://xxx.lanl.gov/abs/1606.0529}{{\tt arXiv:1606.0529}}].
+
+\bibitem{FAIR}
+M.~Wilkinson, M.~A. Dumontier, and I.~et~al., {\it {The FAIR Guiding Principles
+  for scientific data management and stewardship.}},  {\em Sci Data} {\bf 3}
+  (2016) 160018.
+
+\bibitem{Doglioni:2019fza}
+C.~Doglioni, {\it {Synergies between astroparticle, particle and nuclear
+  physics}},  in {\em {Proceedings of the European Physical Society Conference
+  on High Energy Physics (EPS-HEP) 2019, special ECFA-EPS session}}, 2019.
+\newblock \href{http://xxx.lanl.gov/abs/1912.1274}{{\tt arXiv:1912.1274}}.
+
+\bibitem{Aaboud:2016leb}
+{ATLAS Collaboration}, {\it {Performance of the ATLAS Trigger System in 2015}},
+   {\em Eur. Phys. J.} {\bf C77} (2017), no.~5 317,
+  [\href{http://xxx.lanl.gov/abs/1611.0966}{{\tt arXiv:1611.0966}}].
+
+\end{thebibliography}\endgroup

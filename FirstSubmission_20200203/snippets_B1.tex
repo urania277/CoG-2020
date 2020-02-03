@@ -1,0 +1,136 @@
+%WORRD SALLADDD
+\subsubsection*{WP3: WIMP dark matter mediator searches}
+
+\begin{wrapfigure}{L}{0.25\textwidth} \includegraphics[width=0.25\textwidth]{figs/WIMPMediator}
+\caption{\label{fig:WIMPMediator} \small Sketch of WIMP mediator model \scriptsize \color{red} Improve quality, consider adding DD/ID etc. \color{black}}
+\end{wrapfigure}
+
+This model is used by the majority of DM LHC searches and can reproduce the observed relic density. It can be used as a building block for more complex theories (e.g. those mentioned in WP4) since it can describe the behavior of these processes even with a small number of parameters. 
+
+
+Both classes of models can explain the amount of dark matter in the universe from cosmological observations (the DM \textit{relic density}). 
+
+%In this proposal I will map these discoveries to two classes of models which explain the particle nature of dark matter discussed in WP3 and WP4. %too kitchen sink
+The data collected using these techniques represents an entirely new dataset that can extend the experimental reach of the ATLAS experiment with a similar amount of resources~\cite{Resonances}. 
+
+
+
+The contextualization and dissemination of the results obtained will not be limited to high energy physics, as it will be extended further afield, to other experiments searching for DM. 
+
+%and thanks to the presence of a strong theory group with world-leading expertise in the DM models I intend to look for. 
+
+\subsubsection*{WP2: Early searches and measurements}
+
+
+
+\subsubsection*{WP3: Dark Matter mediator searches}
+
+%One of the most striking gaps in the knowledge of our universe is the nature of dark matter. All we know about dark matter so far comes from its gravitational and astrophysics observations and simulations; astrophysics also provides some tantalizing hints towards the existence of a new particle~\cite{HooperLeane} that are imperative to pursue~\footnote{Caveat about gravitation}. 
+
+This WP furthers searches for WIMP models at the LHC using the Trigger Level Analysis technique, in a scenario that is not fully constrained by existing searches, by searching for the visible decays of the particles mediating the interaction between ordinary and dark matter. 
+
+\begin{wrapfigure}{L}{0.25\textwidth} \includegraphics[width=0.25\textwidth]{figs/WIMPMediator}
+\caption{\label{fig:WIMPMediator} \small Sketch of WIMP mediator model \scriptsize \color{red} Improve quality, consider adding DD/ID etc. \color{black}}
+\end{wrapfigure}
+
+%WIMP DM can be produced via interactions of SM particles at the LHC through a new force mediator (analogous to the W and Z for the Weak Force), as in Fig.~\ref{fig:WIMPMediator}. Here, quarks within the colliding protons couple to a mediator particle which decays to a pair of WIMPs or, through the same interaction responsible for mediator production, to two jets. 
+This model is used by the majority of DM LHC searches and can reproduce the observed relic density. 
+
+In WP3, I will search for the decays of mediators of DM in two-jet final states, accompanied by a photon or a jet. I have pioneered LHC searches for this signature in my StG using traditional data-taking techniques as a way to look for new particles with lower masses with respect to what was possible in two-jet searches with the Trigger Level Analysis, and in this CoG I will implement the TLA technique in this kind of search, relying on the first ATLAS availability of TLA photons (\textbf{WP1}). This will lead to a major improvement to the sensitivity of particles in a region of phase space where the SM massive force mediators reside ($<$ 400 GeV), that is inaccessible with the same sensitivity by other kinds of searches, and that is motivated by a number of theoretical models beyond WIMP DM~\cite{ALP, HooperLeane}.  
+
+\subsubsection*{WP4: Mapping dark/hidden sectors}
+
+%Partly motivated by the constraints set on such particles by first-generation direct searches, and by the analyses I have led in the first phase of the LHC data taking, the DM community has recently started to generalize the flagship searches for these weakly interacting massive particles (WIMPs) by expanding the search program for particles with much weaker interactions with SM particles than what predicted by WIMP theories~\cite{FIMPs}. 
+%This is a strong motivation for this project to enable detection of different DM candidates with broad theoretical connections, such as new particles from dark/hidden sectors~\cite{HiddenSector}. 
+
+%While the searches in WP2 are powerful probes of WIMPs, they are not optimally sensitive to DM mediators whose interaction with the SM is even feebler. This is the case for “dark sector” or “hidden valley” models\cite{Zurek}, where the only connection between the SM and the DM particle spectrum occurs via a feebly coupled mediator particle (e.g. a photon-like particle with non-zero mass). Hidden valley models also postulate a multitude of dark sector particles, mirroring the complexity of the SM in a theory similar to the strong force.  
+%These "dark Quantum Chromodynamics” (dark QCD) theories, where the fundamental constituents (e.g. dark quarks) fragment into a mixture of visible and invisible particles (dark hadrons), would still give rise to jets of particles. However, the particles forming the jet may be invisible, or only emerge after having partially traversed the detector material. Dark sector jets may also contain very light dark matter mediators that decay into low-energy electrons and muons. 
+%Given the complexity of the parameter space driving the phenomenology of dark QCD, there are a wide range of possibility of how dark jets appear in the detector that need to be mapped. The majority of those possibilities currently escapes detection and are discarded at the trigger level, either because of the very large SM QCD  backgrounds (a problem shared by the search targets in WP3) or because the trigger system is unable to recognize their characteristic features in time and considers them noise.  
+%The combination of TLA and partial event reconstruction is the solution to this problem: by recording a limited set of information reconstructed at the trigger level in addition to the full set of raw data behind the dark jet, we bypass storage limitations and we can reconstruct the features that distinguish signal from background at a later stage where more resources are available. 
+
+While the dataset collected with those techniques allows mapping a large number of dark sector models, two classes that have not been searched at the LHC before are chosen to be investigated with Run-3 data in this project.
+
+In the first class, one of the dark sector particles within the dark jet can easily make up the relic density of dark matter and is therefore completely invisible to the detector, leading to a \textit{semi-visible} jet. Since the main background for this signal is composed of mismeasured QCD jets, it is crucial that both QCD jets and dark jets are calibrated so that the measurement error and jitter can be minimized. As an expert in hadronic jets and their calibration, I will develop and employ techniques tailored for this specific search. 
+In the second class of models, low-energy leptons from the decays of e.g. a light dark mediator or from a dark Higgs boson are an integral part of the dark jet, mirroring the way as QCD particle showers develop an interleaved electromagnetic component. The main challenge of searches for these models is the development of reconstruction algorithms and calibrations for these leptons, and we will rely on existing algorithm that the ATLAS collaboration has already developed but not yet widely used for physics measurements and implement them in the trigger level reconstruction within WP1. 
+
+As part of WP5, the parameter space that will be investigated in these models will be carefully chosen by considering the constraints from past searches for the individual particles within the dark jet (e.g.~\cite{DarkPion})  and LHC measurements of the development of QCD jets that are sensitive to changes in the structure of jets, using a software program that enables the use of precision results released by the ATLAS, CMS and LHCb collaboration to be used to constrain the parameter space of new physics models~\cite{CONTUR}. 
+
+\subsubsection*{WP5: Conceptualization, contextualization, synergies}
+
+%\begin{wrapfigure}{R}{0.5\textwidth} 
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=0.7\textwidth]{figs/flavorprobes.pdf}
+%\caption{\label{fig:scales} Energy scales of generic NP models probed by heavy flavor observables. The energies accessible to searches at the LHC and a potential $100~\TeV$ future collider (FCC) are indicated. Figure adapted from~\cite{neubert:scales}}
+%\end{center}
+%\end{wrapfigure}
+%\end{figure}
+
+
+\section{Timeliness of the research program and appropriateness of the PI and team} 
+\smallskip
+
+This research program spans the entire upcoming LHC data-taking period (Run-3). The 2021-2026 period is the ideal time to advance the state-of-the-art in processing of large datasets and DM searches, ensuring continued impact through a significant extension of my current successful StG research program that relies on novel data-taking techniques. The LHC schedule includes an initial commissioning period where innovations can be deployed and tested via early measurements with start-up data, which forms the first part of this project. The second phase of this proposal will use the wealth of data delivered by the LHC during the fully-commissioned data-taking period for novel DM searches, with a dataset that will be more than twice as sensitive to the physics observables of this proposal than the data collected so far. 
+
+I am uniquely suited to deliver an ambitious and timely research program in which I will lead a research team of two postdoctoral researchers and two students, complemented by talented Lund University undergraduates that I have a track record of recruiting and training.
+As evidenced by my CV and track record, my profile combines both technical and scientific proficiency with leadership of large groups of scientists in both physics and data analysis tools. 
+With my international collaborators and within my StG, I have led a paradigm shift in data-taking techniques in ATLAS from software concept to publication \textbf{[and I am now HSF convenor]}. I have authored a number of LHC searches for DM and new phenomena, and I have coordinated ATLAS- and LHC-wide working groups instrumental to the design of DM search strategies~\cite{DMWG}. 
+As an internationally recognised expert in the field, I have been invited to write review articles on the subject area of this proposal~\cite{Buchmueller:2017qhf, Boveia:2018yeb}, and have contributed to the European Strategy update, which defines the next 10 years of Europe-wide and international research in HEP, as one of the scientific secretaries of both the Dark Matter and Beyond the Standard Model Physics Planning Groups~\cite{Strategy:2019vxc}.
+
+
+% Mention who asked you to do this rather than saying who you're doing this with
+%In addition to further enhancing my standing as an expert in DM, 
+
+As a recognized expert in DM searches and collider data-taking techniques with a track record of synergistic interdisciplinary activities, the impact of this proposal will not be limited to high energy physics but will be disseminated further afield to generate impact in DM direct detection and cosmological disciplines.  
+
+\section{Project planning}
+\smallskip
+
+Minigantt
+
+I will lead a research team consisting of two postdoctoral researchers and two PhD students. 
+
+\footnote{The first two years of Run-3 are the ideal opportunity to use the  to . 
+The initial LHC accelerator plan for Run-3 foresees that the first two years (2021-2022) will be used as a ramp-up for the production data-taking period, with the majority of the dataset being collected in (2023-2024)~\cite{SomeRandomEuropeanStrategyPresentationOrTooMuch}.}.
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=0.7\textwidth]{figs/timeline_new.pdf}
+%\caption{\label{fig:timeline} Timeline of the proposal.}
+%\end{center}
+%\end{figure}
+
+%The LHC will begin Run III with a commissioning period during %which the software trigger will be exercised. A detector %commissioning paper will be published in Q2 2021, and a %performance paper in Q4 2021 where the new exclusive trigger %selections will be used to highlight the increased efficiency %with respect to Run II. 
+
+
+\section{Conclusions}
+
+%CAN BE USED This proposal will solve this issue by enabling the ATLAS experiment to record data in a new manner. This will permit, for the first time, this wealth of recorded data to be used for early measurements and new dark matter searches, and propagates the results and the developed tools to the broader community. \textbf{Mention the tools somewhere}
+
+\clearpage
+%\addcontentsline{toc}{section}{References}
+\setboolean{inbibliography}{true}
+%\bibliographystyle{LHCb}
+\bibliographystyle{JHEP}
+\bibliography{researchrefs}
+
+
+\clearpage
+
+%\input{CF/CV_CF}
+
+\section*{Section B: Curriculum Vitae}
+
+\clearpage
+
+\section*{Appendix: All ongoing and submitted grants and funding of the PI}
+
+%\input{CF/FundingID_CF}
+
+\clearpage
+
+\section*{Section C: Early achievements track record}
+
+%\input{CF/TrackRecord_CF}
+
+\end{document}  

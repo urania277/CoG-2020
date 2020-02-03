@@ -1,0 +1,253 @@
+%NOTE: This doc formatted according to http://ec.europa.eu/research/participants/data/ref/h2020/call_ptef/pt/2018-2020/h2020-call-pt-erc-stg-2019_en.pdf
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2.0cm,top=2.0cm,right=2.0cm,bottom=1.5cm]{geometry}               
+%\usepackage[subtle]{savetrees}
+\usepackage[bibbreaks=normal, paragraphs=normal, floats=tight, mathspacing=tight, lists=tight, title=normal, margins=normal, wordspacing=normal, tracking=normal, charwidths=normal, bibnotes=normal, mathdisplays=tight, leading=normal, indent=normal, bibliography=tight, sections=tight]{savetrees} 
+
+%for weird chars in bib
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xspace}     
+\usepackage{wrapfig}
+\setlength\intextsep{0pt}
+
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{amsmath} % Adds a large collection of math symbols                  
+\usepackage{ifthen} % for conditional statements               
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{upgreek} % Adds in support for greek letters in roman typeset       
+\usepackage{titling}
+\usepackage{makecell}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{url,booktabs,amsmath,hepunits,abhepexpt,abhep,xcolor}%amsmath
+\usepackage[colorlinks]{hyperref}    % Hyperlinks in references
+\usepackage[all]{hypcap} % Internal hyperlinks to floats.
+
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set to true to get roman particle symbols
+
+%If we need more space we can investigate: https://tex.stackexchange.com/questions/273086/use-smaller-headheight-in-fancyhdr, https://tex.stackexchange.com/questions/271159/turn-off-fancyhdr-auto-spacing
+\usepackage{fancyhdr}
+
+\usepackage{rotating}
+
+%\usepackage{fancyheadings}
+\pagestyle{fancy}
+
+
+% Playing with the page size 
+
+\usepackage{array}
+\newcolumntype{y}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+%\renewcommand*{\arraystretch}{1.2}
+
+%TB
+%\addtolength{\oddsidemargin}{-10pt}
+%\addtolength{\evensidemargin}{-10pt}
+%\addtolength{\textwidth}{25pt}
+%\addtolength{\textheight}{76pt}
+%end TB
+
+%\addtolength{\textfloatsep}{-2pt}
+\setlength{\droptitle}{-44mm}
+
+\setlength{\headwidth}{\textwidth}
+
+
+\newboolean{articletitles}
+\setboolean{articletitles}{false}
+
+\usepackage{cite}
+\usepackage{mciteplus}
+
+\newboolean{inbibliography}
+
+\titlespacing{\section}{0pt}{4pt}{0pt}
+\titlespacing{\subsection}{0pt}{4pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{4pt}{0pt}
+%\titlespacing{\section}{0pt}{\parskip}{0pt}
+%\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+%\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+%Garamond saves space and looks way poncier
+%\usepackage[T1]{fontenc}
+%\usepackage[urw-garamond]{mathdesign}
+\usepackage{ebgaramond}
+\renewcommand\labelitemi{$\bullet$}
+
+\usepackage{fontspec}
+
+\setmainfont{EBGaramond-Regular}[
+  BoldFont = EBGaramond-Bold,
+  ItalicFont = EBGaramond-Italic,
+  BoldItalicFont = EBGaramond-BoldItalic]
+  
+%\usepackage[cmintegrals,cmbraces]{newtxmath}
+%\usepackage{ebgaramond-maths}
+%\usepackage[T1]{fontenc}
+
+% Helvetica for sans serif
+% (scaled to match size of Palatino)
+%\usepackage[scaled=0.90]{helvet}
+%\usepackage{helvet}
+
+%\setlength{\parindent}{2em}
+\setlength{\parskip}{0.2em}
+
+
+\title{{\Large Part B1 - ERC Consolidator grant}}
+\author{{\normalsize Caterina Doglioni}}
+\date{}                                           % Activate to display a given date or no date
+
+%\usepackage[parfill]{parskip}
+
+\begin{document}
+
+\lhead{{\small Doglioni}}
+\chead{{\small Part B2}}
+\rhead{{\small REALDARK}}
+\begin{center} 
+
+{\Large\bf ERC Starting Grant 2020} \\
+ {\Large\bf Research Proposal [Part B2]}  \\
+\vspace{0.5cm} 
+\end{center} 
+
+{\Large{\bf Part B2: {\it{The scientific proposal}}}}
+
+\section{State of the art and objectives}
+%\smallskip
+%
+%\subsection*{Introduction}
+%\smallskip
+
+\input{PartB2_01_Introduction}
+
+
+%\subsection{The state-of-the-art}
+%\smallskip
+
+\input{PartB2_02_StateOfTheArt}
+
+\input{PartB2_03_Objectives}
+
+%As summarised in Part~B1 the proposal is organised into five coherent work packages which logically build using common methodologies to a precision search for new physics with beauty to charm decays. The work packages' main objectives are to: 
+%\begin{description}
+%		\item [WP1:] Develop new trigger algorithms beyond the standard paradigm of the \LHCb upgrade. This WP builds on the work that the PI has led as HLT Project Leader in the run up to the data taking in 2021, and it is the first use of a revolutionary implementation of a fully software trigger at a collider experiment.
+%        \item [WP2:] Perform the first measurements of beauty hadron production cross-sections using decays without leptons. This WP will simultaneously produce measurements that have never been performed and serves as a necessary validation of the trigger system in WP1. In addition, trigger selections to be used in WP5 will be developed. 
+%        \item [WP3:] Make precise determinations of the SM predictions for the NP-sensitive \CP observables $\phi_s$ and $\sin(2\beta)$ in \HepProcess{\PB\to\PD\PD} decays. This WP includes measurements using both Run~2 and Run~3 data in order to maximise efficient use of time and resources. It will exploit the new trigger paradigm delivered in WP1 and extend the selections delivered in  WP2. 
+%        \item [WP4:] Make the world's most precise determinations of $\phi_s$ and $\sin(2\beta)$ in \HepProcess{\PBs\to\PDsplus\PDsminus} and \HepProcess{\PBzero\to\PDplus\PDminus} decays, respectively, and through comparison to the determinations of WP3 provide a clean NP search. 
+%        \item [WP5:] Uncover the structure of the NP measured in WP4 by making the worlds most precise decay-time-dependent determinations of $\gamma$ in \HepProcess{\PBs\to\PDs\PK} and \HepProcess{\PBzero\to\PD\Ppi}. 
+%       \end{description}
+%The objectives are described in detail in the following subsections.
+
+\section{Methodology}
+%\smallskip
+
+\input{PartB2_04_Methodology}
+
+\subsection{Project planning}
+%\smallskip
+
+\input{PartB2_05_ProjectPlanning}
+\label{sec:ProjectPlanning}
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=\textwidth]{figs/Gantt_B2_forPublication.pdf}
+%\caption{\label{fig:timeline} Detailed project timeline describing the allocation of team members and work %package durations. Vertical lines indicate dependencies between work packages. Publications are marked with %yellow diamonds.}
+%\end{center}
+%\end{figure}
+
+%The research team will be comprised of the PI, a PDRA, and three PhD students. In the following, a detailed description of the work to be undertaken by the team is given. 
+
+%A timeline describing the overall planning and allocation of team members is provided in Figure~\ref{fig:timeline}. This has been prepared using project planning and management software~\cite{omni:plan}, taking particular care to schedule tasks common to all analyses and balancing the work between the research team in a way that ensures the ambitious project is achievable within the timescale and resources of this research proposal. Resources are discussed in the next section.
+
+\subsection{Impact and risk management}
+%\smallskip
+
+\input{PartB2_06_ImpactRisk}
+\label{sec:ImpactAndRisk}
+
+
+%\subsection{Risks}
+%\smallskip
+
+%\subsubsection{Delays to the LHC and LHCb data taking schedule}
+%\subsubsection{Reduced RTA functionality}
+
+\section{Resources}
+
+%The resources requested for this proposal are listed in Table~\ref{tab:resources} and described in detail below. 
+%\subsection{Personnel}
+
+%\subsubsection{Principal Investigator} 
+
+%\subsubsection{PDRA}
+
+%\subsubsection{Other personnel}
+%Administrative/Clerical support is included at 5\% Full-Time Equivalent (FTE) over the entire five year period. An additional 10\% for computing support is included to maintain the computing cluster and provide technical support related to its use in this project. The Warwick Elementary Particle Physics group is committed to local outreach activities and employs an outreach coordinator. I have an extensive outreach track record and will, along with the PDRA and PhD students participate in local outreach activities. 5\% FTE for outreach support is included. These are costed according to the normal costing procedures at Warwick.
+
+%\subsubsection{Studentships} 
+%The proposal seeks funding for two PhD students for 3.5 years each, one to start in year 1 and the second in year 2. A third PhD student, funded by the University of Warwick at no cost to this proposal, will start in year 3. The PhD students will spend their first six months working at 50\% in order to also participate in academic training courses. The last 6 months of the PhD students' time will be spent writing their theses. 
+
+%PhD1 will be hired in the first year, and will initially work with the PI on the WP2 early measurement preparations using the Run 1+2 \LHCb datasets. PhD1 will also participate in development of the RTA reduced event format selections of WP1 with the PDRA. PhD1 is expected to become a trigger and RTA on-call expert based on their experience during the development and commissioning stages, and will be based at CERN on long-term attachment for one year from Q3 2020 to Q3 2021 in order to participate in the early measurement data taking and RTA operations. PhD1 will be an author of the deliverables listed in WP1, the early measurements paper in WP2 and the time-integrated $A_{\text{CP}}$ measurements in WP3.  
+
+%PhD2 will be hired in the second year and will work initially on development of the decay-time-dependent component of the fitting framework in WP3. They will become an expert in flavor tagging calibrations and will be based at CERN on long-term attachment from Q3 2021 to Q3 2023 in order to develop \LHCb-wide flavor tagging procedures as part of the Flavor Tagging Performance working group, in addition to developing the time-dependent fitting framework as part of the Beauty to Open Charm (time-dependent) physics working group. PhD2 will be an author of the Time-dependent measurements in WP3,  and the publications in WP4. They will also contribute to \LHCb-wide flavor tagging performance publications as a result of their work in this proposal.
+
+%\subsection{Travel} 
+
+%\subsubsection{Travel to and from CERN}
+%Frequent visits to CERN are required to participate in commissioning, data taking shifts and to disseminate the results of the proposal to the collaboration during \LHCb weeks, when the collaboration meets. Four trips per traveller per year of this kind are envisaged, with 3 travellers in year 1, 4 in years 2
+%and 3, 3.5 in year 4 and 2.5 in year 5. 
+
+
+%\subsubsection{Long-Term Attachment}
+%PhD students in high-energy physics are expected, as part of their development, to spend a period of 1-2 years based at their experiment in order to receive training, participate in on-site commissioning and data taking activities and collaborate with their international peer group. Three years of Long-Term Attachment (LTA) at the LHCb experiment at CERN are requested. During this time the students will need to travel to the host institute at the same frequency as described under the previous heading. 
+
+%\subsubsection{Conferences}
+%In order to present the results of this proposal to the international community, one conference per person per year is foreseen, with the same number of travellers as listed for CERN visits. 
+
+%\subsection{Equipment}
+%The Elementary Particle Physics group has a computing cluster which will be used throughout the course of this project to perform dedicated simulation and pseudoexperiments necessary to determine systematic uncertainties. I have requested funds to add additional processing to the cluster commensurate with the resources the project will require. The costs include additional compute nodes and the warranty required to cover the five year period. 
+
+%\subsection{Other goods and services}
+%\subsubsection{Audit}
+%The compulsory audit is included at nominal cost. 
+%\subsubsection{Recruitment}
+%Recruitment costs are included in order to invite prospective PDRA candidates to interview and cover travel expenses. 
+
+%\subsubsection{Training}
+%Training is necessary for all members of the proposal in order to aid development and ensure delivery of the proposal objectives. The PDRA and PhD students will take advanced software development courses to aid in the trigger development stage of the project. In addition the PI will take courses in project management and leadership training. 
+
+%\subsubsection{Publication charges}
+%The research outputs described in this proposal will be published as a member of the \LHCb collaboration, hosted by CERN. CERN is committed to open access, and covers all publication costs through the SCOAP3 initiative. As such, no publication charges are listed.   
+
+%\subsubsection{Consumables}
+%The PDRA and PI will require laptops with an additional screen, and docking station in order to carry out work both in Warwick and when travelling to CERN. Portable backup devices will be purchased for each laptop to mitigate risk of data loss. The laptops will be bought with warranties to cover the duration of the project. These have been included as consumables in Table~\ref{tab:resources}.
+
+\clearpage
+\begingroup
+    \setboolean{inbibliography}{true}
+\bibliographystyle{LHCb}
+    \linespread{0.9}\selectfont
+\bibliography{researchrefs}
+
+\endgroup
+
+
+%{\bf Note:} The PI is an author of Refs.~\cite{LHCb-PUB-2014-027,Bourgeois:2018nvk} and all the LHCb collaboration papers, with particular contributions to  Refs.~\cite{Aaij:2014jba,CERN-LHCC-2014-016,Aaij:2013mga,Aaij:2014ywt,LHCb-PUB-2014-040,Aaij:2016kjh,Aaij:2017lff}.
+%The PI is acknowledged in Ref.~\cite{Jung:2014jfa}.
+
+
+
+\end{document}  

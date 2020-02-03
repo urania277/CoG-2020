@@ -1,101 +1,83 @@
-The work within \textsc{Realdark} proposal builds novel data acquisition and selection tools and techniques in WP1 and applies them to obtain the physics results in WP2-4. This modus operandi follows my proven track record of bringing challenging improvements to the data taking system and to the combined performance of the entire experiment, then successfully exploiting them for world-best physics measurements and searches. 
+The work within \textsc{Realdark} builds novel data acquisition and selection tools and techniques in WP1 and applies them to obtain the physics results in WP2-4. This modus operandi follows my proven track record of bringing challenging improvements to the data-taking system and to the combined performance of the entire experiment, then successfully exploiting them for world-best physics measurements and searches. 
 Sec.~\ref{subsub:TriggerRecoSoftware} and Sec.~\ref{sub:CommonMethodsAnalysisTools} describe the methodologies required for reaching the objectives of the WPs described in Sec.~\ref{sub:objectives}. 
 Their description follows logically the procedures designed to record, treat and analyze large amounts of raw data towards the dissemination of results that can shed light on the particle nature of DM. %Specific methodologies are described in Sec.~\ref{sub:SpecificMethodsCompression}. 
-The project planning is described in Sec.~\ref{sub:ProjectPlanning}.  
+The project planning is described in Sec.~\ref{sec:ProjectPlanning}.  
 
 \subsection{Methodologies: From LHC collisions to physics objects for analysis}
 \label{subsub:TriggerRecoSoftware}
 
 %Should I have "my expertise" here or in project planning? For now, here. 
-In this section outlines the methods used to record data with the techniques proposed, 
-and transform these data into physics quantities to be used for the searches in WP2-4. 
+This section outlines the methods used to record data with the techniques proposed 
+and transform these data into observables for the searches in WP2-4. 
 
 \textbf{From LHC collisions to storage} The ATLAS core software infrastructure receives raw trigger and detector information from collisions and assembles it into different data streams. 
 Full events that pass the trigger selections are placed in the main data stream for subsequent reconstruction, while partially-built detector data (including TLA and TLA+PEB objects) are placed in specific data streams. 
-In WP1, the team will rely on my expertise as one of the main authors of the TLA framework in Run-2, and deploy new multithreaded software algorithms that can write out jets, photons, muons and electrons, as well as user-defined partial detector information. 
-These algorithms are executed if an event is selected by a given L1+HLT trigger "\textit{seed}" chain. 
+In WP1, starting from my expertise as one of the main authors of the TLA framework in Run-2, the team will deploy new multithreaded software algorithms that can record jets, photons, muons and electrons, as well as user-defined partial detector information. 
+These algorithms are executed if an event is selected by a given L1+HLT trigger ``\textit{seed}'' chain. 
 %, in order to reduce the storage and CPU cost of downstream HLT algorithms. 
-Given that a large part of the searches in this proposal occurs at the HLT, a resource constrained environment, an important part of the planning prior to data taking is to optimize the CPU and storage resources needed for each of the planned data streams using tools in Ref.~\cite{ToBeCited}, % CostMonitoring talk by Tim 
+Given that a large part of the searches in this project occurs at the HLT, a resource constrained environment, an important part of the work occurs prior to data-taking to optimize the CPU and storage resources needed using tools in Ref.~\cite{Martin:2229583} for each of the planned data streams % CostMonitoring talk by Tim 
 and determine the optimal stream content and seed chains for the searches in WP2-4. 
 
 \textbf{Reconstruction} Full events are passed through the ATLAS reconstruction software, so that raw detector data can be reconstructed into final physics objects (muons, electrons, jets...). 
-While TLA events are already reconstructed within the HLT software using inputs and algorithms that are as close as possible to offline, 
-TLA+PEB events require the software reconstruction algorithms to be adapted to cope with receiving partial detector data as input. 
-We can take advantage of trigger-level reconstruction algorithms, where regional reconstruction has already been used to optimize HLT resources~\cite{ToBeCited}, %Partial event building
-and extend existing reconstruction and identification techniques to non-isolated muons and electrons in hadronic environments~\cite{ToBeCited}. %Muons in b-jets, heavy neutrinos, and Tuhin Roy's paper
+While TLA events are already reconstructed within the HLT using inputs and algorithms that are as close as possible to offline~\cite{Aaboud:2017aca,PERF-2017-01,EGAM-2018-01,EGAM-2018-01,Aad:2016jkr}, 
+TLA+PEB events will require adapting the reconstruction algorithms to cope with partial detector data as input. 
+We can take advantage of trigger-level reconstruction algorithms, where regional reconstruction has already been used to optimize HLT resources~\cite{Aaboud:2016leb}, %Partial event building
+and extend existing reconstruction and identification techniques to non-isolated muons and electrons in hadronic environments~\cite{Chatterjee:2019brg,Aaboud:2019wfg}. %Muons in b-jets, heavy neutrinos, and Tuhin Roy's paper
 
-\textbf{Object identification and calibration} Correct object identification and calibration is a crucial point to be able to use HLT and custom objects for physics analysis.
+\textbf{Object identification and calibration} Accurate object identification and calibration is crucial to the use of HLT and custom objects for physics analysis.
 %I am an expert of jet calibration 
 %In the case of TLA, these can be improved at a later date using dedicated algorithms and more refined corrections that are not applied at the HLT. 
-As demonstrated within the HLT jet calibration in my StG, we will keep the procedures to identify and calibrate HLT objects in this proposal as close as possible to those of offline objects, with additional data-derived corrections and scale-factors applied to HLT objects covering the remaining differences. 
+Within my StG, I demonstrated a precise calibration is achievable for HLT jets.
+Here, we will follow similar approaches for the other HLT objects, keeping the procedures to identify and calibrate HLT objects as close as possible to those for offline objects, with additional data-derived corrections and scale-factors covering the remaining differences. 
 %Tracking: where do we need it? Jets, mostly.
-A major improvement in the Run-3 calibration procedures is the addition of tracking information computed by the HLT software, as described in Sec.~\ref{sub:stateOfTheArtExperiment}. 
-This allows for improvements in both jet reconstruction and calibration, as \textit{particle flow}~\cite{ToBeCited} %cite: PFlow
-jets combining calorimeter and tracking information can be used at the trigger level, and the same track-based correction steps can be applied to HLT and offline jets~\cite{ToBeCited}. %GSC, pile-up suppression
-The use of tracks is for HLT photons, electrons and muons will be investigated in WP1.   
-For example, the use of tracks could improve the rejection of fake photons and facilitate identification and correct calibration for converted photons in TLA.  
-Preliminary studies that I supervised~\cite{ToBeCited} %Leo thesis 
-show that the HLT photon calibration in Run-2 was already well-understood without further optimizations in the energy range used for the searches in WP3~\footnote{We expect the situation to improve in Run-3, especially since the preliminary studies did not subtract any of the QCD background that can be removed using a combination of calorimeter variables (e.g. as in~\ref{PhotonID,PhotonXSec})}. 
-We expect a similar situation in Run-3 for photons and electrons alike, given that the HLT ATLAS electron and photon group plans to align reconstruction, identification and calibration as much as possible, and that residual differences (e.g. from different online/offline calorimeter corrections) can be covered with data-derived factors e.g. from analysis of $Z\rightarrow ee (\gamma)$ events.  
-Identification and calibration of HLT muons will also rely on the offline procedures (reaching muon momenta as low as 3 GeV~\cite{ToBeCited}) %muon performance paper
+A major improvement in the Run-3 calibration procedures is the addition of widely-available tracking information computed by the HLT software, as described in Sec.~\ref{sub:stateOfTheArtExperiment}. 
+This allows for improvements in both jet reconstruction and calibration, as \textit{particle flow}~\cite{Aaboud:2017aca} %cite: PFlow
+jets combining calorimeter and tracking information can be used at the trigger level, and the same track-based correction steps can be applied to HLT and offline jets~\cite{Aaboud:2018fzt,PERF-2014-03,PERF-2016-04}. %GSC, pile-up suppression
+More extensive use of tracks for HLT photons, electrons and muons will be investigated in WP1.   
+For example, preliminary studies that I supervised~\cite{8956089} %Leo thesis 
+show that the HLT photon calibration in Run-2 was already sufficient for the searches in WP3~\footnote{We expect the situation to improve in Run-3, especially since the preliminary studies did not subtract any of the QCD background, which can be removed using a combination of calorimeter variables (e.g. as in~\cite{STDM-2010-08}).}, but these must be incorporated in the TLA algorithms, and
+more thorough use of tracking information could improve the rejection of fake photons and facilitate identification and correct calibration for converted photons in TLA.  
+We expect a similar situation in Run-3 for photons and electrons alike, given that the HLT ATLAS electron and photon group plans to align reconstruction, identification and calibration as much as possible, and that residual differences (e.g. from different online/offline calorimeter corrections) can be covered with data-derived factors e.g. from analysis of $Z\rightarrow ee (\gamma)$ events~\cite{EGAM-2018-01}.  
+Identification and calibration of HLT muons will also rely on the offline procedures~\cite{PERF-2015-10} %muon performance paper
 and additional corrections from $Z$ and $J/\psi \rightarrow \mu\mu$ events. 
 
 \textbf{Performance evaluation} Once the reconstruction and calibration algorithms are in place, their performance needs to be evaluated in data.
-We will test HLT objects against well-measured references (offline objects, simulated objects without detector effects), according to quantitative figures of merit such as response and resolution, tested against well-measured references. 
-In WP2, we will prepare a comprehensive software toolkit for quantitative comparisons between physics objects reconstructed in TLA, TLA+PEB and offline, using automated problem detection techniques. 
-This toolkit will be deployed online, so that HLT problems can be corrected as early as possible, and used offline to determine the performance of HLT objects.  
-The extent to which a mismatch between tested object and reference objects requires intervention (e.g. modification of the reconstruction software, re-derivation of calibration constants...) varies. This will be estimated case by case for the WP3 and WP4 searches, as discussed in Sec.~\ref{sec:SensitivityStudies}.
+We will test HLT objects against well-measured references (offline objects in data and simulated objects without detector effects), according to quantitative figures of merit such as response and resolution, tested against well-measured references. 
+In WP2, we will prepare a comprehensive software toolkit for automated, quantitative comparisons between physics objects reconstructed in TLA, TLA+PEB and offline. 
+This toolkit will be deployed online, so that HLT problems can be caught as early as possible.
+The toolkit will also be used offline to determine the performance of HLT objects.  
+The extent to which a mismatch between tested object and reference objects requires intervention (e.g. modification of the reconstruction software, re-derivation of calibration constants...) will be estimated case by case for the WP3 and WP4 searches within sensitivity studies. 
  
-\subsubsection{Specific methodologies for WP1: data compression}
-
-Compressing data can lead to further gains in terms of reducing the storage requirements of TLA and TLA+PEB. 
-For this reason, this proposal investigates using deep autoencoders for lossy data compression, in a forward-looking study targeting HL-LHC. 
-%Preliminary studies by a Lund engineering (LTH) student that I co-supervised have shown that compressing data using deep autoencoders could lead to large space savings for TLA data and ATLAS data and simulation as a whole, leading to compression factors of 2 with negligible performance loss in TLA data~\cite{ToBeCited}. %Eric's thesis 
-The advantage of autoencoders over methods such as Principal Component Analysis is that they are able to learn non-linear correlations among the nodes, 
-and that, once the network is trained, the compression is fast (order 2-5 $\mu s$), making them a good candidate to be used in the HLT (latency $\approx$ 300 $\mu$ s). 
-Over the course of this proposal, we will bring the proof-of-principle studies done by the Lund Master's student to a realistic proof-of-principle, within a number of Master's projects and summer projects. 
-%Firstly, we will test whether the compression data is compatible with .
-%Secondly, we will understand the interplay. 
-%Thirdly,   
-%investigate compressing raw data. 
-%Finally, we will 
-
-%Autoencoders are neural network that implement an approximation to the identity $f(x) \approx x$ using hidden layers with a smaller dimensionality with respect to input and output layers. 
-%The smallest-dimensionality hidden layer contains a compressed representation of of the original information. 
-%This compressed representation can then be saved to storage instead of the original data format, along with the network implementing the identity. 
-%A figure of merit of the fidelity of this identity is the “reconstruction error”. 
-%Autoencoders are widely used as anomaly detection algorithms. They are first trained on large amounts of non-anomalous reference data, and then presented with new data. If the new data does not match the reference data, the reconstruction error will be large and can be used as figure of merit to spot anomalies. 
-
 \subsection{Common methodologies: analysis and interpretation tools}
 \label{sub:CommonMethodsAnalysisTools}
 
 This section outlines the data analysis and reinterpretation methods that are common to the searches in WP2-4, mentioning specific details for each of the searches. 
 
-\textbf{Sensitivity studies} Prior to starting any of the physics analyses in WP2-4, studies are needed to determine the sensitivity of the analysis and refine the parameter space to be targeted (e.g. for producing simulated signal grids). 
-These studies are initially implemented as a simplified version of the analysis, where trigger, detector and calibration effects are implemented using parameterizations and employ full simulation at a later stage. 
-For the implementation of the analyses in this proposal, we will use the RIVET software~\cite{ToBeCited}%RIVET 
+\textbf{Sensitivity studies} Prior to starting any of the physics analyses in WP2-4, studies are needed to determine the sensitivity of the analysis and refine the parameter space to be targeted (e.g., for producing simulated signals). 
+These studies will be initially implemented as a simplified version of the analysis using events generated for signal and background~\cite{Alwall:2014hca,Sjostrand:2014zea}, where trigger, detector and calibration effects are implemented using parameterizations. Later, they will employ full simulation in a second stage. 
+For the implementation of the analyses in this project, we will use the RIVET software~\cite{Buckley:2010ar} %RIVET 
 as a starting point to analyze generator-level signal and background simulation. 
-The advantage of using RIVET is that it easily interfaces with the CONTUR software~\cite{ToBeCited}%CONTUR
-permitting the use of a large number of LHC measurements to constrain new phenomena. 
-This is particularly crucial for the searches in WP4, since measurements of jet fragmentation can already constrain dark QCD showering parameters. 
-Sensitivity studies also provide a first testing ground for analysis techniques prior to data taking, and can be used during the data processing stage 
+The advantage of using RIVET is that it easily interfaces with the CONTUR software~\cite{Butterworth:2019wnt}%CONTUR
+make it practical to evaluate constraints from many LHC measurements on new phenomena. 
+This is particularly crucial for the searches in WP4, since measurements of jet fragmentation already constrain certain dark QCD showering parameters. 
+Sensitivity studies also provide a first testing ground for analysis techniques prior to data-taking, and can be used during the data processing stage 
 to understand the level of precision needed for HLT objects in order to be sensitive to certain kinds of signals. 
 
-\textbf{Background reduction and estimate}
-Standard Model backgrounds to all searches in WP2-WP4 need to be reduced and estimated. \\
+\textbf{Background estimate and reduction}
+Standard Model backgrounds to all searches in WP2-WP4 need to be estimated and reduced. \\
 \noindent
 The background reduction techniques employed for the searches in WP2-4 select events based on one or more variables that discriminate signal from background.
 %These selections will be initially determined in simulation samples, and verified in “validation regions” with limited amounts of signal contamination. 
-Simplicity is a driving factor in the choice of background reduction techniques in this proposal. 
+Simplicity is a driving factor in the choice of background reduction techniques in this project. 
 Simpler selections allow searches to remain relatively agnostic to the specific model details, and ease the reinterpretation of results.
 % using models others than the ones we employed, enabling the dissemination objectives in WP5. 
 In the searches in WP2 and WP3, we will use the angular distribution of the jets as a discriminant between s-channel processes over the QCD backgrounds. 
 In the semi-visible and composite jets searches in WP4, we will apply loose selections to reduce the QCD background already at the HLT. 
-We will investigate the use and CPU cost of particle flow jet properties~\cite{ToBeCited}, %PFlow in ATLAS
-event shape variables~\cite{ToBeCited}, %event shapes in ATLAS
-jet substructure techniques and variables~\cite{ToBeCited}, %Nachman/Moult review, but also ttbar rejection
-as well as new dedicated theoretical and phenomenological metrics for measuring QCD jet showering and identifying anomalies~\cite{ToBeCited}. %Lund plane, Thaler distance
-To complement this \textit{cut-based} approach and to further increase the generality of the searches in WP4, exploratory studies will be performed in the direction of detecting anomalies over the known QCD background using ML techniques. % employing the same tools as for data compression in WP1. 
+We will investigate the use and CPU cost of particle flow jet properties~\cite{Aaboud:2017aca}, %PFlow in ATLAS
+event shape variables~\cite{STDM-2011-33}, %event shapes in ATLAS
+jet substructure techniques and variables~\cite{Larkoski:2017jix}, %Nachman/Moult review, but also ttbar rejection
+as well as new dedicated theoretical and phenomenological metrics for measuring QCD jet showering and identifying deviations~\cite{Dreyer:2018nbf,Komiske:2019fks}. %Lund plane, Thaler distance
+To complement this \textit{cut-based} approach and to further increase the generality of the searches in WP4, exploratory studies will be performed in the direction of detecting anomalies over the known QCD background using ML techniques (see e.g.~\cite{Cerri:2018anq,DAgnolo:2019vbw,Collins:2019jip}). % employing the same tools as for data compression in WP1. 
 This will benefit from the work done within my VR Project Grant, which focuses on unsupervised search strategies specifically targeting resonance searches.
 \\
 \noindent
@@ -104,8 +86,8 @@ The background of the dijet and dijet+ISR TLA searches in WP2 and WP3 will be de
 For the semi-visible and lepton-in-jets searches in WP4, we will use a combination of data-derived and simulation-driven backgrounds, depending on whether the backgrounds are mainly from QCD (e.g. fake leptons, jets containing heavy flavor quarks decaying leptonically) or from QED and weak interactions (e.g. Z/W+jets where the vector boson decays into leptons and neutrinos, boosted top quarks containing a lepton from the W decay). 
 Three background estimation methods are foreseen for the searches in this project: 
 \begin{itemize}
-\item For searches in WP2 and WP3 we will estimate the smoothly falling QCD background with a functional form or with a continuous parameterization that does not accommodate narrow local excesses such as those from a new resonant particle. The experience gained with the high-statistics Run-2 dijet TLA search within my StG will be crucial to choose the appropriate method among a number of available techniques~\cite{ToBeCited}. %GaussianProcesses,FitMethod
-\item For searches in WP4, we will use the ABCD method (e.g. Ref.~\cite{ToBeCited}) %ABCD
+\item For searches in WP2 and WP3 we will estimate the smoothly falling QCD background with a functional form or with a continuous parameterization that does not accommodate narrow local excesses such as those from a new resonant particle. The experience gained with the high-statistics Run-2 dijet TLA search within my StG will be crucial to choose the appropriate method among a number of available techniques~\cite{Frate:2017mai,Aaboud:2018fzt,Edgar:2018irz}. %GaussianProcesses,FitMethod
+\item For searches in WP4, we will use the ABCD method (e.g. Ref.~\cite{Choi:2019mip,Aaboud:2018lpl}) %ABCD
 to estimate the background events in the signal region from normalization and control regions that have a minimal background contamination, defined in terms of independent variables. 
 \item For the smaller W/Z backgrounds in the WP4 searches, we will make use of MC simulation using normalization factors derived from control regions in data. 
 \end{itemize}
@@ -118,30 +100,30 @@ Before unblinding the signal region, we will finalize background estimation, sys
 % satisfactorily, according to an internal peer-review committee. 
 Once this is done, a statistical test will be employed to compare the observed data and estimated background. In this phase, we will also incorporate the systematic uncertainties from the reconstruction and calibration and on the background estimation techniques. 
 Given the data-driven nature of the background estimation employed, the systematic uncertainties will mostly impact the signal yields and therefore have a limited impact on the search sensitivity. 
-The statistical compatibility of background and data can then be extracted from either the CLs technique~\cite{ToBeCited}, %CL, from ERC StG
-or from tests that are well suited for looking for a resonance or for an excess in the tails of the distribution, such as the BumpHunter and TailHunter~\cite{ToBeCited}. %Bumphunter/Tailhunter from ERC StG
-We will use a statistical toolkit that enables sharing the final likelihood function, e.g. pyhf~cite{ToBeCited}. %pyhf
+The statistical compatibility of background and data can then be extracted from either the CLs technique~\cite{Read:2002hq}, %CL, from ERC StG
+and from tests designed to look for a resonant peak or for an excess in the tails of the distribution~\cite{Choudalakis:2011qn,Aaltonen:2008vt}. %Bumphunter/Tailhunter from ERC StG
+We will use a statistical toolkit that enables sharing the final likelihood function, e.g. \texttt{pyhf}~\cite{pyhf}. %pyhf
 
-\subsubsection{Interpretation and dissemination of results} The outcome of the statistical analysis will be either compatibility between the data and the background estimation, or an excess above the background. In both cases, the implementation of the analysis code will be available via RIVET/RECAST/REANA 
-and within the ESCAPE software catalogue~\cite{ToBeCited}, 
-and the digitized results will be made available on HEPData~\cite{ToBeCited}. %Rivet
+\subsubsection{Interpretation and dissemination of results} The outcome of the statistical analysis will be either compatibility between the data and the background estimation, or an excess above the background. In both cases, the implementation of the analysis code will be available via RIVET~\cite{Buckley:2010ar}, RECAST~\cite{Schuy:2019awp} and executable on-demand on the \href{http://reanahub.io}{REANA} platform.  
+and within the \href{https://projectescape.eu/services/open-source-scientific-software-and-service-repository}{ESCAPE software repository}, 
+and the digitized results will be made available on HEPData~\cite{Maguire:2017ypu}. %Rivet
 %Note: check that REANA is described somewhere beforehand
 
 \textit{Null result:} The compatibility of data and background indicates that no new phenomena are found within the dataset used for the search. 
 Therefore, constraints can be set on benchmark models in the limit setting phase. 
-Frequentist or Bayesian techniques~\cite{ToBeCited} %BAT
+Frequentist or Bayesian techniques~\cite{Cowan:2013pha,Caldwell_2009} %BAT
 can be used to set limits on the maximum allowed cross-section of the benchmark process versus the model parameters, e.g. the mass of new resonances.
 To extend the results of these searches to any resonant particle, we will also set limits on generic Gaussian-shaped resonances of different widths.
 % as done in all searches in my StG, and a responsibility of one of the students for the Run-2 dijet+ISR search~\cite{ToBeCited}. %dijet+ISR 
 The outcomes of these searches will be plotted alongside results of other LHC searches and non-LHC experiments within a common theoretical framework. 
-For WIMP searches, this will initially follow the methodology of Ref.~\cite{ToBeCited}, %DMWG invisible/visible searches
+For WIMP searches, this will initially follow the methodology of Ref.~\cite{Aaboud:2018fzt}, %DMWG invisible/visible searches
 and will evolve following input from the broader community (e.g. from dedicated discussion within workshops and iDMEU). 
 
 \textit{Discovery:} If an excess above the background prediction is observed, it will need to be characterized. 
 Following the procedure for blind analyses, the observation will be made public as soon as the excess has been reviewed by the entire ATLAS Collaboration. 
 It will be cross-correlated with other ATLAS searches which might see hints of the same process in different final states. 
-Identifying the source of the excess and the nature of the resonance (e.g. distinguishing its parton content~\cite{ToBeCited}) %Vignaroli / Sanz
-will become an outmost priority for the team~\footnote{This may lead to changes in the and work sharing of this project, as the entire team will be working first-hand with the tools and datasets employed up to that point for a result that has a world-wide impact on the field.} and for the Collaboration. 
+Identifying the source of the excess and the nature of the resonance (e.g. Refs.~\cite{Khosa:2019kxd,Chivukula:2014pma}) %Vignaroli / Sanz
+will become an outmost priority for the team~\footnote{This may lead to changes in the work sharing of this project, as the entire team will be working first-hand with the tools and datasets employed up to that point for a result that has a world-wide impact on the field.} and for the Collaboration. 
 In this case, the results of astrophysics and non-LHC experiments will be crucial to ascertain whether these results can be attributed to processes involving DM.
 
 %This needs a study
@@ -149,3 +131,25 @@ In this case, the results of astrophysics and non-LHC experiments will be crucia
 %In Run-2, the TLA stream contained all events where there was at least one jet above a certain transverse momentum threshold at L1. 
 %The Run-3 TLA stream will contain events where the selection is made on the sum of the transverse momentum of the jets in the event.
 %This choice leads to a similar rate as the Run-2 one, thanks to the planned hardware improvements in the L1 trigger, but allows more flexible searches 
+
+\subsubsection{Specific methodologies for WP1: data compression}
+
+Compressing data can lead to further gains in terms of reducing the storage requirements of TLA and TLA+PEB. 
+For this reason, this project investigates using deep autoencoders for lossy data compression, in a forward-looking study targeting HL-LHC. 
+%Preliminary studies by a Lund engineering (LTH) student that I co-supervised have shown that compressing data using deep autoencoders could lead to large space savings for TLA data and ATLAS data and simulation as a whole, leading to compression factors of 2 with negligible performance loss in TLA data~\cite{ToBeCited}. %Eric's thesis 
+The advantage of autoencoders over methods such as Principal Component Analysis is that they are able to learn non-linear correlations among the data, 
+and that, once the network is trained, the compression is fast (order 2-5 $\mu s$).
+This makes them good candidates to be used in the HLT (latency $\approx$ 300 $\mu$ s). 
+Over the course of this project, we will bring the preliminary studies done by the Lund Master's student to a realistic proof-of-principle, within a number of Master's projects and summer projects. 
+%Firstly, we will test whether the compression data is compatible with .
+%Secondly, we will understand the interplay. 
+%Thirdly,   
+%investigate compressing raw data. 
+%Finally, we will 
+
+%Autoencoders are neural network that implement an approximation to the identity $f(x) \approx x$ using hidden layers with a smaller dimensionality with respect to input and output layers. 
+%The smallest-dimensionality hidden layer contains a compressed representation of of the original information. 
+%This compressed representation can then be saved to storage instead of the original data format, along with the network implementing the identity. 
+%A figure of merit of the fidelity of this identity is the “reconstruction error”. 
+%Autoencoders are widely used as anomaly detection algorithms. They are first trained on large amounts of non-anomalous reference data, and then presented with new data. If the new data does not match the reference data, the reconstruction error will be large and can be used as figure of merit to spot anomalies. 
+

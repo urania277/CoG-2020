@@ -1,0 +1,588 @@
+\ifx\mcitethebibliography\mciteundefinedmacro
+\PackageError{LHCb.bst}{mciteplus.sty has not been loaded}
+{This bibstyle requires the use of the mciteplus package.}\fi
+\providecommand{\href}[2]{#2}
+\begin{mcitethebibliography}{10}
+\mciteSetBstSublistMode{n}
+\mciteSetBstMaxWidthForm{subitem}{\alph{mcitesubitemcount})}
+\mciteSetBstSublistLabelBeginEnd{\mcitemaxwidthsubitemform\space}
+{\relax}{\relax}
+
+\bibitem{LHC2008}
+L.~Evans and P.~Bryant, \ifthenelse{\boolean{articletitles}}{\emph{{{LHC
+  Machine}}}, }{}\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08001}{{JINST}
+  \textbf{3} (2008) {S08001}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bertone:2016nfn}
+G.~Bertone and D.~Hooper, \ifthenelse{\boolean{articletitles}}{\emph{{History
+  of dark matter}},
+  }{}\href{http://dx.doi.org/10.1103/RevModPhys.90.045002}{Rev.\ Mod.\ Phys.\
+  \textbf{90} (2018), no.~4 045002},
+  \href{http://arxiv.org/abs/1605.04909}{{\normalfont\ttfamily
+  arXiv:1605.04909}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bernal:2017kxu}
+N.~Bernal {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{The Dawn of
+  FIMP Dark Matter: A Review of Models and Constraints}},
+  }{}\href{http://dx.doi.org/10.1142/S0217751X1730023X}{Int.\ J.\ Mod.\ Phys.\
+  \textbf{A32} (2017), no.~27 1730023},
+  \href{http://arxiv.org/abs/1706.07442}{{\normalfont\ttfamily
+  arXiv:1706.07442}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Steigman:2012nb}
+G.~Steigman, B.~Dasgupta, and J.~F. Beacom,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Precise Relic WIMP Abundance and
+  its Impact on Searches for Dark Matter Annihilation}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevD.86.023506}{Phys.\ Rev.\
+  \textbf{D86} (2012) 023506},
+  \href{http://arxiv.org/abs/1204.3622}{{\normalfont\ttfamily
+  arXiv:1204.3622}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Boveia:2018yeb}
+A.~Boveia and C.~Doglioni, \ifthenelse{\boolean{articletitles}}{\emph{{Dark
+  Matter Searches at Colliders}},
+  }{}\href{http://dx.doi.org/10.1146/annurev-nucl-101917-021008}{Ann.\ Rev.\
+  Nucl.\ Part.\ Sci.\  \textbf{68} (2018) 429},
+  \href{http://arxiv.org/abs/1810.12238}{{\normalfont\ttfamily
+  arXiv:1810.12238}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Aaboud:2018fzt}
+{ATLAS Collaboration}, \ifthenelse{\boolean{articletitles}}{\emph{{Search for
+  low-mass dijet resonances using trigger-level jets with the ATLAS detector in
+  $pp$ collisions at $\sqrt{s}=13$ TeV}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevLett.121.081801}{Phys.\ Rev.\
+  Lett.\  \textbf{121} (2018), no.~8 081801},
+  \href{http://arxiv.org/abs/1804.03496}{{\normalfont\ttfamily
+  arXiv:1804.03496}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Aad:2014bia}
+ATLAS, A.~Collaboration, \ifthenelse{\boolean{articletitles}}{\emph{{Jet energy
+  measurement and its systematic uncertainty in proton-proton collisions at
+  $\sqrt{s}=7$ TeV with the ATLAS detector}},
+  }{}\href{http://dx.doi.org/10.1140/epjc/s10052-014-3190-y}{Eur.\ Phys.\ J.\
+  \textbf{C75} (2015) 17},
+  \href{http://arxiv.org/abs/1406.0076}{{\normalfont\ttfamily
+  arXiv:1406.0076}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Aaboud:2018kfi}
+ATLAS, A.~Collaboration, \ifthenelse{\boolean{articletitles}}{\emph{{In situ
+  calibration of large-radius jet energy and mass in 13 TeV proton–proton
+  collisions with the ATLAS detector}},
+  }{}\href{http://dx.doi.org/10.1140/epjc/s10052-019-6632-8}{Eur.\ Phys.\ J.\
+  \textbf{C79} (2019), no.~2 135},
+  \href{http://arxiv.org/abs/1807.09477}{{\normalfont\ttfamily
+  arXiv:1807.09477}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Doglioni:2011ema}
+C.~Doglioni, {\em {Measurement of the inclusive jet cross section with the
+  ATLAS detector at the Large Hadron Collider}}, PhD thesis, Oxford U.,
+  2011\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Aad:2014aqa}
+ATLAS, A.~Collaboration, \ifthenelse{\boolean{articletitles}}{\emph{{Search for
+  new phenomena in the dijet mass distribution using $p-p$ collision data at
+  $\sqrt{s}=8$ TeV with the ATLAS detector}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevD.91.052007}{Phys.\ Rev.\
+  \textbf{D91} (2015), no.~5 052007},
+  \href{http://arxiv.org/abs/1407.1376}{{\normalfont\ttfamily
+  arXiv:1407.1376}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{ATLAS:2015nsi}
+ATLAS, A.~Collaboration, \ifthenelse{\boolean{articletitles}}{\emph{{Search for
+  new phenomena in dijet mass and angular distributions from $pp$ collisions at
+  $\sqrt{s}=$ 13 TeV with the ATLAS detector}},
+  }{}\href{http://dx.doi.org/10.1016/j.physletb.2016.01.032}{Phys.\ Lett.\
+  \textbf{B754} (2016) 302},
+  \href{http://arxiv.org/abs/1512.01530}{{\normalfont\ttfamily
+  arXiv:1512.01530}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Hall:2009bx}
+L.~J. Hall, K.~Jedamzik, J.~March-Russell, and S.~M. West,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Freeze-In Production of FIMP Dark
+  Matter}}, }{}\href{http://dx.doi.org/10.1007/JHEP03(2010)080}{JHEP
+  \textbf{03} (2010) 080},
+  \href{http://arxiv.org/abs/0911.1120}{{\normalfont\ttfamily
+  arXiv:0911.1120}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{McGaugh_2016}
+S.~S. McGaugh, F.~Lelli, and J.~M. Schombert,
+  \ifthenelse{\boolean{articletitles}}{\emph{Radial acceleration relation in
+  rotationally supported galaxies},
+  }{}\href{http://dx.doi.org/10.1103/physrevlett.117.201101}{Physical Review
+  Letters \textbf{117} (2016) }\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Lennon:2017tqq}
+O.~Lennon, J.~March-Russell, R.~Petrossian-Byrne, and H.~Tillim,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Black Hole Genesis of Dark
+  Matter}}, }{}\href{http://dx.doi.org/10.1088/1475-7516/2018/04/009}{JCAP
+  \textbf{1804} (2018), no.~04 009},
+  \href{http://arxiv.org/abs/1712.07664}{{\normalfont\ttfamily
+  arXiv:1712.07664}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bird:2016dcv}
+S.~Bird {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{Did LIGO
+  detect dark matter?}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevLett.116.201301}{Phys.\ Rev.\
+  Lett.\  \textbf{116} (2016), no.~20 201301},
+  \href{http://arxiv.org/abs/1603.00464}{{\normalfont\ttfamily
+  arXiv:1603.00464}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Marsh:2015xka}
+D.~J.~E. Marsh, \ifthenelse{\boolean{articletitles}}{\emph{{Axion Cosmology}},
+  }{}\href{http://dx.doi.org/10.1016/j.physrep.2016.06.005}{Phys.\ Rept.\
+  \textbf{643} (2016) 1},
+  \href{http://arxiv.org/abs/1510.07633}{{\normalfont\ttfamily
+  arXiv:1510.07633}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Martin:1997ns}
+S.~P. Martin, \ifthenelse{\boolean{articletitles}}{\emph{{A Supersymmetry
+  primer}}, }{}\href{http://dx.doi.org/10.1142/9789812839657_0001,
+  10.1142/9789814307505_0001}{Adv.\ Ser.\ Direct.\ High Energy Phys \textbf{18}
+  (1997) 1}, \href{http://arxiv.org/abs/hep-ph/9709356}{{\normalfont\ttfamily
+  arXiv:hep-ph/9709356}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Goodman:2010ku}
+J.~Goodman {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{Constraints
+  on dark matter from colliders},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevD.82.116010}{Phys.\ Rev.\
+  \textbf{D82} (2010) 116010},
+  \href{http://arxiv.org/abs/1008.1783}{{\normalfont\ttfamily
+  arXiv:1008.1783}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Abercrombie:2015wmb}
+LHC Dark Matter Forum, D.~Abercrombie {\em et~al.},
+  \ifthenelse{\boolean{articletitles}}{\emph{{Dark Matter Benchmark Models for
+  Early LHC Run-2 Searches: Report of the ATLAS/CMS Dark Matter Forum}},
+  }{}\href{http://arxiv.org/abs/1507.00966}{{\normalfont\ttfamily
+  arXiv:1507.00966}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Shoemaker:2011vi}
+I.~M. Shoemaker and L.~Vecchi,
+  \ifthenelse{\boolean{articletitles}}{\emph{Unitarity and monojet bounds on
+  models for {DAMA}, {CoGeNT}, and {CRESST-II}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevD.86.015023}{Phys.\ Rev.\
+  \textbf{D86} (2012) 015023},
+  \href{http://arxiv.org/abs/1112.5457}{{\normalfont\ttfamily
+  arXiv:1112.5457}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Buchmueller:2013dya}
+O.~Buchmueller, M.~J. Dolan, and C.~McCabe,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Beyond Effective Field Theory for
+  Dark Matter Searches at the LHC}},
+  }{}\href{http://dx.doi.org/10.1007/JHEP01(2014)025}{JHEP \textbf{01} (2014)
+  025}, \href{http://arxiv.org/abs/1308.6799}{{\normalfont\ttfamily
+  arXiv:1308.6799}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Chala:2015ama}
+M.~Chala {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{Constraining
+  Dark Sectors with Monojets and Dijets}},
+  }{}\href{http://dx.doi.org/10.1007/JHEP07(2015)089}{JHEP \textbf{07} (2015)
+  089}, \href{http://arxiv.org/abs/1503.05916}{{\normalfont\ttfamily
+  arXiv:1503.05916}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Buckley:2014fba}
+M.~R. Buckley, D.~Feld, and D.~Goncalves,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Scalar Simplified Models for Dark
+  Matter}}, }{}\href{http://dx.doi.org/10.1103/PhysRevD.91.015017}{Phys.\ Rev.\
+   \textbf{D91} (2015) 015017},
+  \href{http://arxiv.org/abs/1410.6497}{{\normalfont\ttfamily
+  arXiv:1410.6497}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Egana-Ugrinovic:2019dqu}
+D.~Egana-Ugrinovic, S.~Homiller, and P.~R. Meade,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Higgs bosons with large couplings
+  to light quarks}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevD.100.115041}{Phys.\ Rev.\
+  \textbf{D100} (2019), no.~11 115041},
+  \href{http://arxiv.org/abs/1908.11376}{{\normalfont\ttfamily
+  arXiv:1908.11376}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Abe:2018bpo}
+LHC Dark Matter Working Group, T.~Abe {\em et~al.},
+  \ifthenelse{\boolean{articletitles}}{\emph{{LHC Dark Matter Working Group:
+  Next-generation spin-0 dark matter models}},
+  }{}\href{http://dx.doi.org/10.1016/j.dark.2019.100351}{Phys.\ Dark Univ.\
+  (2019) 100351}, \href{http://arxiv.org/abs/1810.09420}{{\normalfont\ttfamily
+  arXiv:1810.09420}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Kang:2020huh}
+Y.-J. Kang and H.~M. Lee,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Lightening Gravity-Mediated Dark
+  Matter}}, }{}\href{http://arxiv.org/abs/2001.04868}{{\normalfont\ttfamily
+  arXiv:2001.04868}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Strategy:2019vxc}
+R.~K. Ellis {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{Physics
+  Briefing Book}},
+  }{}\href{http://arxiv.org/abs/1910.11775}{{\normalfont\ttfamily
+  arXiv:1910.11775}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bauer:2013ihz}
+Snowmass 2013 Cosmic Frontier Working Groups 1–4, D.~Bauer {\em et~al.},
+  \ifthenelse{\boolean{articletitles}}{\emph{{Dark Matter in the Coming Decade:
+  Complementary Paths to Discovery and Beyond}},
+  }{}\href{http://dx.doi.org/10.1016/j.dark.2015.04.001}{Phys.\ Dark Univ.\
+  \textbf{7-8} (2015) 16},
+  \href{http://arxiv.org/abs/1305.1605}{{\normalfont\ttfamily
+  arXiv:1305.1605}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Boveia:2016mrp}
+G.~Busoni {\em et~al.},
+  \ifthenelse{\boolean{articletitles}}{\emph{{Recommendations on presenting LHC
+  searches for missing transverse energy signals using simplified $s$-channel
+  models of dark matter}},
+  }{}\href{http://dx.doi.org/10.1016/j.dark.2019.100365}{Phys.\ Dark Univ.\
+  (2019) 100365}, \href{http://arxiv.org/abs/1603.04156}{{\normalfont\ttfamily
+  arXiv:1603.04156}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Ellis:2018xal}
+J.~Ellis, M.~Fairbairn, and P.~Tunney,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Phenomenological Constraints on
+  Anomaly-Free Dark Matter Models}},
+  }{}\href{http://arxiv.org/abs/1807.02503}{{\normalfont\ttfamily
+  arXiv:1807.02503}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Strassler:2006im}
+M.~J. Strassler and K.~M. Zurek,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Echoes of a hidden valley at
+  hadron colliders}},
+  }{}\href{http://dx.doi.org/10.1016/j.physletb.2007.06.055}{Phys.\ Lett.\
+  \textbf{B651} (2007) 374},
+  \href{http://arxiv.org/abs/hep-ph/0604261}{{\normalfont\ttfamily
+  arXiv:hep-ph/0604261}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Holdom:1985ag}
+B.~Holdom, \ifthenelse{\boolean{articletitles}}{\emph{{Two U(1)'s and Epsilon
+  Charge Shifts}},
+  }{}\href{http://dx.doi.org/10.1016/0370-2693(86)91377-8}{Phys.\ Lett.\
+  \textbf{166B} (1986) 196}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Curtin:2014cca}
+D.~Curtin, R.~Essig, S.~Gori, and J.~Shelton,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Illuminating Dark Photons with
+  High-Energy Colliders}},
+  }{}\href{http://dx.doi.org/10.1007/JHEP02(2015)157}{JHEP \textbf{02} (2015)
+  157}, \href{http://arxiv.org/abs/1412.0018}{{\normalfont\ttfamily
+  arXiv:1412.0018}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Zurek:2013wia}
+K.~M. Zurek, \ifthenelse{\boolean{articletitles}}{\emph{{Asymmetric Dark
+  Matter: Theories, Signatures, and Constraints}},
+  }{}\href{http://dx.doi.org/10.1016/j.physrep.2013.12.001}{Phys.\ Rept.\
+  \textbf{537} (2014) 91},
+  \href{http://arxiv.org/abs/1308.0338}{{\normalfont\ttfamily
+  arXiv:1308.0338}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Cheung:2009su}
+C.~Cheung, J.~T. Ruderman, L.-T. Wang, and I.~Yavin,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Lepton Jets in (Supersymmetric)
+  Electroweak Processes}},
+  }{}\href{http://dx.doi.org/10.1007/JHEP04(2010)116}{JHEP \textbf{04} (2010)
+  116}, \href{http://arxiv.org/abs/0909.0290}{{\normalfont\ttfamily
+  arXiv:0909.0290}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Tulin:2017ara}
+S.~Tulin and H.-B. Yu, \ifthenelse{\boolean{articletitles}}{\emph{{Dark Matter
+  Self-interactions and Small Scale Structure}},
+  }{}\href{http://dx.doi.org/10.1016/j.physrep.2017.11.004}{Phys.\ Rept.\
+  \textbf{730} (2018) 1},
+  \href{http://arxiv.org/abs/1705.02358}{{\normalfont\ttfamily
+  arXiv:1705.02358}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bernreuther:2019pfb}
+E.~Bernreuther, F.~Kahlhoefer, M.~Krämer, and P.~Tunney,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Strongly interacting dark sectors
+  in the early Universe and at the LHC through a simplified portal}},
+  }{}Submitted to: J.\ High Energy Phys.\  (2019)
+  \href{http://arxiv.org/abs/1907.04346}{{\normalfont\ttfamily
+  arXiv:1907.04346}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Cohen:2017pzm}
+T.~Cohen, M.~Lisanti, H.~K. Lou, and S.~Mishra-Sharma,
+  \ifthenelse{\boolean{articletitles}}{\emph{{LHC Searches for Dark Sector
+  Showers}}, }{}\href{http://dx.doi.org/10.1007/JHEP11(2017)196}{JHEP
+  \textbf{11} (2017) 196},
+  \href{http://arxiv.org/abs/1707.05326}{{\normalfont\ttfamily
+  arXiv:1707.05326}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Park:2017rfb}
+M.~Park and M.~Zhang, \ifthenelse{\boolean{articletitles}}{\emph{{Tagging a jet
+  from a dark sector with Jet-substructures at colliders}},
+  }{}\href{http://dx.doi.org/10.1103/PhysRevD.100.115009}{Phys.\ Rev.\
+  \textbf{D100} (2019), no.~11 115009},
+  \href{http://arxiv.org/abs/1712.09279}{{\normalfont\ttfamily
+  arXiv:1712.09279}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Beacham:2019nyx}
+J.~Beacham {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{Physics
+  Beyond Colliders at CERN: Beyond the Standard Model Working Group Report}},
+  }{}\href{http://dx.doi.org/10.1088/1361-6471/ab4cd2}{J.\ Phys.\  \textbf{G47}
+  (2020), no.~1 010501},
+  \href{http://arxiv.org/abs/1901.09966}{{\normalfont\ttfamily
+  arXiv:1901.09966}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bertone:2019irm}
+G.~Bertone {\em et~al.},
+  \ifthenelse{\boolean{articletitles}}{\emph{{Gravitational wave probes of dark
+  matter: challenges and opportunities}},
+  }{}\href{http://arxiv.org/abs/1907.10610}{{\normalfont\ttfamily
+  arXiv:1907.10610}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Barausse:2020rsu}
+E.~Barausse {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{Prospects
+  for Fundamental Physics with LISA}},
+  }{}\href{http://arxiv.org/abs/2001.09793}{{\normalfont\ttfamily
+  arXiv:2001.09793}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{ATLAS2008}
+{{ATLAS Collaboration}}, \ifthenelse{\boolean{articletitles}}{\emph{{The ATLAS
+  Experiment at the CERN Large Hadron Collider}},
+  }{}\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08003}{{JINST} \textbf{3}
+  (2008) {S08003}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{ToBeCited}
+CERN, \ifthenelse{\boolean{articletitles}}{\emph{Citation to be added}, }{}
+  \url{https://cern.ch}, 2016.
+\newblock [Online; accessed 21-January-2019]\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Aad:1602235}
+ATLAS Collaboration, {ATLAS Collaboration},
+  \ifthenelse{\boolean{articletitles}}{\emph{{Technical Design Report for the
+  Phase-I Upgrade of the ATLAS TDAQ System}}, }{}  CERN-LHCC-2013-018.
+  ATLAS-TDR-023, CERN, Sep, 2013.
+\newblock Final version presented to December 2013 LHCC.\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Tang:2016ded}
+ATLAS, S.~Tang {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{gFEX,
+  the ATLAS Calorimeter Level-1 real time processor}}, }{} in {\em {2015 IEEE
+  Nuclear Science Symposium and Medical Imaging Conference (NSS/MIC 2015)}},
+  p.~7581865, 2016.
+\newblock
+  doi:~\href{http://dx.doi.org/10.1109/NSSMIC.2015.7581865}{10.1109/NSSMIC.2015.7581865}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bauss:2018nde}
+B.~Bauss {\em et~al.}, \ifthenelse{\boolean{articletitles}}{\emph{{A new high
+  speed, Ultrascale+ based board for the ATLAS jet calorimeter trigger
+  system}}, }{} in {\em {21st IEEE Real Time Conference (RT2018) Williamsburg,
+  Virginia, June 11-15, 2018}}, 2018.
+\newblock \href{http://arxiv.org/abs/1806.09207}{{\normalfont\ttfamily
+  arXiv:1806.09207}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Bielski:2674286}
+ATLAS Collaboration, R.~Bielski and A.~Collaboration,
+  \ifthenelse{\boolean{articletitles}}{\emph{{ATLAS High Level Trigger within
+  the multi-threaded software framework AthenaMT}}, }{}  ATL-DAQ-PROC-2019-004,
+  CERN, Geneva, May, 2019\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{ATL-PHYS-PUB-2019-041}
+ATLAS Collaboration, A.~Collaboration,
+  \ifthenelse{\boolean{articletitles}}{\emph{{Fast Track Reconstruction for
+  HL-LHC}}, }{}  ATL-PHYS-PUB-2019-041, CERN, Geneva, Oct, 2019\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{CMSSummary}
+{CMS Collaboration}, \ifthenelse{\boolean{articletitles}}{\emph{{CMS Dark
+  Matter Summary Plots}}, }{}
+  \url{https://twiki.cern.ch/twiki/pub/CMSPublic/PhysicsResultsEXO/DM-summary-plots-Jul17.pdf},
+  2017.
+\newblock [Online; accessed 21-January-2020]\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{ATLASSummary}
+{ATLAS Collaboration}, \ifthenelse{\boolean{articletitles}}{\emph{{Summary
+  plots from the ATLAS Exotic physics group}}, }{}
+  \url{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/EXOTICS/index.html#ATLAS_DarkMatter_Summary},
+  2019.
+\newblock [Online; accessed 21-January-2020]\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Kim:2019rhy}
+J.~H. Kim, K.~Kong, B.~Nachman, and D.~Whiteson,
+  \ifthenelse{\boolean{articletitles}}{\emph{{The motivation and status of
+  two-body resonance decays after the LHC Run 2 and beyond}},
+  }{}\href{http://arxiv.org/abs/1907.06659}{{\normalfont\ttfamily
+  arXiv:1907.06659}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Sirunyan:2018njd}
+CMS, A.~M. Sirunyan {\em et~al.},
+  \ifthenelse{\boolean{articletitles}}{\emph{{Search for new particles decaying
+  to a jet and an emerging jet}},
+  }{}\href{http://dx.doi.org/10.1007/JHEP02(2019)179}{JHEP \textbf{02} (2019)
+  179}, \href{http://arxiv.org/abs/1810.10069}{{\normalfont\ttfamily
+  arXiv:1810.10069}}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{Collaboration:2035503}
+A.~Collaboration, \ifthenelse{\boolean{articletitles}}{\emph{{Measurement of
+  the inclusive-jet cross section in proton-proton collisions at 13 TeV
+  centre-of-mass energy with the ATLAS detector}}, }{}
+  ATLAS-COM-CONF-2015-042, CERN, Geneva, Jul, 2015\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem{omni:plan}
+{The Omni Group}, \ifthenelse{\boolean{articletitles}}{\emph{{OmniPlan}}, }{}
+  Omniplan Project Management Software.
+\newblock
+  \href{https://www.omnigroup.com/omniplan/}{https://www.omnigroup.com/omniplan/}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\end{mcitethebibliography}

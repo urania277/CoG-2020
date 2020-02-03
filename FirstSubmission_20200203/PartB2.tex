@@ -1,0 +1,198 @@
+%NOTE: This doc formatted according to http://ec.europa.eu/research/participants/data/ref/h2020/call_ptef/pt/2018-2020/h2020-call-pt-erc-stg-2019_en.pdf
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2.0cm,top=2.0cm,right=2.0cm,bottom=1.5cm]{geometry}               
+%\usepackage[subtle]{savetrees}
+\usepackage[bibbreaks=normal, paragraphs=normal, floats=tight, mathspacing=tight, lists=tight, title=normal, margins=normal, wordspacing=normal, tracking=normal, charwidths=normal, bibnotes=normal, mathdisplays=tight, leading=normal, indent=normal, bibliography=tight, sections=tight]{savetrees} 
+
+%for weird chars in bib
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xspace}     
+\usepackage{wrapfig}
+\setlength\intextsep{0pt}
+
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{amsmath} % Adds a large collection of math symbols                  
+\usepackage{ifthen} % for conditional statements               
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{upgreek} % Adds in support for greek letters in roman typeset       
+\usepackage{titling}
+\usepackage{makecell}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{url,booktabs,amsmath,hepunits,abhepexpt,abhep,xcolor}%amsmath
+\usepackage[colorlinks]{hyperref}    % Hyperlinks in references
+\usepackage[all]{hypcap} % Internal hyperlinks to floats.
+
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set to true to get roman particle symbols
+
+%If we need more space we can investigate: https://tex.stackexchange.com/questions/273086/use-smaller-headheight-in-fancyhdr, https://tex.stackexchange.com/questions/271159/turn-off-fancyhdr-auto-spacing
+\usepackage{fancyhdr}
+
+\usepackage{rotating}
+
+%\usepackage{fancyheadings}
+\pagestyle{fancy}
+
+
+% Playing with the page size 
+
+\usepackage{array}
+\newcolumntype{y}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+%\renewcommand*{\arraystretch}{1.2}
+
+%TB
+%\addtolength{\oddsidemargin}{-10pt}
+%\addtolength{\evensidemargin}{-10pt}
+%\addtolength{\textwidth}{25pt}
+%\addtolength{\textheight}{76pt}
+%end TB
+
+%\addtolength{\textfloatsep}{-2pt}
+\setlength{\droptitle}{-44mm}
+
+\setlength{\headwidth}{\textwidth}
+
+
+\newboolean{articletitles}
+\setboolean{articletitles}{false}
+
+\usepackage{cite}
+\usepackage{mciteplus}
+
+\newboolean{inbibliography}
+
+\titlespacing{\section}{0pt}{4pt}{0pt}
+\titlespacing{\subsection}{0pt}{4pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{4pt}{0pt}
+%\titlespacing{\section}{0pt}{\parskip}{0pt}
+%\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+%\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+%Garamond saves space and looks way poncier
+%\usepackage[T1]{fontenc}
+%\usepackage[urw-garamond]{mathdesign}
+\usepackage{ebgaramond}
+\renewcommand\labelitemi{$\bullet$}
+
+\usepackage{fontspec}
+
+\setmainfont{EBGaramond-Regular}[
+  BoldFont = EBGaramond-Bold,
+  ItalicFont = EBGaramond-Italic,
+  BoldItalicFont = EBGaramond-BoldItalic]
+  
+%\usepackage[cmintegrals,cmbraces]{newtxmath}
+%\usepackage{ebgaramond-maths}
+%\usepackage[T1]{fontenc}
+
+% Helvetica for sans serif
+% (scaled to match size of Palatino)
+%\usepackage[scaled=0.90]{helvet}
+%\usepackage{helvet}
+
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{0.2em}
+
+
+\title{{\Large Part B1 - ERC Consolidator grant}}
+\author{{\normalsize Caterina Doglioni}}
+\date{}                                           % Activate to display a given date or no date
+
+\usepackage[parfill]{parskip}
+
+\begin{document}
+
+\lhead{{\small Doglioni}}
+\chead{{\small Part B2}}
+\rhead{{\small REALDARK}}
+\begin{center} 
+
+{\Large\bf ERC Starting Grant 2020} \\
+ {\Large\bf Research Proposal [Part B2]}  \\
+\vspace{0.5cm} 
+\end{center} 
+
+{\Large{\bf Part B2: {\it{The scientific proposal}}}}
+
+\section{State of the art and objectives}
+%\smallskip
+%
+%\subsection*{Introduction}
+%\smallskip
+
+\input{PartB2_01_Introduction}
+
+
+%\subsection{The state-of-the-art}
+%\smallskip
+
+\input{PartB2_02_StateOfTheArt}
+
+\input{PartB2_03_Objectives}
+
+%As summarised in Part~B1 the proposal is organised into five coherent work packages which logically build using common methodologies to a precision search for new physics with beauty to charm decays. The work packages' main objectives are to: 
+%\begin{description}
+%		\item [WP1:] Develop new trigger algorithms beyond the standard paradigm of the \LHCb upgrade. This WP builds on the work that the PI has led as HLT Project Leader in the run up to the data taking in 2021, and it is the first use of a revolutionary implementation of a fully software trigger at a collider experiment.
+%        \item [WP2:] Perform the first measurements of beauty hadron production cross-sections using decays without leptons. This WP will simultaneously produce measurements that have never been performed and serves as a necessary validation of the trigger system in WP1. In addition, trigger selections to be used in WP5 will be developed. 
+%        \item [WP3:] Make precise determinations of the SM predictions for the NP-sensitive \CP observables $\phi_s$ and $\sin(2\beta)$ in \HepProcess{\PB\to\PD\PD} decays. This WP includes measurements using both Run~2 and Run~3 data in order to maximise efficient use of time and resources. It will exploit the new trigger paradigm delivered in WP1 and extend the selections delivered in  WP2. 
+%        \item [WP4:] Make the world's most precise determinations of $\phi_s$ and $\sin(2\beta)$ in \HepProcess{\PBs\to\PDsplus\PDsminus} and \HepProcess{\PBzero\to\PDplus\PDminus} decays, respectively, and through comparison to the determinations of WP3 provide a clean NP search. 
+%        \item [WP5:] Uncover the structure of the NP measured in WP4 by making the worlds most precise decay-time-dependent determinations of $\gamma$ in \HepProcess{\PBs\to\PDs\PK} and \HepProcess{\PBzero\to\PD\Ppi}. 
+%       \end{description}
+%The objectives are described in detail in the following subsections.
+
+\section{Methodology}
+%\smallskip
+
+\input{PartB2_04_Methodology}
+
+\subsection{Team composition and project planning}
+%\smallskip
+
+\input{PartB2_05_ProjectPlanning}
+\label{sec:ProjectPlanning}
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=\textwidth]{figs/Gantt_B2_forPublication.pdf}
+%\caption{\label{fig:timeline} Detailed project timeline describing the allocation of team members and work %package durations. Vertical lines indicate dependencies between work packages. Publications are marked with %yellow diamonds.}
+%\end{center}
+%\end{figure}
+
+%The research team will be comprised of the PI, a PDRA, and three PhD students. In the following, a detailed description of the work to be undertaken by the team is given. 
+
+%A timeline describing the overall planning and allocation of team members is provided in Figure~\ref{fig:timeline}. This has been prepared using project planning and management software~\cite{omni:plan}, taking particular care to schedule tasks common to all analyses and balancing the work between the research team in a way that ensures the ambitious project is achievable within the timescale and resources of this research proposal. Resources are discussed in the next section.
+
+
+
+%%%%%%BEGIN TO COMPILE UP TO HERE 
+\clearpage
+\mciteErrorOnUnknownfalse
+\begingroup
+    \setboolean{inbibliography}{true}
+\bibliographystyle{JHEP}
+    \linespread{0.9}\selectfont
+%\bibliography{researchrefs}
+\bibliography{bib/ATLAS,bib/CMS,bib/ConfNotes,researchrefs}%,.bib/CMS.bib/ConfNotes,bib/PubNotes
+\endgroup
+%{\bf Note:} The PI is an author of Refs.~\cite{LHCb-PUB-2014-027,Bourgeois:2018nvk} and all the LHCb collaboration papers, with particular contributions to  Refs.~\cite{Aaij:2014jba,CERN-LHCC-2014-016,Aaij:2013mga,Aaij:2014ywt,LHCb-PUB-2014-040,Aaij:2016kjh,Aaij:2017lff}.
+%The PI is acknowledged in Ref.~\cite{Jung:2014jfa}.
+\end{document}  
+%%%%%%END TO COMPILE UP TO HERE 
+
+
+
+\subsection{Impact and risk management}
+%\smallskip
+
+\input{PartB2_06_ImpactRisk}
+\label{sec:ImpactAndRisk}

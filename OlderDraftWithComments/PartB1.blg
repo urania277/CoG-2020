@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: PartB1.aux
+The style file: JHEP.bst
+Database file #1: researchrefs.bib
+Warning--I didn't find a database entry for "Autoencoders"
+Warning--empty editors in LHC2008
+Warning--empty editors in Khachatryan:2016vau
+Warning--empty editors in Bertone:2016nfn
+Warning--empty editors in Boveia:2018yeb
+Warning--empty editors in Abercrombie:2015wmb
+Warning--empty editors in Khachatryan:2016ecr
+Warning--empty editors in Aaij:2016rxn
+Warning--empty editors in Aaboud:2018fzt
+Warning--empty editors in Aaboud:2016leb
+Warning--empty editors in Alves:2017she
+Warning--empty booktitle in Allen:2018yvz
+Warning--empty editors in Strategy:2019vxc
+Warning--empty editors in Beacham:2019nyx
+Warning--empty editors in Strassler:2006im
+Warning--empty editors in Cohen:2017pzm
+Warning--empty editors in Curtin:2014cca
+Warning--there's a number but no series in Bielski:2674286
+Warning--empty editors in Aaboud:2019zxd
+Warning--empty editors in Kim:2019rhy
+Warning--empty editors in Bernreuther:2019pfb
+Warning--empty editors in Falkowski:2010gv
+Warning--empty editors in Sjostrand:2007gs
+Warning--empty editors in Butterworth:2016sqg
+You've used 30 entries,
+            2196 wiz_defined-function locations,
+            718 strings with 9037 characters,
+and the built_in function-call counts, 8155 in all, are:
+= -- 811
+> -- 232
+< -- 0
++ -- 91
+- -- 61
+* -- 668
+:= -- 1070
+add.period$ -- 38
+call.type$ -- 30
+change.case$ -- 30
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 461
+empty$ -- 839
+format.name$ -- 61
+if$ -- 2085
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 85
+newline$ -- 101
+num.names$ -- 26
+pop$ -- 181
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 275
+stack$ -- 0
+substring$ -- 344
+swap$ -- 165
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 23
+while$ -- 48
+width$ -- 32
+write$ -- 314
+(There were 24 warnings)

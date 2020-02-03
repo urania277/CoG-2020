@@ -1,0 +1,491 @@
+\ProvidesPackage{abhep}[2005/01/17]
+
+\RequirePackage{amsmath}
+\RequirePackage{cancel}
+\RequirePackage{abhepexpt}
+\RequirePackage{hepnicenames}
+\RequirePackage{hepunits}
+\RequirePackage{maybemath}
+\RequirePackage{abmath}
+
+
+%C++ macro (to be moved!)
+\DeclareRobustCommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+\def\CCtwo{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+\DeclareRobustCommand{\Rplus}{\protect\nolinebreak\hspace{-.07em}\protect\raisebox{.25ex}{\small\textbf{+}}}
+\DeclareRobustCommand{\Cpp}{C\Rplus\Rplus\xspace}
+
+\DeclareRobustCommand{\rescatter}{re-scatter\xspace}
+\DeclareRobustCommand{\electroweak}{electro-weak\xspace}
+\DeclareRobustCommand{\StandardModel}{Standard Model\xspace}
+\DeclareRobustCommand{\SM}{Standard Model\xspace}
+
+% General lagrangian formalism
+\DeclareRobustCommand{\matrixelementM}{\mymath{ \mathcal{M} }\xspace}
+\DeclareRobustCommand{\matrixelementA}{\mymath{ \mathcal{A} }\xspace}
+
+\DeclareRobustCommand{\Amplitude}[1]{\mymath{
+    \mathcal{A}%
+    \begingroup%
+    \def\@empty{}%
+    \def\@arg{#1}%
+    \ifx\@arg\@empty{}\else\parenths{#1}\fi%
+    \endgroup%
+}}
+
+% also want Rate and BranchingRatio
+\DeclareRobustCommand{\lagrangian}{\mymath{ \mathcal{L} }\xspace}
+\DeclareRobustCommand{\hamiltonian}{\mymath{ \mathcal{H} }\xspace}
+
+\DeclareRobustCommand{\Lagrangian}{Lagrangian\xspace}
+\DeclareRobustCommand{\Hamiltonian}{Hamiltonian\xspace}
+\DeclareRobustCommand{\RenormalisationScale}{\mymath{ \mu }\xspace}
+
+\DeclareRobustCommand{\Lag}{\lagrangian}
+
+\DeclareRobustCommand{\adjointField}[1]{\mymath{ \bar{#1} }\xspace}
+\DeclareRobustCommand{\scalarField}{\mymath{ \phi }\xspace}
+\DeclareRobustCommand{\spinorField}{\mymath{ \psi }\xspace}
+
+\DeclareRobustCommand{\pathD}{\mymath{ \mathcal{D} }\xspace}
+\DeclareRobustCommand{\VEV}{VEV\xspace}
+
+\DeclareRobustCommand{\QCD}{QCD\xspace}
+\DeclareRobustCommand{\QED}{QED\xspace}
+\DeclareRobustCommand{\EW}{EW\xspace}
+\DeclareRobustCommand{\EM}{EM\xspace}
+\DeclareRobustCommand{\PDG}{PDG\xspace}
+
+% covariant derivative
+% covariant vectors, tensors, vectors
+
+% Common Feynman rules
+%% photon propagator
+%% external vector boson
+%% Z,W propagator
+
+\DeclareRobustCommand{\pseudorapidity}{pseudo-rapidity\xspace}
+
+% Rates and measurements
+\DeclareRobustCommand{\BR}[1]{\mymath{%
+    \def\empty{}%
+    \def\thearg{#1}%
+    \mathcal{B}%
+    \ifx\thearg\empty{}\else{(\HepProcess{#1})}\fi%
+}\xspace}
+
+\DeclareRobustCommand{\efficiency}[1]{\mymath{
+    \def\empty{}%
+    \def\thearg{#1}%
+    \varepsilon%
+    \ifx\thearg\empty{}\else{(\text{#1})}\fi%
+}\xspace}
+
+\DeclareRobustCommand{\eff}[1]{\mymath{\varepsilon_{\text{#1}}}\xspace}
+\DeclareRobustCommand{\yield}[1]{\mymath{N_{\text{#1}}}\xspace}
+
+\DeclareRobustCommand{\purity}{\mymath{p}\xspace}
+\DeclareRobustCommand{\luminosity}{\mymath{\mathcal{L}}\xspace}
+\DeclareRobustCommand{\intlumi}{\mymath{\int\mathcal{L}\text{d}t}\xspace}
+\DeclareRobustCommand{\sqrtS}{\mymath{\sqrt{s}}\xspace}
+
+%% CP violation
+\DeclareRobustCommand{\opC}{\mymath{\maybebm{\mathcal{C}}}\xspace}
+\DeclareRobustCommand{\opP}{\mymath{\maybebm{\mathcal{P}}}\xspace}
+\DeclareRobustCommand{\opT}{\mymath{\maybebm{\mathcal{T}}}\xspace}
+%%\DeclareRobustCommand{\opC}{\texorpdfstring{\mymath{\maybebm{\mathcal{C}}}}{C}\xspace}
+%%\DeclareRobustCommand{\opP}{\texorpdfstring{\mymath{\maybebm{\mathcal{P}}}}{P}\xspace}
+%%\DeclareRobustCommand{\opT}{\texorpdfstring{\mymath{\maybebm{\mathcal{T}}}}{T}\xspace}
+\DeclareRobustCommand{\opCP}{\mymath{\opC\opP}\xspace}
+\DeclareRobustCommand{\opCPT}{\mymath{\opC\opP\opT}\xspace}
+%% and for convenience...
+\DeclareRobustCommand{\CP}{\opCP}
+\DeclareRobustCommand{\CPT}{\opCPT}
+%% symmetry violation shorthands
+\DeclareRobustCommand{\CPv}{\mymath{\cancel{\opCP}}\xspace}
+\DeclareRobustCommand{\CPViolation}{\mymath{\opCP\text{-violation}}\xspace}
+\DeclareRobustCommand{\CPTv}{\mymath{\cancel{\opCPT}}\xspace}
+\DeclareRobustCommand{\CPTViolation}{\mymath{\opCPT\text{-violation}}\xspace}
+
+
+\DeclareRobustCommand{\betas}{\mymath{\beta_{\text{s}}}\xspace}
+\DeclareRobustCommand{\phis}{\mymath{\phi_{\text{s}}}\xspace}
+
+%% Important names (of effects, params, theories etc.) and suchlike
+\DeclareRobustCommand{\Cabibbo}{\ensuremath{\text{Cabibbo}}\xspace}
+\DeclareRobustCommand{\Maskawa}{\ensuremath{\text{Maskawa}}\xspace}
+\DeclareRobustCommand{\Kobayashi}{\ensuremath{\text{Kobayashi}}\xspace}
+\DeclareRobustCommand{\Jarlskog}{\ensuremath{\text{Jarlskog}}\xspace}
+\DeclareRobustCommand{\Sakharov}{\ensuremath{\text{Sakharov}}\xspace}
+\DeclareRobustCommand{\Majorana}{\ensuremath{\text{Majorana}}\xspace}
+\DeclareRobustCommand{\Planck}{\ensuremath{\text{Planck}}\xspace}
+\DeclareRobustCommand{\Dirac}{\ensuremath{\text{Dirac}}\xspace}
+\DeclareRobustCommand{\Weyl}{\ensuremath{\text{Weyl}}\xspace}
+\DeclareRobustCommand{\Pauli}{\ensuremath{\text{Pauli}}\xspace}
+\DeclareRobustCommand{\Weinberg}{\ensuremath{\text{Weinberg}}\xspace}
+\DeclareRobustCommand{\Yukawa}{\ensuremath{\text{Yukawa}}\xspace}
+\DeclareRobustCommand{\Higgs}{\ensuremath{\text{Higgs}}\xspace}
+\DeclareRobustCommand{\Noether}{\ensuremath{\text{Noether}}\xspace}
+
+
+%% Theories
+\DeclareRobustCommand{\SUSY}{\ensuremath{\text{SUSY}}\xspace}
+\DeclareRobustCommand{\AMSB}{\ensuremath{\text{AMSB}}\xspace}
+\DeclareRobustCommand{\mSUGRA}{\ensuremath{\text{mSUGRA}}\xspace}
+
+\DeclareRobustCommand{\JarlskogParam}{\mymath{J_{\CP}}\xspace}
+\DeclareRobustCommand{\thetaCabibbo}{\mymath{\maybebm{\theta_c}}}
+
+%% CKM matrix stuff
+\DeclareRobustCommand{\Vckm}{\mymath{ \boldmatrix{V}_{\!\mathrm{CKM}} }\xspace}
+\DeclareRobustCommand{\VckmFull}{\mymath{%
+\begin{pmatrix}
+ \Vud & \Vus & \Vub \\
+ \Vcd & \Vcs & \Vcb \\
+ \Vtd & \Vts & \Vtb \\
+\end{pmatrix}
+}}
+
+\DeclareRobustCommand{\alphaCKM}{\mymath{\alpha}\xspace}
+\DeclareRobustCommand{\betaCKM}{\mymath{\beta}\xspace}
+\DeclareRobustCommand{\gammaCKM}{\mymath{\gamma}\xspace}
+\DeclareRobustCommand{\CkmElementConj}[2]{\mymath{V_{{#1}{#2}}^{*}}\xspace}
+\DeclareRobustCommand{\CkmElement}[2]{\mymath{V_{{#1}{#2}}^{\phantom{*}}}\xspace}
+\DeclareRobustCommand{\Vud}{\CkmElement{\mathrm{u}}{\mathrm{d}}}
+\DeclareRobustCommand{\Vus}{\CkmElement{\mathrm{u}}{\mathrm{s}}}
+\DeclareRobustCommand{\Vub}{\CkmElement{\mathrm{u}}{\mathrm{b}}}
+\DeclareRobustCommand{\Vcd}{\CkmElement{\mathrm{c}}{\mathrm{d}}}
+\DeclareRobustCommand{\Vcs}{\CkmElement{\mathrm{c}}{\mathrm{s}}}
+\DeclareRobustCommand{\Vcb}{\CkmElement{\mathrm{c}}{\mathrm{b}}}
+\DeclareRobustCommand{\Vtd}{\CkmElement{\mathrm{t}}{\mathrm{d}}}
+\DeclareRobustCommand{\Vts}{\CkmElement{\mathrm{t}}{\mathrm{s}}}
+\DeclareRobustCommand{\Vtb}{\CkmElement{\mathrm{t}}{\mathrm{b}}}
+\DeclareRobustCommand{\VudConj}{\CkmElementConj{\mathrm{u}}{\mathrm{d}}}
+\DeclareRobustCommand{\VusConj}{\CkmElementConj{\mathrm{u}}{\mathrm{s}}}
+\DeclareRobustCommand{\VubConj}{\CkmElementConj{\mathrm{u}}{\mathrm{b}}}
+\DeclareRobustCommand{\VcdConj}{\CkmElementConj{\mathrm{c}}{\mathrm{d}}}
+\DeclareRobustCommand{\VcsConj}{\CkmElementConj{\mathrm{c}}{\mathrm{s}}}
+\DeclareRobustCommand{\VcbConj}{\CkmElementConj{\mathrm{c}}{\mathrm{b}}}
+\DeclareRobustCommand{\VtdConj}{\CkmElementConj{\mathrm{t}}{\mathrm{d}}}
+\DeclareRobustCommand{\VtsConj}{\CkmElementConj{\mathrm{t}}{\mathrm{s}}}
+\DeclareRobustCommand{\VtbConj}{\CkmElementConj{\mathrm{t}}{\mathrm{b}}}
+
+%% CKM element pairing for unitarity relations
+\newlength{\CKMPairWidth}
+\settowidth{\CKMPairWidth}{\Vtd\VtbConj}
+\DeclareRobustCommand{\@Vbox}[1]{\makebox[\CKMPairWidth]{#1}}
+\DeclareRobustCommand{\VCkmPair}[2]{\ensuremath{\@Vbox{{#1}{#2}}}}
+
+%% Theory acronyms
+\DeclareRobustCommand{\SCET}{SCET\xspace}
+\DeclareRobustCommand{\HQET}{HQET\xspace}
+\DeclareRobustCommand{\CKM}{CKM\xspace}
+\DeclareRobustCommand{\KM}{KM\xspace}
+\DeclareRobustCommand{\BSM}{BSM\xspace}
+\DeclareRobustCommand{\FCNC}{FCNC\xspace}
+
+%% Typical analysis concepts
+\DeclareRobustCommand{\PV}{\MathUpright{PV}\xspace}
+\DeclareRobustCommand{\IP}{\MathUpright{IP}\xspace}
+\DeclareRobustCommand{\pT}{\mymath{p_\MathUpright{T}}\xspace}
+\DeclareRobustCommand{\missingpT}{\mymath{\cancel{\pT}}\xspace}
+\DeclareRobustCommand{\ET}{\mymath{E_\MathUpright{T}}\xspace}
+\DeclareRobustCommand{\missingEt}{\mymath{\cancel{\Et}}\xspace}
+\DeclareRobustCommand{\p}{\mymath{p}\xspace}
+\DeclareRobustCommand{\chisq}{\mymath{\chi^2}\xspace}
+\DeclareRobustCommand{\tuple}[1]{\ensuremath{#1}-tuple\xspace}
+\DeclareRobustCommand{\tuples}[1]{\ensuremath{#1}-tuples\xspace}
+\DeclareRobustCommand{\ntuple}{\tuple{n}\xspace}
+\DeclareRobustCommand{\ntuples}{\tuples{n}\xspace}
+\DeclareRobustCommand{\dataset}{data set\xspace}
+\DeclareRobustCommand{\cutset}{cut set\xspace}
+\DeclareRobustCommand{\CoM}{CoM\xspace}
+
+%% General utility defns
+\DeclareRobustCommand{\MC}{Monte-Carlo\xspace}
+\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
+\DeclareRobustCommand{\characteristicFn}{\ensuremath{\mathcal{F}}\xspace}
+\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
+%\DeclareRobustCommand{\CPv}{\CPviolation}
+\DeclareRobustCommand{\Likelihood}{\thesismath{\mathcal{L}}\xspace}
+\DeclareRobustCommand{\Hypothesis}{\thesismath{\mathcal{H}}\xspace}
+
+%% powers of 10
+\DeclareRobustCommand{\e}[1]{\thesismath{\times10^{#1}}}
+%% O(x) order...
+\DeclareRobustCommand{\Ord}[1]{\thesismath{{\mathcal{O}}\left(#1\right)}}
+
+%% Basic rate formalisms
+\DeclareRobustCommand{\Rate}{\thesismath{\Gamma}\xspace}
+\DeclareRobustCommand{\RateOf}[1]{\thesismath{\Gamma}\parenths{#1}\xspace}
+\DeclareRobustCommand{\GammaBar}{\thesismath{\overline{\Gamma}}\xspace}
+\DeclareRobustCommand{\InterferenceTerm}{\thesismath{I}\xspace}
+\DeclareRobustCommand{\InterferenceTermBar}{\thesismath{\bar{\InterferenceTerm}}\xspace}
+\DeclareRobustCommand{\rInt}{\thesismath{\lambda}\xspace}
+\DeclareRobustCommand{\rIntBar}{\thesismath{\bar{\lambda}}\xspace}
+\DeclareRobustCommand{\timevar}{\thesismath{t}\xspace}
+
+%% For meson mixing formalism
+\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
+\DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
+\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\pX}{\HepParticle{X}{}{}\xspace}
+\DeclareRobustCommand{\pXbar}{\HepAntiParticle{X}{}{}\xspace}
+\DeclareRobustCommand{\pXzero}{\HepParticle{\pX}{}{0}\xspace}
+\DeclareRobustCommand{\pXzerobar}{\HepAntiParticle{\pX}{}{0}\xspace}
+
+%% CPv in decay (direct)
+\DeclareRobustCommand{\initial}{\thesismath{i}\xspace}
+\DeclareRobustCommand{\initialbar}{\thesismath{\bar{i}}\xspace}
+\DeclareRobustCommand{\final}{\thesismath{f}\xspace}
+\DeclareRobustCommand{\finalbar}{\thesismath{\bar{f}}\xspace}
+\DeclareRobustCommand{\pInitial}{\HepParticle{i}{}{}\xspace}
+\DeclareRobustCommand{\pFinal}{\HepParticle{f}{}{}\xspace}
+\DeclareRobustCommand{\pInitialBar}{\HepParticle{\bar{i}}{}{}\xspace}
+\DeclareRobustCommand{\pFinalBar}{\HepParticle{\bar{f}}{}{}\xspace}
+\DeclareRobustCommand{\Ampl}{\thesismath{A}\xspace}
+\DeclareRobustCommand{\AmplBar}{\thesismath{\bar{A}}\xspace}
+
+%% Phrases to be consistent about (with b/B)
+\DeclareRobustCommand{\bphysics}{heavy flavour\xspace}
+\DeclareRobustCommand{\bfactory}{\Pbottom-factory\xspace}
+\DeclareRobustCommand{\bfactories}{\Pbottom-factories\xspace}
+\DeclareRobustCommand{\bsector}{\Pbottom-sector\xspace}
+\DeclareRobustCommand{\bsystem}{\Pbottom-system\xspace}
+% for compatibility...
+\DeclareRobustCommand{\Bphysics}{\bphysics}
+\DeclareRobustCommand{\Bfactory}{\bfactory}
+\DeclareRobustCommand{\Bfactories}{\bfactories}
+\DeclareRobustCommand{\Bsector}{\bsector}
+
+\DeclareRobustCommand{\Bsystem}{\PB-system\xspace}
+\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
+\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
+\DeclareRobustCommand{\Bmesons}{\PB-mesons\xspace}
+\DeclareRobustCommand{\bbaryon}{\Pbottom-baryon\xspace}
+\DeclareRobustCommand{\Bdecay}{\PB-decay\xspace}
+\DeclareRobustCommand{\bdecay}{\Pbottom-decay\xspace}
+\DeclareRobustCommand{\bproduction}{\Pbottom-production\xspace}
+\DeclareRobustCommand{\Bproduction}{\PB-production\xspace}
+\DeclareRobustCommand{\bquark}{\Pbottom-quark\xspace}
+
+%% CKM formalism
+\DeclareRobustCommand{\lambdaW}{\thesismath{\lambda}\xspace}
+\DeclareRobustCommand{\rhoW}{\thesismath{\rho}\xspace}
+\DeclareRobustCommand{\etaW}{\thesismath{\eta}\xspace}
+\DeclareRobustCommand{\Wolfenstein}{Wolfenstein\xspace}
+\DeclareRobustCommand{\rhobar}{\thesismath{\bar{\rho}}\xspace}
+\DeclareRobustCommand{\etabar}{\thesismath{\bar{\eta}}\xspace}
+\DeclareRobustCommand{\chiCKM}{\thesismath{\chi}\xspace}
+
+%% Convenient particle-related friendly names
+\DeclareRobustCommand{\PX}{\ensuremath{\HepParticle{X}{}{}}}
+\DeclareRobustCommand{\bbbar}{\ensuremath{\Pbottom\APbottom}\xspace}
+\DeclareRobustCommand{\ccbar}{\ensuremath{\Pcharm\APcharm}\xspace}
+\DeclareRobustCommand{\bbar}{\HepParticle{\APbottom}{}{}\xspace}
+\DeclareRobustCommand{\incbbbar}{inclusive \bbbar}
+\DeclareRobustCommand{\UpsilonFourS}{\HepParticleResonance{\PUpsilon}{4S}{}{}\xspace}
+\DeclareRobustCommand{\proton}{\Pproton}
+\DeclareRobustCommand{\antiproton}{\APproton}
+\DeclareRobustCommand{\protonantiproton}{\ensuremath{\proton\antiproton}\xspace}
+
+\DeclareRobustCommand{\protonproton}{\ensuremath{\proton\proton}\xspace}
+
+\DeclareRobustCommand{\pp}{\protonproton}
+\DeclareRobustCommand{\ppbar}{\protonantiproton}
+\DeclareRobustCommand{\electron}{\Pelectron}
+\DeclareRobustCommand{\positron}{\Ppositron}
+\DeclareRobustCommand{\epluseminus}{\ensuremath{\positron\electron}\xspace}
+\DeclareRobustCommand{\ep}{\epluseminus}
+\DeclareRobustCommand{\pipi}{\HepProcess{ \Ppiplus \Ppiminus }\xspace}
+
+%% Processes
+% B
+\DeclareRobustCommand{\BToKPi}{\HepProcess{ \PB \to \PK \, \Ppi }\xspace}
+\DeclareRobustCommand{\BToPiPi}{\HepProcess{ \PB \to \Ppi \, \Ppi }\xspace}
+\DeclareRobustCommand{\BToKK}{\HepProcess{\PB \to \PK \, \PK}\xspace}
+\DeclareRobustCommand{\BToJpsiKs}{\BdToJpsiKs}
+\DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \, \Prho }\xspace}
+\DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \, \Ppi }\xspace}
+
+% Bpm, B0
+\DeclareRobustCommand{\BpmToKzeroPipm}{\HepProcess{ \PBpm \to \PKzero \, \Ppipm }\xspace}
+\DeclareRobustCommand{\BpmToKpmPizero}{\HepProcess{ \PBpm \to \PKpm \, \Ppizero }\xspace}
+\DeclareRobustCommand{\BpmToKpmKzero}{\HepProcess{ \PBpm \to \PKpm \, \PKzero }\xspace}
+\DeclareRobustCommand{\BzeroToKplusKminus}{\HepProcess{\PBzero \to \PKplus \, \PKminus}\xspace}
+\DeclareRobustCommand{\BzeroToPiplusPiminus}{\HepProcess{\PBzero \to \Ppiplus \, \Ppiminus}\xspace}
+% Bd
+\DeclareRobustCommand{\BdToKPi}{\HepProcess{ \PBd \to \PK \, \Ppi }\xspace}
+\DeclareRobustCommand{\BdToKplusPiminus}{\HepProcess{ \PBd \to \PKplus \, \Ppiminus }\xspace}
+\DeclareRobustCommand{\BdbarToKminusPiplus}{\HepProcess{ \APBd \to \PKminus \, \Ppiplus }\xspace}
+\DeclareRobustCommand{\BdToKpmPimp}{\HepProcess{ \PBd \to \PKpm \, \Ppimp }\xspace}
+\DeclareRobustCommand{\BdToPizeroPizero}{\HepProcess{ \PBd \to \Ppizero \, \Ppizero }\xspace}
+\DeclareRobustCommand{\BdToRhozeroRhozero}{\HepProcess{ \PBd \to \Prhozero \, \Prhozero }\xspace}
+\DeclareRobustCommand{\BdToRhoplusRhominus}{\HepProcess{ \PBd \to \Prhoplus \, \Prhominus }\xspace}
+\DeclareRobustCommand{\BdbarToRhoplusRhominus}{\HepProcess{ \APBd \to \Prhoplus \, \Prhominus }\xspace}
+\DeclareRobustCommand{\BdToKsPizero}{\HepProcess{ \PBd \to \PKshort \, \Ppizero }\xspace}
+\DeclareRobustCommand{\BdToJpsiKs}{\HepProcess{ \PBd \to \PJpsi \, \PKshort }\xspace}
+\DeclareRobustCommand{\BdbarToJpsiKs}{\HepProcess{ \APBd \to \PJpsi \, \PKshort }\xspace}
+\DeclareRobustCommand{\BdToKplusKminus}{\HepProcess{\PBd \to \PKplus \, \PKminus}\xspace}
+\DeclareRobustCommand{\BdToPiplusPiminus}{\HepProcess{\PBd \to \Ppiplus \, \Ppiminus}\xspace}
+% Bu
+\DeclareRobustCommand{\BuToRhopmRhozero}{\HepProcess{ \PBu \to \Prhopm \, \Prhozero }\xspace}
+\DeclareRobustCommand{\BuToKzeroPiplus}{\HepProcess{\PBu \to \PKzero \, \Ppiplus}\xspace}
+\DeclareRobustCommand{\BuToKsPi}{\HepProcess{ \PBu \to \PKshort \, \Ppiplus }\xspace}
+\DeclareRobustCommand{\BuToKsPiPiPi}{\HepProcess{ \PBu \to \PKshort \, (\pipi) \, \Ppiplus }\xspace}
+\DeclareRobustCommand{\BuToKsPiplus}{\HepProcess{ \PBu \to \PKshort \, \Ppiplus }\xspace}
+\DeclareRobustCommand{\BubarToKsbarPiminus}{\HepProcess{ \APBu \to \APKshort \, \Ppiminus }\xspace}
+\DeclareRobustCommand{\BuToKplusPizero}{\HepProcess{ \PBu \to \PKplus \, \Ppizero }\xspace}
+\DeclareRobustCommand{\BubarToKzerobarPiminus}{\HepProcess{ \APBu \to \APKzero \, \Ppiminus }\xspace}
+\DeclareRobustCommand{\BuToPiplusPizero}{\HepProcess{ \PBu \to \Ppiplus \, \Ppizero }\xspace}
+\DeclareRobustCommand{\BuToKplusKzero}{\HepProcess{ \PBu \to \PKplus \, \PKzero }\xspace}
+% Bs
+\DeclareRobustCommand{\BsToDsK}{\HepProcess{ \PBs \to \PDs \, \PK }\xspace}
+\DeclareRobustCommand{\BsToJpsiPhi}{\HepProcess{ \PBs \to \PJpsi \, \Pphi }\xspace}
+\DeclareRobustCommand{\BsToDsDs}{\HepProcess{ \PBs \to \PDsplus \, \PDsminus }\xspace}
+% Ks
+\DeclareRobustCommand{\KsToPiPi}{\HepProcess{ \PKshort \to \Ppi \, \Ppi}\xspace}
+\DeclareRobustCommand{\KsToPiplusPiminus}{\HepProcess{ \PKshort \to \Ppiplus \, \Ppiminus}\xspace}
+\DeclareRobustCommand{\KsToPizeroPizero}{\HepProcess{ \PKshort \to \Ppizero \, \Ppizero}\xspace}
+\DeclareRobustCommand{\KzeroToKs}{\HepProcess{ \PKzero \to \PKshort}\xspace}
+
+%Ds
+
+\DeclareRobustCommand{\DsToPhiPi}{\HepProcess{ \PDsplus \to \Pphi \, \Ppiplus}\xspace}
+\DeclareRobustCommand{\PhiToKK}{\HepProcess{ \Pphi \to \PKplus \, \PKminus}\xspace}
+
+
+%% Flavour tagging
+\DeclareRobustCommand{\btag}{\Pbottom-tag\xspace}
+\DeclareRobustCommand{\btagging}{\Pbottom-tagging\xspace}
+\DeclareRobustCommand{\tagEff}{\thesismath{\epsilon}\xspace}
+\DeclareRobustCommand{\tagWrongFrac}{\thesismath{\omega}\xspace}
+\DeclareRobustCommand{\tagPower}{\thesismath{\epsilon D^{2}}\xspace}
+\DeclareRobustCommand{\flavour}{flavour\xspace}
+
+%% B decays
+\DeclareRobustCommand{\qDType}{\HepGenParticle{q}{\Pdown}{}\xspace}
+\DeclareRobustCommand{\qOne}{\HepGenParticle{q}{1}{}\xspace}
+\DeclareRobustCommand{\qOneBar}{\HepGenAntiParticle{q}{1}{}\xspace}
+\DeclareRobustCommand{\qTwo}{\HepGenParticle{q}{2}{}\xspace}
+\DeclareRobustCommand{\qTwoBar}{\HepGenAntiParticle{q}{2}{}\xspace}
+
+\DeclareRobustCommand{\Asymmetry}{\thesismath{\mathcal{A}}\xspace}
+\DeclareRobustCommand{\CPAsymmetry}{\thesismath{\mathcal{A}_{\CP}}\xspace}
+\DeclareRobustCommand{\CPAsymmetryDir}{\thesismath{\mathcal{A}_{\CP}^{\mspace{2mu}\text{dir}}}\xspace}
+\DeclareRobustCommand{\CPAsymmetryInt}{\thesismath{\mathcal{A}_{\CP}^{\mspace{2mu}\text{mix}}}\xspace}
+
+\DeclareRobustCommand{\YukawaCoupling}{\thesismath{\lambda}\xspace}
+\DeclareRobustCommand{\uptype}{\thesismath{\hat{\pu}}\xspace}
+\DeclareRobustCommand{\downtype}{\thesismath{\hat{\pd}}\xspace}
+
+\DeclareRobustCommand{\leptonic}{leptonic\xspace}
+\DeclareRobustCommand{\semileptonic}{semi-\leptonic\xspace}
+\DeclareRobustCommand{\nonleptonic}{non-\leptonic\xspace}
+
+
+%% Bu2KsPi phenomenology
+\DeclareRobustCommand{\BKPiP}{\thesismath{P}\xspace}
+\DeclareRobustCommand{\BKPiPbar}{\thesismath{\overline{P}}\xspace}
+\DeclareRobustCommand{\BKPiT}{\thesismath{T}\xspace}
+\DeclareRobustCommand{\BKPiTbar}{\thesismath{\overline{T}}\xspace}
+\DeclareRobustCommand{\BKPiPc}{\thesismath{P_\text{em}}\xspace}
+\DeclareRobustCommand{\BKPideltaT}{\thesismath{\delta_{\BKPiT}}\xspace}
+\DeclareRobustCommand{\BKPideltaPc}{\thesismath{\delta_\text{em}}\xspace}
+\DeclareRobustCommand{\BKPiPengTopoTerm}[1]{\thesismath{\mathcal{P}_{#1}}}
+\DeclareRobustCommand{\BKPiAparam}{\thesismath{A}\xspace}
+\DeclareRobustCommand{\BKPiRbparam}{\thesismath{R_{\Pbottom}}\xspace}
+\DeclareRobustCommand{\BKPir}{\thesismath{r}\xspace}
+\DeclareRobustCommand{\BKPirho}{\thesismath{\rho_\text{r}}\xspace}
+\DeclareRobustCommand{\BKPitheta}{\thesismath{\theta}\xspace}
+\DeclareRobustCommand{\BKPiomega}{\thesismath{\omega}\xspace}
+\DeclareRobustCommand{\BKPiepsilon}{\thesismath{\epsilon}\xspace}
+\DeclareRobustCommand{\BKPidelta}{\thesismath{\delta}\xspace}
+\DeclareRobustCommand{\BKPiDelta}{\thesismath{\Delta}\xspace}
+\DeclareRobustCommand{\BKPiBRRatio}{\thesismath{R}\xspace}
+\DeclareRobustCommand{\BKPiBRPseudoAsymm}{\thesismath{A_0}\xspace}
+\DeclareRobustCommand{\BKPiBRAsymmBu}{\thesismath{A_+}\xspace}
+\DeclareRobustCommand{\BKPiBRAsymmBd}{\thesismath{A_{\PK\Ppi}}\xspace}
+\DeclareRobustCommand{\BKPiLambdaS}[1]{\thesismath{\lambda_{\,\,{#1}}^{(\Pstrange)}}\xspace}
+\DeclareRobustCommand{\BKPikappa}{\thesismath{\kappa}\xspace}
+\DeclareRobustCommand{\BKPiBRRatioMin}{\thesismath{\BKPiBRRatio_\text{min}}\xspace}
+
+\DeclareRobustCommand{\BKPiQCDPengAmplBu}[1]{\thesismath{\mathcal{P}^{#1}}\xspace}
+\DeclareRobustCommand{\BKPiEWPengAmplBu}[1]{\thesismath{\mathcal{P}_\text{ew}^{#1}}\xspace}
+\DeclareRobustCommand{\BKPiAnnihilAmplBu}{\thesismath{\mathcal{A}}\xspace}
+\DeclareRobustCommand{\BKPiQCDPengAmplBd}[1]{\thesismath{\widetilde{\mathcal{P}}^{#1}}\xspace}
+\DeclareRobustCommand{\BKPiEWPengAmplBd}[1]{\thesismath{\widetilde{\mathcal{P}}_\text{ew}^{#1}}\xspace}
+\DeclareRobustCommand{\BKPiTreeAmplBd}{\thesismath{\widetilde{\mathcal{T}}}\xspace}
+
+%Bs to jpsi phi angular analysis conventions
+\DeclareRobustCommand{\swave}{\thesismath{s}-wave\xspace}
+
+%Transversity angles
+\DeclareRobustCommand{\AngPsi}{\thesismath{\psi}\xspace}
+\DeclareRobustCommand{\AngTheta}{\thesismath{\theta}\xspace}
+\DeclareRobustCommand{\AngPhi}{\thesismath{\varphi}\xspace}
+
+\DeclareRobustCommand{\thetatr}{\AngTheta}
+\DeclareRobustCommand{\cthetatr}{\cos\AngTheta}
+\DeclareRobustCommand{\thetaone}{\AngPsi}
+\DeclareRobustCommand{\phitr}{\AngPhi}
+%\DeclareRobustCommand{\cphitr}{\thesismath{\cos\phitr}\xspace}
+\DeclareRobustCommand{\cthetaone}{\thesismath{\cos\thetaone}\xspace}
+
+
+
+%phases
+\DeclareRobustCommand{\dzero}{\thesismath{\delta_{0}}\xspace}
+\DeclareRobustCommand{\dpara}{\thesismath{\delta_{\|}}\xspace}
+\DeclareRobustCommand{\dperp}{\thesismath{\delta_{\perp}}\xspace}
+\DeclareRobustCommand{\ds}{\thesismath{\delta_{s}}\xspace}
+
+%Amplitudes
+
+\DeclareRobustCommand{\Azero}{\thesismath{\mathrm{A}_{0}}\xspace}
+\DeclareRobustCommand{\Azerot}[1]{\thesismath{\Azero(#1)}\xspace}
+\DeclareRobustCommand{\Azerosq}{\thesismath{|\Azero|^{2}}\xspace}
+\DeclareRobustCommand{\Azerosqt}[1]{\thesismath{|\Azero(#1)|^{2}}\xspace}
+\DeclareRobustCommand{\Apara}{\thesismath{\mathrm{A}_{\|}}\xspace}
+\DeclareRobustCommand{\Aparat}[1]{\thesismath{\Apara(#1)}\xspace}
+\DeclareRobustCommand{\Aparasq}{\thesismath{|\Apara|^{2}}\xspace}
+\DeclareRobustCommand{\Aparasqt}[1]{\thesismath{|\Apara(#1)|^{2}}\xspace}
+\DeclareRobustCommand{\Aperp}{\thesismath{\mathrm{A}_{\perp}}\xspace}
+\DeclareRobustCommand{\Aperpt}[1]{\thesismath{\Aperp(#1)}\xspace}
+\DeclareRobustCommand{\Aperpsq}{\thesismath{|\Aperp|^{2}}\xspace}
+\DeclareRobustCommand{\Aperpsqt}[1]{\thesismath{|\Aperp(#1)|^{2}}\xspace}
+\DeclareRobustCommand{\As}{\thesismath{\mathrm{A}_{s}}\xspace}
+\DeclareRobustCommand{\Ast}[1]{\thesismath{\As(#1)}\xspace}
+\DeclareRobustCommand{\Assq}{\thesismath{|\As|^{2}}\xspace}
+\DeclareRobustCommand{\Assqt}[1]{\thesismath{|\As(#1)|^{2}}\xspace}
+
+%propertime and mixing
+
+\DeclareRobustCommand{\dms}{\thesismath{\Delta m_{s}}\xspace}
+\DeclareRobustCommand{\Gs}{\thesismath{\Gamma_{s}}\xspace}
+\DeclareRobustCommand{\dGs}{\thesismath{\Delta \Gs}\xspace}
+
+%splot, sweight etc
+\DeclareRobustCommand{\CROP}{{\texttt{CROP}}\xspace}
+\DeclareRobustCommand{\Splot}{\thesismath{\mathcal{S}\textrm{-plot}}\xspace}
+\DeclareRobustCommand{\Splots}{\thesismath{\mathcal{S}\textrm{-plots}}\xspace}
+\DeclareRobustCommand{\Sweight}{\thesismath{\mathcal{S}\textrm{-weight}}\xspace}
+
+\DeclareRobustCommand{\Sweighted}{\thesismath{\mathcal{S}\textrm{-weighted}}\xspace}
+\DeclareRobustCommand{\Sweights}{\thesismath{\mathcal{S}\textrm{-weights}}\xspace}
+
+\DeclareRobustCommand{\Sfit}{\thesismath{\mathcal{S}\textrm{-fit}}\xspace}
+\DeclareRobustCommand{\Cfit}{\thesismath{\mathcal{C}\textrm{-fit}}\xspace}
+
+\DeclareRobustCommand{\lifetime}{proper time\xspace}
+\DeclareRobustCommand{\NLL}{\thesismath{\textrm{NLL}}\xspace}
+\DeclareRobustCommand{\dNLL}{\thesismath{-\Delta \ln {\mathcal{L}}}\xspace}
+
+
+\DeclareRobustCommand{\B}{\lifetime biased\xspace}
+\DeclareRobustCommand{\UB}{\lifetime unbiased\xspace}
+\DeclareRobustCommand{\UBB}{\lifetime unbiased + biased\xspace}
+
+\DeclareRobustCommand{\Arxiv}[2]{\href{http://arxiv.org/abs/#1}{\textcolor{blue}{\texttt{arXiv:#1#2}}}}
+\DeclareRobustCommand{\link}[2]{\href{#1}{\textcolor{blue}{\texttt{#2}}}}
